@@ -1,0 +1,190 @@
+.item-swatch::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+    border-radius: 10px;
+    background: #f1f1f1;
+  }
+  .item-swatch::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  .item-swatch {
+    list-style: none;
+    padding: 52px 38px 5px 0;
+    margin: -40px 0 0 0;
+    letter-spacing: -.33em;
+    line-height: 0;
+    position: relative;
+    display: flex;
+    overflow-x:auto;
+    width:100%;
+}
+.item-swatch.lessThen5 {
+  padding-right: 5px;
+  justify-content: center;
+  padding-left: 5px;
+}
+  .item-swatch li {
+   display:inline-block;
+   margin:0 4px 0;
+   letter-spacing:normal;
+   text-align:center;
+   vertical-align:middle;
+   position:relative
+  }
+  .item-swatch li:first-of-type {
+   margin-left:0
+  }
+  .item-swatch li:last-of-type {
+   margin-right:0
+  }
+  .item-swatch li label {
+   width:30px;
+   height:30px;
+   border-radius:100%;
+   margin:0 0 0;
+   background-size:cover;
+   cursor:pointer;
+   background-position:center;
+   background-repeat:no-repeat;
+   border:3px solid #fff;
+   box-shadow:0 0 0 1px var(--border_bt_sidebar);
+   overflow:hidden;
+   display: inline-block;
+  }
+  .item-swatch li label.active {
+   -webkit-box-shadow:0 0 0 1.5px #000;
+   -moz-box-shadow:0 0 0 1.5px #000;
+   box-shadow:0 0 0 1.5px #000
+  }
+  .item-swatch li label img {
+   width:100%;
+   height:100%;
+   object-fit:cover
+  }
+  .item-swatch li label img.file_img {
+   width:100%;
+   height:100%
+  }
+  .item-swatch li a {
+   width:30px;
+   height:30px;
+   display:inline-block;
+   cursor:pointer;
+   line-height:31px;
+   text-align:center;
+   font-size:var(--font_size);
+   font-weight:500;
+   color:#2d2d2d
+  }
+  .item-swatch li .tooltip , .item-swatch li.group-swatch div .tooltip {
+   text-align:center;
+   background:#000000;
+   color:#ffffff;
+   bottom:100%;
+   padding:4px 7px;
+   display:block;
+   position:absolute;
+   z-index:99999;
+   min-width:44px;
+   left:50%;
+   transform:translateX(-20%);
+   margin-bottom:12px;
+   opacity:0;
+   visibility:hidden;
+   transition:all .25s ease-out;
+   box-shadow:2px 2px 6px rgba(0,0,0,.28);
+   font-size:var(--font_size_minus1);
+   font-weight:500;
+   letter-spacing:normal;
+   pointer-events:none;
+   width: max-content;
+  }
+  .item-swatch li .tooltip:after {
+   border-left:solid transparent 7px;
+   border-right:solid transparent 7px;
+   border-top:solid #000000 7px;
+   bottom:-7px;
+   content:" ";
+   height:0;
+   left:20%;
+   -moz-transform:translateX(-20%);
+   -o-transform:translateX(-20%);
+   -ms-transform:translateX(-20%);
+   -webkit-transform:translateX(-20%);
+   transform:translateX(-20%);
+   position:absolute;
+   width:0
+  }
+  .item-swatch li:hover .tooltip {
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+   display: block !important;
+   height: max-content;
+   position: absolute;
+   padding: 12px;
+  }
+  .item-swatch li.group-swatch > div:hover > .tooltip {
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+   display: block;
+   height: max-content;
+   position: absolute;
+   padding: 12px;
+  }
+  .show--more .item-swatch{
+   position:relative;
+  }
+  .card__content.show--more .group-swatch {
+   display: flex !important;
+   justify-content: start;
+   padding:0px;
+   flex-wrap: nowrap;
+  }
+  .card__content .item-swatch-more {
+    position: absolute;
+    right: -2px;
+    background: #fff;
+    font-size: 14px;
+    top: 7px;
+    padding: 9px 6px 4px;
+}
+.card__content .item-swatch-more a{color:#000; text-decoration:none !important;}
+  .item-swatch .group-swatch {
+   position:static;
+   width:100%;
+   display:block;
+   left:0;
+   background:#fff;
+   bottom:100%;
+   letter-spacing:-.31em;
+   padding-top:8px;
+   text-align:center;
+  }
+  .item-swatch .group-swatch>div {
+   letter-spacing:normal;
+   display:inline-block;
+   margin:0px 4px;
+   position:relative;
+   vertical-align:top
+  }
+  .item-swatch .group-swatch>div:first-child {
+   margin-left:0
+  }
+  @media screen and (min-width:1300px) {
+    .show--more .item-swatch{
+      overflow-x:auto;
+    }
+    .item-swatch{
+      overflow-x:inherit;
+    }
+  }
+  @media screen and (min-width:1400px) {
+    .item-swatch {
+      padding: 52px 30px 5px 22px;
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,116 @@
+{% if settings.display_size_chart %}
+    <div class="modal fade" id="size_chart" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">          
+                    <a data-dismiss="modal" class="close close-modal" title="{{ 'cart.ajax_cart.close' | t }}" href="javascript:void(0)">{% render 'icon-close' %}</a>
+                </div>        
+                <div class="modal-body">
+                    <div class="tabs__product-page horizontal-tabs horizontal-tabs-center">    
+                        <div class="list-tabs tab">
+                            {% if settings.custom_size_chart_header != blank %}
+                                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'sizeChartTab')">
+                                    {% render 'multilang' with settings.custom_size_chart_header %}
+                                </button>
+                            {% endif %}
+
+                            {% comment %} {% if settings.measure_heading != blank %}
+                                <button class="tablinks" onclick="openTab(event, 'measureTab')">
+                                    {% render 'multilang' with settings.measure_heading %}
+                                </button>
+                            {% endif %}
+                            {% if settings.shipping_heading != blank %}
+                                <button class="tablinks" onclick="openTab(event, 'shippingTab')">
+                                    {% render 'multilang' with settings.shipping_heading %}
+                                </button>
+                            {% endif %} {% endcomment %}
+                        </div>
+                        <div class="wrapper-tab-content">
+                            <div id="sizeChartTab" class="tabcontent" data-TabContent>
+                                {% comment %} {% if settings.custom_size_chart_header != blank %}
+                                    {% render 'multilang' with settings.custom_size_chart_header %}
+                                {% endif %} {% endcomment %}
+                                <span class="dNone">{{settings.size_chart_header_measurements}}</span>
+                                <caption>{{settings.size_chart_header_caption}}</caption>
+                                <div class="size-chart-img">
+                                    {% if settings.size_chart == 'product_vendor' %}          
+                                        {% capture img_vendor %}{{ product.vendor | handle | append: '-sizechart.jpg' | file_url }}{% endcapture %}
+                                        <img loading="lazy" width="{{img_vendor.width}}" height="{{img_vendor.height}}" class="size-chart-img-display" onError="style.display = 'none';" src="{{ img_vendor }}" alt="{{ settings.custom_size_chart_header }}"/>
+                                    
+                                    {% elsif settings.size_chart == 'product_type' %}          
+                                        {% capture img_type %}{{ product.type | handle | append: '-sizechart.jpg' | file_url }}{% endcapture %}
+                                        <img loading="lazy" width="{{img_type.width}}" height="{{img_type.height}}" class="size-chart-img-display" onError="style.display = 'none';" src="{{ img_type }}" alt="{{ settings.custom_size_chart_header }}"/>
+                                    
+                                    {% elsif settings.size_chart == 'different' %} 
+                                        {% if product.metafields.c_f.size_chart != blank %}
+                                            {% capture img_product %}{{ product.metafields.c_f.size_chart }}{% endcapture %}
+                                            <img loading="lazy" src="{{ img_product}}" alt="{{ settings.custom_size_chart_header }}"/>
+                                        {% else %}  
+                                        <img loading="lazy" width="{{product.images[1].width}}" height="{{product.images[1].height}}" src="{{product.images[1] | img_url:'original'}} alt="{{ settings.custom_size_chart_header }}"">
+                                        {% endif %}
+                                    {% elsif settings.size_chart == 'none' %} 
+                                        <img loading="lazy" src="{{ settings.custom_size_chart | img_url: 'original' }}" alt="{{ settings.custom_size_chart_header }}"/>
+                                        {% comment %}
+                                            <img width="{{product.images[1].width}}" height="{{product.images[1].height}}" src="{{product.images[1] | img_url:'original'}} alt="{{ settings.custom_size_chart_header }}"">
+                                        {% endcomment %}
+                                    {% endif %}               
+                                </div>
+                            <p>{{settings.size_chart_footer_note}}</p>
+                            </div>
+                            <div id="measureTab" class="tabcontent" data-TabContent>{{settings.measure_text}}</div>
+                            <div id="shippingTab" class="tabcontent" data-TabContent>{{settings.shipping_text}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <script>
+        // Get the modal
+            var modal = document.getElementById("size_chart");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("modalbtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            function openTab(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+              
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+              
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+              
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click()
+    </script>

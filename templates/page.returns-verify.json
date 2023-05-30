@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "c359baec-935f-497e-90f8-860f7442ea47": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "returns",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "4d6b4523-9e2d-4242-a139-e2d7af0f8ca5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15186846154813__4d6b4523-9e2d-4242-a139-e2d7af0f8ca5-1681988876b64bade5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Return",
+            "heading_size": "h2"
+          }
+        },
+        "template--15186846154813__4d6b4523-9e2d-4242-a139-e2d7af0f8ca5-1681988876b64bade5-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To return your dress, a Return Authorization is required. Returns must be requested within 1-week of receiving the order. We charge a 20% restocking fee for returned dresses or you can choose a store credit with no restocking fee and an additional $10 bonus credit. Please bear in mind that we do not profit from the restocking fee and it is solely to ensure our low prices.<\/p><p><br\/><\/p><p><strong>To get started, click on the link below.<\/strong><br\/><br\/><br\/><a href=\"https:\/\/www.thedressoutlet.com\/apps\/redo\/returns-portal\" target=\"_blank\" title=\"https:\/\/www.thedressoutlet.com\/apps\/redo\/returns-portal\"><strong>CLICK HERE TO START YOUR RETURN PROCESS<\/strong><\/a><\/p><p><br\/><br\/><\/p><p>If you are purchasing more than 1 piece, our customer experience team will be contacting you to confirm a restocking fee before shipping out your order. Because the order has multiple pieces, the restocking fee will vary from the original 20%.<br\/><br\/>While most orders will fall under the default 20% restocking fee, there are some orders that may be subject to a higher restocking fee than normal due to the dress being a special order. In either case, our customer experience team will reach out to you to confirm with you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15186846154813__4d6b4523-9e2d-4242-a139-e2d7af0f8ca5-1681988876b64bade5-0",
+        "template--15186846154813__4d6b4523-9e2d-4242-a139-e2d7af0f8ca5-1681988876b64bade5-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "2138ca70-de51-4de6-82ee-932ec44d6519": {
+      "type": "do-return-form",
+      "settings": {
+        "contact_your_name": "",
+        "contact_your_email": "",
+        "contact_your_order_number": ""
+      }
+    },
+    "01eb5bdd-8a4d-4d38-8672-b8cff630cdbb": {
+      "type": "do-collapsible-content",
+      "blocks": {
+        "template--15186846154813__01eb5bdd-8a4d-4d38-8672-b8cff630cdbb-168198921255e9d2ad-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "INSTRUCTIONS",
+            "icon": "none",
+            "row_content": "<p><strong>Your dress was not as expected? We'll do anything to make it right within reason. Just follow these steps and you are good to go:<\/strong><\/p><ol><li>Click the NEW returns portal link above to be taken to a new page powered by Re:Do. From there, enter your order number, fill out the info and start the return.<\/li><li>Carefully place the item back on the hanger, in the bag, and back in the box.<\/li><li>Seal the box as best you can.<\/li><li>Ship it back to us with the label from Re:Do<\/li><li>All international customers are responsible to pay any and all fees when shipping an item back. (Duties, taxes, customs etc.)<\/li><li>Once your item has been received, inspected and processed, we will issue the requested store credit or refund.<\/li><\/ol>",
+            "page": ""
+          }
+        },
+        "template--15186846154813__01eb5bdd-8a4d-4d38-8672-b8cff630cdbb-168198921255e9d2ad-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "RETURN RULES",
+            "icon": "none",
+            "row_content": "<p><strong>Before starting your return, please read the rules!<\/strong><\/p><p><\/p><ol><li>Please feel free to contact us with any questions.<\/li><li>You must request a return within 1-week of receiving your order, No exchanges. If you need another style or size of dress, initiate a return and purchase the other dress to receive it quickly.<\/li><li>Final Sale items can not be returned!<\/li><li>Store Credit is available with no restocking fee and a $10 bonus.<\/li><li>Returns are carefully inspected; all original tags must be in place and the product must not show any signs of wear or damage.<\/li><li>If you receive a damaged item, tell us right away! That way, we can immediately send your replacement of the same style, size and color.<\/li><\/ol>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15186846154813__01eb5bdd-8a4d-4d38-8672-b8cff630cdbb-168198921255e9d2ad-0",
+        "template--15186846154813__01eb5bdd-8a4d-4d38-8672-b8cff630cdbb-168198921255e9d2ad-1"
+      ],
+      "settings": {
+        "caption": "How to return or exchange your dress?",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "c359baec-935f-497e-90f8-860f7442ea47",
+    "main",
+    "4d6b4523-9e2d-4242-a139-e2d7af0f8ca5",
+    "2138ca70-de51-4de6-82ee-932ec44d6519",
+    "01eb5bdd-8a4d-4d38-8672-b8cff630cdbb"
+  ]
+}

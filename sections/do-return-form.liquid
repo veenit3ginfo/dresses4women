@@ -1,0 +1,72 @@
+<div class="contact-us-page"> 
+  <div class="container page-width">
+    <div class="wrapper">
+      <div class="do-flex md:do-flex-row do-flex-col do-mt-[25px]">
+        <div class="md:do-w-1/2 do-w-full form-contact do-px-[15px] form-contact">
+          
+          {% form 'contact' %}
+
+          {% comment %}
+          Successful message
+          {% endcomment %}
+
+          {% if form.posted_successfully? %}
+          <script> 
+            window.location = "/pages/thank-you-for-contacting-us"; 
+          </script>
+          
+          {% endif %}
+
+          {{ form.errors | default_errors }}
+
+          <div id="contactFormWrapper">          
+            <div class="form-group">
+              <label for="contactFormName">
+                <span>
+                  
+                </span>
+              </label>
+          {% endform %}
+        </div>
+      </div>     
+    </div>
+  </div>    
+</div>
+
+
+{% schema %}
+    {
+    "name": "DO Return Verify",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_your_name",
+        "label": "Placeholder text in Your Name"
+      },
+      {
+        "type": "text",
+        "id": "contact_your_email",
+        "label": "Placeholder text in Your Email"
+      },
+      {
+        "type": "text",
+        "id": "contact_your_order_number",
+        "label": "Placeholder text in Your Order Number"
+      }
+    ],
+    "presets": [
+        {
+          "name": "DO Return Verify"
+        }
+      ]
+  }
+{% endschema %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var reasonOption = document.querySelector("#reasonoption");
+    reasonOption.addEventListener("change", function() {
+      var otherDiv = document.querySelector("#Other");
+      otherDiv.style.display = this.value == "Other" ? "block" : "none";
+    });
+  });
+</script>

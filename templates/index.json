@@ -1,0 +1,336 @@
+{
+  "sections": {
+    "9ca7f9f5-0ddc-4327-a8ad-23ed973346e9": {
+      "type": "do-hero-banner",
+      "blocks": {
+        "template--15174408044605__9ca7f9f5-0ddc-4327-a8ad-23ed973346e9-1679664056ab81f638-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP SALE",
+            "button_link_1": "shopify:\/\/collections\/on-sale",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify:\/\/collections\/formal-dresses",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15174408044605__9ca7f9f5-0ddc-4327-a8ad-23ed973346e9-1679664056ab81f638-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/BOGO_MAIN.jpg",
+        "image_2": "shopify:\/\/shop_images\/BOGOMOBILE_8c6bf9df-12a0-4f19-b4eb-245a181768ef.jpg",
+        "do__image_link": "shopify:\/\/collections\/on-sale",
+        "image_overlay_opacity": 0,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "1d2f7479-9a9a-4aa9-ad23-141d3625d326": {
+      "type": "do-collections-masonry",
+      "blocks": {
+        "template--15174408044605__1d2f7479-9a9a-4aa9-ad23-141d3625d326-1680039258ca988e84-0": {
+          "type": "collectionBox",
+          "settings": {
+            "collection": "mother-of-the-bride-dresses",
+            "image": "shopify:\/\/shop_images\/MOB_2.jpg"
+          }
+        },
+        "287b7c15-7e6f-47c4-8309-66f28946af90": {
+          "type": "collectionBox",
+          "settings": {
+            "collection": "best-seller",
+            "image": "shopify:\/\/shop_images\/BESTSELLERS_1_5d94cfc5-6f57-498f-8245-ceca38ad0c8c.jpg"
+          }
+        },
+        "e71dfa12-3218-4737-9262-a8fa59d9220b": {
+          "type": "collectionBox",
+          "settings": {
+            "collection": "formal-dresses",
+            "image": "shopify:\/\/shop_images\/formal-1-1-seat-cta.jpg"
+          }
+        },
+        "19f78824-d779-4ac2-89ee-3881f18a99ba": {
+          "type": "collectionBox",
+          "settings": {
+            "collection": "plus-size-formal-dresses",
+            "image": "shopify:\/\/shop_images\/plus-1-1-wall.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--15174408044605__1d2f7479-9a9a-4aa9-ad23-141d3625d326-1680039258ca988e84-0",
+        "287b7c15-7e6f-47c4-8309-66f28946af90",
+        "e71dfa12-3218-4737-9262-a8fa59d9220b",
+        "19f78824-d779-4ac2-89ee-3881f18a99ba"
+      ],
+      "settings": {
+        "full_width": true,
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "2e016feb-e6f9-4317-b6df-ea5cb4f7fa22": {
+      "type": "do-featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-seller",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "columns_tablet": "3",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "283276ab-33a5-444e-8cb5-513927dbccc3": {
+      "type": "do-featured-collection-grid",
+      "blocks": {
+        "a6e56d85-31b9-4817-a3a5-d1d48fe0bf30": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wedding-guest-dresses",
+            "do__featured_collection_title": "Wedding Guest Dresses"
+          }
+        },
+        "7bffc856-aa43-45c4-aa6a-6efb66021d98": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "homecoming-dresses",
+            "do__featured_collection_title": "Homecoming Dresses"
+          }
+        },
+        "505c524b-d527-4970-b8d7-7e4263ef2c58": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mother-of-the-bride-dresses",
+            "do__featured_collection_title": "Mother of the Bride Dresses"
+          }
+        },
+        "fe0308e2-17ea-424a-84be-b0edc7e80aec": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wedding-dresses",
+            "do__featured_collection_title": "Wedding Dresses"
+          }
+        }
+      },
+      "block_order": [
+        "a6e56d85-31b9-4817-a3a5-d1d48fe0bf30",
+        "7bffc856-aa43-45c4-aa6a-6efb66021d98",
+        "505c524b-d527-4970-b8d7-7e4263ef2c58",
+        "fe0308e2-17ea-424a-84be-b0edc7e80aec"
+      ],
+      "custom_css": [
+        "img {object-position: top;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "collection_grid_style": "style2",
+        "do_hide_title_arrow": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "columns_tablet": "2",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "649f8fea-1650-4b3c-a8f5-9446ff9b0ccc": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<h1>Get The Perfect Dress for Your Special Occasion on – The Dress Outlet<\/h1>",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 16
+      }
+    },
+    "cbe3d052-1d7c-4e39-a58c-9e8087485ad4": {
+      "type": "do-featured-collection-grid",
+      "blocks": {
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bridesmaid",
+            "do__featured_collection_title": "Bridesmaid Dresses"
+          }
+        },
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "short-cocktail-dresses",
+            "do__featured_collection_title": "Cocktail Dresses"
+          }
+        },
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "evening-gowns",
+            "do__featured_collection_title": "Evening Gowns"
+          }
+        },
+        "0fff64ce-89a8-445f-83cb-2630cf8fdf3b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "formal-dresses",
+            "do__featured_collection_title": "Formal Dresses"
+          }
+        },
+        "162da16e-4d3a-4e6b-9545-e020135cd94b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plus-size-dresses",
+            "do__featured_collection_title": "Plus Size Dresses"
+          }
+        },
+        "0a1395c3-bbf8-4871-9d0a-e9a1ce66fbc4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "quinceanera-dresses",
+            "do__featured_collection_title": "Quinceanera Dresses"
+          }
+        }
+      },
+      "block_order": [
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-0",
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-1",
+        "template--15170142994493__cbe3d052-1d7c-4e39-a58c-9e8087485ad4-1679478420df2fe9a1-2",
+        "0fff64ce-89a8-445f-83cb-2630cf8fdf3b",
+        "162da16e-4d3a-4e6b-9545-e020135cd94b",
+        "0a1395c3-bbf8-4871-9d0a-e9a1ce66fbc4"
+      ],
+      "custom_css": [
+        "img {object-position: top;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "collection_grid_style": "style3",
+        "do_hide_title_arrow": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "columns_tablet": "1",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "b2279c05-6188-4f68-8a6c-d6f3f0e1de4f": {
+      "type": "do-featured-collection-grid",
+      "blocks": {
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "long-sleeve-formal-dresses",
+            "do__featured_collection_title": "Long Sleeve Formal Dresses"
+          }
+        },
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plus-size-formal-dresses",
+            "do__featured_collection_title": "Plus Size Formal Dresses"
+          }
+        },
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "evening-dresses",
+            "do__featured_collection_title": "Evening Dresses"
+          }
+        },
+        "4a684ec8-c74f-4621-bf92-e0b00d0e87e6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "prom-dresses",
+            "do__featured_collection_title": "Prom Dresses"
+          }
+        }
+      },
+      "block_order": [
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-0",
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-1",
+        "template--15170142994493__b2279c05-6188-4f68-8a6c-d6f3f0e1de4f-1679478420df2fe9a1-2",
+        "4a684ec8-c74f-4621-bf92-e0b00d0e87e6"
+      ],
+      "custom_css": [
+        "img {object-position: top;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "collection_grid_style": "style2",
+        "do_hide_title_arrow": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "columns_tablet": "2",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "90268a95-9910-47eb-8985-b445e69d00cd": {
+      "type": "do-read-more",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading": "Shop Now at The Dress Outlet!",
+        "do_rm_initial_text": "<p>Looking for the perfect dress for your next big <br\/>occasion? Look no further than The Dress Outlet! Go through our huge <br\/>collections of <a href=\"https:\/\/www.thedressoutlet.com\/collections\/formal-dresses\">formal dresses<\/a>, <a href=\"https:\/\/www.thedressoutlet.com\/collections\/prom-dresses\">prom dresses<\/a>, and many more and find the perfect one for you!<\/p>",
+        "do_rm_more_text": "<p>Nobody wants to find themselves in the most isolating social situation <br\/>of their life because they can't find a dress that fits right. With The <br\/>Dress Outlet, you don't have to worry about not being able to find your <br\/>perfect dress because we offer not only fashionable dresses but also <br\/>very convenient online shopping services where you can purchase high <br\/>quality dresses at low prices and at any time of the day.<\/p><p><br\/>We have a great collection of<a href=\"https:\/\/www.thedressoutlet.com\/collections\/modest-formal-dresses\"> modest formal dresses<\/a> featuring <a href=\"https:\/\/www.thedressoutlet.com\/collections\/mother-of-the-bride-dresses\">mother of the bride dresses<\/a> and <a href=\"https:\/\/www.thedressoutlet.com\/collections\/long-sleeve-dresses\">long-sleeved dresses<\/a><br\/> with matching jackets. We have many elegant collections from The Dress <br\/>Outlet that are great for church weddings, evening parties, or any <br\/>special occasion. <br\/> <\/p><p><br\/>Not sure what type of dress is a flattering match for your body shape? No worries here, as we have a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-dresses\">plus size dress collection<\/a>specifically<br\/> catered to fit your figure! Shopping for any occasion can be difficult,<br\/> but don't worry, The Dress Outlet is here to make it easier. Whether <br\/>you need a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/prom-dresses\">prom dress<\/a> or a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/wedding-guest-dresses\">wedding guest dress<\/a> or even a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/mother-of-the-bride-dresses\">mother of the bride dress<\/a>, our online store has just what you need!<\/p><p><br\/>You can save the time, money, and stress of pulling dresses around just <br\/>to find the perfect fit! The Dress Outlet has you covered. Our dresses <br\/>are all moderately priced and come in a variety of sizes.<\/p><p>From princess ball gowns to <a href=\"https:\/\/www.thedressoutlet.com\/collections\/sexy-prom-dresses\">sexy prom dresses<\/a>,<br\/> you’re sure to find a dress you love. We take pride in offering you the<br\/> best selection of prom dresses in 2022, and we are sure you will find <br\/>the dress that makes you feel like the beautiful queen that you deserve <br\/>to be. You can also find a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/prom-short-dresses\">short prom dress<\/a>  if you’re looking for something more flattering on your figure. If you like to be comfortable on the dance floor, our <a href=\"https:\/\/www.thedressoutlet.com\/collections\/sexy-prom-dresses\">sexy prom dresses<\/a> are perfect for dancing all night long!<\/p><p>What we have aren't just <a href=\"https:\/\/www.thedressoutlet.com\/collections\/formal-dresses\">formal dresses<\/a> but some extremely trendy and<a href=\"https:\/\/www.thedressoutlet.com\/collections\/formal-dresses\">elegant formal dresses<\/a>.We are not just saying this, we mean it. Whether you have a formal occasion, a  <a href=\"https:\/\/www.thedressoutlet.com\/collections\/prom-dresses\">prom party<\/a>, a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/wedding-dresses-1\">wedding<\/a>, or a <a href=\"https:\/\/www.thedressoutlet.com\/collections\/homecoming-dresses\">homecoming<\/a>, we have something formal to suit the different shades of your style. Affordable prices aren’t possible on <a href=\"https:\/\/www.thedressoutlet.com\/collections\/formal-dresses\">formal dresses<\/a>—we would like to disagree with this statement. Our lovely customers have now enjoyed affordable prices and a wide range of <a href=\"https:\/\/www.thedressoutlet.com\/collections\/special-occasion-dresses\">formal special occasion dresses<\/a> to choose from.<\/p><p>Our collection of<a href=\"https:\/\/www.thedressoutlet.com\/collections\/mother-of-the-bride-dresses\">Mother of the Bride dresses<\/a><br\/> is perfect for any mother or mother in law. You'll find a wide variety <br\/>of styles, colors, and sizes to choose from. Choose from simple <a href=\"https:\/\/www.thedressoutlet.com\/collections\/mother-of-the-bride-dresses\">mother of the bride dresses<\/a> or go for something a little more glamorous with a short lace dress or<a href=\"https:\/\/www.thedressoutlet.com\/collections\/long-formal-dress\">long formal gown<\/a>.<br\/> Whatever you're looking for, we have it here! Our collection includes <br\/>all types of mothers in mind: stylish, modern, classic, and trendy moms <br\/>alike will find just what they're looking for.<\/p><p>Flaunt your curves in a<a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-dresses\">plus-size dress<\/a> The Dress Outlet offers a wide range of <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-dresses\">plus size dresses<\/a>, including casual and <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-formal-dresses\">formal dresses<\/a>, <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-cocktail-dresses\">cocktail<\/a> and <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-party-dresses\">party dresses<\/a>, <a href=\"https:\/\/www.thedressoutlet.com\/collections\/plus-size-maxi-dresses\">maxi dresses<\/a>, sheath dresses, shift dresses, and more.<\/p><p><a href=\"https:\/\/www.thedressoutlet.com\/collections\/wedding-guest-dresses\">Wedding guest dresses<\/a><br\/> are just as important as the bride’s dress. The dress you wear to a <br\/>wedding is an accessory that can make or break your entrance. Our <br\/>extensive collection features a range of styles, including mermaid <br\/>wedding guest dresses, strapless wedding guest dresses, high low wedding<br\/> guest dresses, and more!<\/p><p>The Dress Outlet offers an elegant solution for all your special <br\/>occasion needs. Likewise, you can contact our customer service <br\/>representatives and curate your own perfect dress from its vast range at<br\/> a great price.<\/p><p>There's no better time than now to find the perfect dress for your special occasion. Browse our website today!<\/p>",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "9ca7f9f5-0ddc-4327-a8ad-23ed973346e9",
+    "1d2f7479-9a9a-4aa9-ad23-141d3625d326",
+    "2e016feb-e6f9-4317-b6df-ea5cb4f7fa22",
+    "283276ab-33a5-444e-8cb5-513927dbccc3",
+    "649f8fea-1650-4b3c-a8f5-9446ff9b0ccc",
+    "cbe3d052-1d7c-4e39-a58c-9e8087485ad4",
+    "b2279c05-6188-4f68-8a6c-d6f3f0e1de4f",
+    "90268a95-9910-47eb-8985-b445e69d00cd"
+  ]
+}

@@ -1,0 +1,224 @@
+{% comment %}
+  This page template is a requirement if you are submitting your theme to the Shopify Theme Store.
+  Be sure to select page.contact as the template from the admin page to have this template take effect.
+
+  For information on adding more fields, visit:
+    - http://docs.shopify.com/support/configuration/store-customization/adding-fields-to-the-liquid-contact-form
+{% endcomment %}
+
+{% comment %}
+  Google Map
+{% endcomment %}
+<div class="contact-us-page">
+    <div class="container page-width">
+      <!--header class="page-header">
+        <h1>
+          {{ section.settings.contact_title | split: '|' | first }}
+        </h1>
+        <span class="line"></span>
+      </header--> 
+      
+      {% if page.content != blank %}
+     {% comment %} <div class="rte">
+        {{ page.content }}
+      </div>   {% endcomment %}
+      {% endif %}
+      
+      <div class="wrapper">
+        <div class="do-flex">
+            <div class="do-w-1/2 contactchat do-px-[15px]">
+                <div class="live-chat text-center">
+                    <a href="javascript:$zopim.livechat.window.show();">
+                        <div class="do-text-center do-flex do-justify-center">
+                            {%render 'icon-chat' %}
+                        </div>
+                        <h3>Live Chat</h3>
+                    </a>
+                </div>
+            </div> 
+            <div class="do-w-1/2 contactemail do-px-[15px]">
+                <div class="email-us text-center">
+                    <a href="mailto:info@thedressoutlet.com">
+                        <div class="do-text-center do-flex do-justify-center">
+                            {%render 'icon-email' %}
+                        </div>
+                        <h3>Email Us</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="do-flex md:do-flex-row do-flex-col do-mt-[25px]"> 
+          <div class="md:do-w-1/2 do-w-full form-contact do-px-[15px]">     
+            {% if settings.enable_multilang %}
+            <div class="lang1 des">
+              {{ section.settings.contact_text_desc | split: '[lang2]' | first }}
+            </div>
+            <div class="lang2 des">
+              {{ section.settings.contact_text_desc | split: '[lang2]' | last }}
+            </div>
+            {% else %}
+            <div class="des">
+              {{ section.settings.contact_text_desc | split: '[lang2]' | first }}
+            </div>
+            {% endif %}
+            
+            {% form 'contact' %}
+  
+            {% comment %}
+            Successful message
+            {% endcomment %}
+  
+            {% if form.posted_successfully? %}
+            <p class="note form-success" {% if settings.enable_multilang %}data-translate="templates.contact.form.post_success"{% endif %}>
+              {{ 'templates.contact.form.post_success' | t }}
+            </p>
+            {% endif %}
+  
+            {{ form.errors | default_errors }}
+  
+            <div id="contactFormWrapper" class="md:do-mr-[20px]">          
+              <div class="form-group">
+                <label for="contactFormName">
+                  <span {% if settings.enable_multilang %}data-translate="templates.contact.form.name"{%endif%}>
+                    {{ 'templates.contact.form.name' | t }}
+                  </span>
+                </label>
+                <input type="text" id="contactFormName" name="contact[name]" autocapitalize="words" placeholder="{{ section.settings.contact_your_name }}">
+              </div>
+  
+              <div class="form-group">
+                <label for="contactFormPhone">
+                  <span {% if settings.enable_multilang %}data-translate="templates.contact.form.phone"{%endif%}>
+                    {{ 'templates.contact.form.phone' | t }}
+                  </span>
+                </label>
+                <input type="tel" name="contact[phone]" id="contactFormPhone" pattern="[0-9]*" placeholder="{{ section.settings.contact_phone_number }}">
+              </div>
+  
+              <div class="form-group">
+                <label for="contactFormEmail">
+                  <span {% if settings.enable_multilang %}data-translate="templates.contact.form.email"{%endif%}>
+                    {{ 'templates.contact.form.email' | t }}
+                  </span>
+                  <em>*</em>
+                </label>
+                <input type="email" name="contact[email]" id="contactFormEmail" autocorrect="off" autocapitalize="off" placeholder="{{ section.settings.contact_your_email }}">
+              </div>
+  
+              <div class="form-group">
+                <label for="contactFormMessage">
+                  <span {% if settings.enable_multilang %}data-translate="templates.contact.form.message"{%endif%}>
+                    {{ 'templates.contact.form.message' | t }}
+                  </span>
+                  <em>*</em>
+                </label>
+                <textarea rows="2" name="contact[body]" id="contactFormMessage" placeholder="{{ 'templates.contact.form.placeholder_message' | t }}"></textarea>
+              </div>
+  
+              <button type="submit" class="do-mx-auto do-my-0 do-block do-bg-black do-text-white do-px-[22px] do-py-[10px] do-uppercase do-font-medium do-border-[1px] do-border-solid hover:do-bg-white hover:do-text-black do-transition-all do-text-[14px] do-tracking-[1px]">{{ 'templates.contact.form.submit_contact' | t }}</button>
+            </div>
+            {% endform %}
+          </div>
+          
+          {% if section.settings.display_location %}
+            <div class="do-mb-[30px] md:do-mb-0 md:do-w-1/2 do-w-full contact-margin-top do-px-[15px] do-text-[14px] do-leading-[25px]">
+                {% if section.settings.location_code != blank %}
+                {% if settings.enable_multilang %}
+                <div class="location lang1">
+                {{ section.settings.location_code | split: '|' | first }}
+                </div>
+                <div class="location lang2">
+                {{ section.settings.location_code | split: '|' | last }}
+                </div>
+                {% else %}
+                <div class="location">
+                {{ section.settings.location_code | split: '|' | first }}
+                </div>
+                {% endif %}
+                {% endif %}
+                {% if section.settings.link != blank %}
+                <a href="{{ section.settings.link }}" class="btn do-bg-black do-text-white do-px-[22px] do-py-[10px] do-inline-block do-uppercase do-font-medium do-border-[1px] do-border-solid hover:do-bg-white hover:do-text-black do-transition-all">{{ section.settings.linktext }}</a>
+                {% endif %}
+            </div>
+          {% endif %}
+        </div>
+        </div>     
+      </div>
+    </div>    
+      {% if section.settings.display_google_map %}
+    <div class="map">
+      {% if section.settings.google_map_code != blank %}
+      {{ section.settings.google_map_code }}
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+  
+  
+  {% schema %}
+      {
+      "name": "Contact Page",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "display_google_map",
+          "label": "Display Google Map?",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "google_map_code",
+          "label": "Google Map Code"
+        },
+        {
+          "type": "text",
+          "id": "contact_title",
+          "label": "Title",
+          "default": "Drop Us A Line"
+        },
+        {
+          "type": "textarea",
+          "id": "contact_text_desc",
+          "label": "Text Description"
+        },
+        {
+          "type": "text",
+          "id": "contact_your_name",
+          "label": "Placeholder text in Your Name"
+        },
+        {
+          "type": "text",
+          "id": "contact_phone_number",
+          "label": "Placeholder text in Your Phone"
+        },
+        {
+          "type": "text",
+          "id": "contact_your_email",
+          "label": "Placeholder text in Your Email"
+        },
+        {
+          "type": "checkbox",
+          "id": "display_location",
+          "label": "Display Location?",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "location_code",
+          "label": "Location Code"
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Button text",
+          "default": "Request a Return"
+        }
+      ]
+    }
+  {% endschema %}
+  

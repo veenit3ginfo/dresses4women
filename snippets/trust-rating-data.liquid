@@ -1,0 +1,2098 @@
+<div id="container" class="trustapp">
+  <select id="ratingFilter">
+   <option value=" ">All ratings</option>  
+  <option value="5">5 stars</option>
+  <option value="4">4 stars</option>
+  <option value="3">3 stars</option>
+  <option value="2">2 stars</option>
+  <option value="1">1 stars</option>
+</select>
+<div class="trustreviewdata">
+        </div>
+<div id="trustpagination"></div>
+    </div>
+<script>
+const trustdataSet = [
+ {
+   "Name": "Jennifer McMillan",
+   "Title": "They do NOT have easy returns",
+   "Description": "5 days ago\nThey do NOT have easy returns\nThey do NOT have easy returns. You also have to pay a 20% restocking fee and return shipping. While every other website allows around 15-30 days to request return, they only allow 5. They shipped 2 of the dresses and then later shipped the 3rd dress b/c the one I ordered was out of stock and so they sent me a different color separate from the rest of the order. I was waiting to try on the 3rd dress before deciding which one to purchase. I went out of town and when I returned home to open the final dress and return the dresses I didn't want, I was told I couldn't b/c it was past the 5 days. Had they not shipped them separately I would've been able to fit in their tiny 5 day window :(. The whole process was inconvenient and aggravating.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Hal Val",
+   "Title": "If i could i gave them one star",
+   "Description": "Jul 8, 2022\nIf i could i gave them one star\nIf i could i gave them one star\nThey sent me wrong size and they charged me 12 dollars for shipping and deduct 20% stocking fee\nThey are scam please be aware",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "customer",
+   "Title": "A hassle",
+   "Description": "Jul 1, 2022\nA hassle\nIt took them almost 2 months to send the dress. I called them several times and the first time they said that it was a issue and that they had to check into it and get back with me. I ended up calling them again and she advised that I would receive it in 3 days weeks went by and I called again they asked me when did I need it. Smh. What difference does it make. It was a hassle dealing with them. Never again",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "LAURA MUSURAS",
+   "Title": "First time customer and even though my…",
+   "Description": "Jun 29, 2022\nFirst time customer and even though my…\nFirst time customer and even though my purchase didn’t work out they were nice enough to walk me through the return process and it was a breeze.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Mayan Muhee",
+   "Title": "The customer service is amazing",
+   "Description": "Jun 25, 2022\nThe customer service is amazing\nThe customer service is amazing. Chelsea helped me with all my questions about shipment. Highly recommend.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Amanda C",
+   "Title": "Pam was so helpful changing my shipping…",
+   "Description": "Jun 21, 2022\nPam was so helpful changing my shipping…\nPam was so helpful changing my shipping speed and helping with my needs last minute! Amazing customer service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "DENISE",
+   "Title": "Horrible 5 day return policy",
+   "Description": "Jun 20, 2022\nHorrible 5 day return policy\nThe Dress Outlet's return policy is 5 DAYS. Don't waste your time. You need more than 5 days to order from multiple websites and try dresses on in order to find the right fit and design for your event. Seriously?? What a scam.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ibis",
+   "Title": "DO NOT ORDER",
+   "Description": "Jun 18, 2022\nDO NOT ORDER\nDO NOT ORDER - Dress Outlet advertises and charges you for fast shipping. DHL worldwide was billed. They lied! Once you realize they've lied and try to get a refund, they tell you that you have to pay to send it back and only AFTER they receive it, then they will only refund you 80% of the cost of the dress!!!! A real SCAM. I wish I'd seen these other reviews before I ordered.",
+   "Rating": 1,
+   "Location": "SX"
+ },
+ {
+   "Name": "lv",
+   "Title": "NOT easy to return, and it costs you. Bad quality.",
+   "Description": "Jun 17, 2022\nNOT easy to return, and it costs you. Bad quality.\nTheir site spouts about easy returns. These returns are anything but easy. They charge a 20% restocking fee. Then, you have to pay the postage for that return as well. The form they provide for you to indicate how you want your return doesn't state where to send the dress back. When asked, I was talked to like an idiot as it was 'indicated on the form'. The address is the footer on the form. This could be headquarters, and not where they have their warehouse. How am I supposed to just guess about where to send the item when my $ back depends on sending it to the right place.\nI chose to return it because the material was very stiff and scratchy. I felt like I was wearing a mosquito net.\nDeciding not to go with this dress just cost me $50. Very disappointed.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Zan Taylor",
+   "Title": "They will ruin your special day…",
+   "Description": "May 21, 2022\nThey will ruin your special day…\nThe Dress Outlet advertises fast shipping and easy returns - not the case! I repeatedly called and emailed to assure a timely exchange for my daughter's prom dress. Very long story short, I paid for overnight delivery and they sent me the same dress size that I had returned. They then agreed to overnight me the dress in the correct size. That would be nice if the warehouse knew that UPS only delivers overnight Monday - Friday unless you check the box for a overnight weekend delivery. My daughter's prom dress arrived Monday after her prom. I have repeatedly asked for the manager to call me to explain how so many errors could have occurred. I have yet to hear from Elvia. I cannot begin to truly express my daughter's and my disappointment with the customer service we received from Trisha, Miaca, Megan and Leann. I was repeatedly told to be patient and that they were expediting the situation to the team. They will ruin your special day too!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Chloe Porter",
+   "Title": "Not worth the stress or the money",
+   "Description": "May 20, 2022\nNot worth the stress or the money\nI ordered myself a prom dress and verified beforehand with customer if the one I ordered was in stock in the colour and size I wanted. Order was confirmed and then a week later I got an email saying it was out of stock and that I’d have to pick another dress (either a different colour or there was a similar one available) was extremely dissapointed but picked a different colour.\nHowever then when messaging customer service again, turns out they can hold my payment until that dress comes back into stock. 2 weeks go by and no dice. THEN when browsing their website looking for a different dress because my prom is getting closer: they had a final sale of the exact dresses but was a size bigger. Contact customer service AGAIN and now that dress has been sent to me.\nI’d give the company slightly less than 3 stars however customer service was very helpful and my situation was dealt with very professionally and they were lovely! Fingers crossed it’s worth the £160 and three week wait\nEdit: they sent the wrong dress and I’m so unbelievably angry :)",
+   "Rating": 1,
+   "Location": "GB"
+ },
+ {
+   "Name": "Lucy Cervera",
+   "Title": "I ordered a a dress for my sons…",
+   "Description": "May 13, 2022\nI ordered a a dress for my sons…\nI ordered a a dress for my sons wedding. I had to return for 1 size up and told it was available. They received my return and when I called to check about shipping of the replacement dress they said it was out of stock. I paid freight charges to return it. Even though they could not fulfill my exchange they still charged a 20% restocking fee. Horrible business policy. Don’t buy from them!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Jenna MacKenzie",
+   "Title": "Sent me the wrong dress!!!",
+   "Description": "May 10, 2022\nSent me the wrong dress!!!\nI purchased a dress from this site for an event coming up in roughly 3 weeks. Put in for an expedited ship and everything. I'll ignore the fact that it came a day late (I get it, that happens), but they sent me THE WRONG DRESS. Item # was off by one digit. Not to mention the dress was *not* worth the amount of money it was listed for on the site. Super cheap, weird interfacing (plastic?) on the train... Just AWFUL.\nI emailed them right away, was given a return authorization number, then was completed ghosted by Tricia when I asked how they would make this right in time for my event in roughly 1.5 weeks from then. Filling out the return form, they charge a 20% restock fee--EXCUSE ME??! I DIDN'T GET THE RIGHT ITEM. I DON'T HAVE FAITH IN YOU GETTING ME THE RIGHT ITEM.\nNeedless to say, I'm pissed. I refuse to pay for this company's complete negligence. Tricia is horrible to work with, she'll completely go silent on you. Cannot rate this place low enough. AVOID THIS PLACE! DON'T GET SCREWED OVER LIKE I DID!!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "AnnEtta",
+   "Title": "We purchased a prom dress from there",
+   "Description": "May 4, 2022\nWe purchased a prom dress from there\nWe purchased a prom dress from there. It arrived with 3 major flaws even though being in plastic and with tags - rips on the side, missing hooks on the back, and straps that were missing main rhinestones. Material was very thin and crappy workmanship. We will not order from there again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Liz A",
+   "Title": "Great customer service",
+   "Description": "May 3, 2022\nGreat customer service\nGreat customer service. Chelsea was very responsive towards my question. Love the dress we bought for my daughters event. Will defintely be ordering a lot more dresses for upcoming events.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sofija Kochovska",
+   "Title": "Great customer service",
+   "Description": "May 2, 2022\nGreat customer service\nGreat customer service! I talked with Pam a few times, she helped me a lot!",
+   "Rating": 5,
+   "Location": "MK"
+ },
+ {
+   "Name": "Gaby Martell",
+   "Title": "Lack of Customer Service",
+   "Description": "May 1, 2022\nLack of Customer Service\nI bought this dress and immediately after I realized the size is not something that fits I attempted to request a new size, never received on what would be a label to return.\nSince I never seen on how to exchange (besides the fact that you always have to wait for a response for any type of exchange or what not) maybe an upgrade on the system would be helpful and would avoid these type of issues.\nI tried to return or exchange again and I can’t even get a store credit. Now I have a dress that is almost $200 sitting being useless.\nHow to improve customer service: at least allow store credit or exchanges SPECIALLY If your managing a dresses ONLINE! Keep in mind things take a while to arrive and ship and it’s not as easy to go to a store to exchange, also the fact that dresses might not fit so people have to exchange.\nWhat a steal of money.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Janice Carver Perry",
+   "Title": "LOVE MY OUTFIT!!!",
+   "Description": "May 1, 2022\nLOVE MY OUTFIT!!!\nLOVE the outfit I ordered through Amazon,but came from you. Contrary to other sites, my gorgeous outfit looks exactly like the picture. I LOVE it and will wear it proudly on my granddaughter's wedding day, May 28th. Thank you for having a trustworthy company. It arrived like it came off the rack. I will recommend you to ALL my friends!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nichole",
+   "Title": "It takes a lot for me to make a review",
+   "Description": "Apr 27, 2022\nIt takes a lot for me to make a review\nIt takes a lot for me to make a review. The Dress Outlet exceeded my expectations. I purchased my daughters prom dress and immediately received updates on shipping status. The dress matched the marketing and was beautiful! I had a question, texted the customer service (very cool option I am not yet used to) with a response within 30 seconds. Thank you for making this stressful senior year and last prom so very special!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Arishma Ashley Karan",
+   "Title": "Customer Service - Chelsea",
+   "Description": "Apr 25, 2022\nCustomer Service - Chelsea\nCustomer Service on this site is amazing. Chelsea helped me find my dress. I didn't know my measurements, so she helped me get them by providing me with advice. She helped me compare my measurements to the size guides on the site. In addition, she helped me pick out a color that would look good on my skin tone as well. Overall, very helpful and supportive customer service chat.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jennifer McMillan",
+   "Title": "They do NOT have easy returns",
+   "Description": "5 days ago\nThey do NOT have easy returns\nThey do NOT have easy returns. You also have to pay a 20% restocking fee and return shipping. While every other website allows around 15-30 days to request return, they only allow 5. They shipped 2 of the dresses and then later shipped the 3rd dress b/c the one I ordered was out of stock and so they sent me a different color separate from the rest of the order. I was waiting to try on the 3rd dress before deciding which one to purchase. I went out of town and when I returned home to open the final dress and return the dresses I didn't want, I was told I couldn't b/c it was past the 5 days. Had they not shipped them separately I would've been able to fit in their tiny 5 day window :(. The whole process was inconvenient and aggravating.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Hal Val",
+   "Title": "If i could i gave them one star",
+   "Description": "Jul 8, 2022\nIf i could i gave them one star\nIf i could i gave them one star\nThey sent me wrong size and they charged me 12 dollars for shipping and deduct 20% stocking fee\nThey are scam please be aware",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "customer",
+   "Title": "A hassle",
+   "Description": "Jul 1, 2022\nA hassle\nIt took them almost 2 months to send the dress. I called them several times and the first time they said that it was a issue and that they had to check into it and get back with me. I ended up calling them again and she advised that I would receive it in 3 days weeks went by and I called again they asked me when did I need it. Smh. What difference does it make. It was a hassle dealing with them. Never again",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "LAURA MUSURAS",
+   "Title": "First time customer and even though my…",
+   "Description": "Jun 29, 2022\nFirst time customer and even though my…\nFirst time customer and even though my purchase didn’t work out they were nice enough to walk me through the return process and it was a breeze.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Mayan Muhee",
+   "Title": "The customer service is amazing",
+   "Description": "Jun 25, 2022\nThe customer service is amazing\nThe customer service is amazing. Chelsea helped me with all my questions about shipment. Highly recommend.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Amanda C",
+   "Title": "Pam was so helpful changing my shipping…",
+   "Description": "Jun 21, 2022\nPam was so helpful changing my shipping…\nPam was so helpful changing my shipping speed and helping with my needs last minute! Amazing customer service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "DENISE",
+   "Title": "Horrible 5 day return policy",
+   "Description": "Jun 20, 2022\nHorrible 5 day return policy\nThe Dress Outlet's return policy is 5 DAYS. Don't waste your time. You need more than 5 days to order from multiple websites and try dresses on in order to find the right fit and design for your event. Seriously?? What a scam.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ibis",
+   "Title": "DO NOT ORDER",
+   "Description": "Jun 18, 2022\nDO NOT ORDER\nDO NOT ORDER - Dress Outlet advertises and charges you for fast shipping. DHL worldwide was billed. They lied! Once you realize they've lied and try to get a refund, they tell you that you have to pay to send it back and only AFTER they receive it, then they will only refund you 80% of the cost of the dress!!!! A real SCAM. I wish I'd seen these other reviews before I ordered.",
+   "Rating": 1,
+   "Location": "SX"
+ },
+ {
+   "Name": "lv",
+   "Title": "NOT easy to return, and it costs you. Bad quality.",
+   "Description": "Jun 17, 2022\nNOT easy to return, and it costs you. Bad quality.\nTheir site spouts about easy returns. These returns are anything but easy. They charge a 20% restocking fee. Then, you have to pay the postage for that return as well. The form they provide for you to indicate how you want your return doesn't state where to send the dress back. When asked, I was talked to like an idiot as it was 'indicated on the form'. The address is the footer on the form. This could be headquarters, and not where they have their warehouse. How am I supposed to just guess about where to send the item when my $ back depends on sending it to the right place.\nI chose to return it because the material was very stiff and scratchy. I felt like I was wearing a mosquito net.\nDeciding not to go with this dress just cost me $50. Very disappointed.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Zan Taylor",
+   "Title": "They will ruin your special day…",
+   "Description": "May 21, 2022\nThey will ruin your special day…\nThe Dress Outlet advertises fast shipping and easy returns - not the case! I repeatedly called and emailed to assure a timely exchange for my daughter's prom dress. Very long story short, I paid for overnight delivery and they sent me the same dress size that I had returned. They then agreed to overnight me the dress in the correct size. That would be nice if the warehouse knew that UPS only delivers overnight Monday - Friday unless you check the box for a overnight weekend delivery. My daughter's prom dress arrived Monday after her prom. I have repeatedly asked for the manager to call me to explain how so many errors could have occurred. I have yet to hear from Elvia. I cannot begin to truly express my daughter's and my disappointment with the customer service we received from Trisha, Miaca, Megan and Leann. I was repeatedly told to be patient and that they were expediting the situation to the team. They will ruin your special day too!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Chloe Porter",
+   "Title": "Not worth the stress or the money",
+   "Description": "May 20, 2022\nNot worth the stress or the money\nI ordered myself a prom dress and verified beforehand with customer if the one I ordered was in stock in the colour and size I wanted. Order was confirmed and then a week later I got an email saying it was out of stock and that I’d have to pick another dress (either a different colour or there was a similar one available) was extremely dissapointed but picked a different colour.\nHowever then when messaging customer service again, turns out they can hold my payment until that dress comes back into stock. 2 weeks go by and no dice. THEN when browsing their website looking for a different dress because my prom is getting closer: they had a final sale of the exact dresses but was a size bigger. Contact customer service AGAIN and now that dress has been sent to me.\nI’d give the company slightly less than 3 stars however customer service was very helpful and my situation was dealt with very professionally and they were lovely! Fingers crossed it’s worth the £160 and three week wait\nEdit: they sent the wrong dress and I’m so unbelievably angry :)",
+   "Rating": 1,
+   "Location": "GB"
+ },
+ {
+   "Name": "Lucy Cervera",
+   "Title": "I ordered a a dress for my sons…",
+   "Description": "May 13, 2022\nI ordered a a dress for my sons…\nI ordered a a dress for my sons wedding. I had to return for 1 size up and told it was available. They received my return and when I called to check about shipping of the replacement dress they said it was out of stock. I paid freight charges to return it. Even though they could not fulfill my exchange they still charged a 20% restocking fee. Horrible business policy. Don’t buy from them!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Jenna MacKenzie",
+   "Title": "Sent me the wrong dress!!!",
+   "Description": "May 10, 2022\nSent me the wrong dress!!!\nI purchased a dress from this site for an event coming up in roughly 3 weeks. Put in for an expedited ship and everything. I'll ignore the fact that it came a day late (I get it, that happens), but they sent me THE WRONG DRESS. Item # was off by one digit. Not to mention the dress was *not* worth the amount of money it was listed for on the site. Super cheap, weird interfacing (plastic?) on the train... Just AWFUL.\nI emailed them right away, was given a return authorization number, then was completed ghosted by Tricia when I asked how they would make this right in time for my event in roughly 1.5 weeks from then. Filling out the return form, they charge a 20% restock fee--EXCUSE ME??! I DIDN'T GET THE RIGHT ITEM. I DON'T HAVE FAITH IN YOU GETTING ME THE RIGHT ITEM.\nNeedless to say, I'm pissed. I refuse to pay for this company's complete negligence. Tricia is horrible to work with, she'll completely go silent on you. Cannot rate this place low enough. AVOID THIS PLACE! DON'T GET SCREWED OVER LIKE I DID!!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "AnnEtta",
+   "Title": "We purchased a prom dress from there",
+   "Description": "May 4, 2022\nWe purchased a prom dress from there\nWe purchased a prom dress from there. It arrived with 3 major flaws even though being in plastic and with tags - rips on the side, missing hooks on the back, and straps that were missing main rhinestones. Material was very thin and crappy workmanship. We will not order from there again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Liz A",
+   "Title": "Great customer service",
+   "Description": "May 3, 2022\nGreat customer service\nGreat customer service. Chelsea was very responsive towards my question. Love the dress we bought for my daughters event. Will defintely be ordering a lot more dresses for upcoming events.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sofija Kochovska",
+   "Title": "Great customer service",
+   "Description": "May 2, 2022\nGreat customer service\nGreat customer service! I talked with Pam a few times, she helped me a lot!",
+   "Rating": 5,
+   "Location": "MK"
+ },
+ {
+   "Name": "Gaby Martell",
+   "Title": "Lack of Customer Service",
+   "Description": "May 1, 2022\nLack of Customer Service\nI bought this dress and immediately after I realized the size is not something that fits I attempted to request a new size, never received on what would be a label to return.\nSince I never seen on how to exchange (besides the fact that you always have to wait for a response for any type of exchange or what not) maybe an upgrade on the system would be helpful and would avoid these type of issues.\nI tried to return or exchange again and I can’t even get a store credit. Now I have a dress that is almost $200 sitting being useless.\nHow to improve customer service: at least allow store credit or exchanges SPECIALLY If your managing a dresses ONLINE! Keep in mind things take a while to arrive and ship and it’s not as easy to go to a store to exchange, also the fact that dresses might not fit so people have to exchange.\nWhat a steal of money.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Janice Carver Perry",
+   "Title": "LOVE MY OUTFIT!!!",
+   "Description": "May 1, 2022\nLOVE MY OUTFIT!!!\nLOVE the outfit I ordered through Amazon,but came from you. Contrary to other sites, my gorgeous outfit looks exactly like the picture. I LOVE it and will wear it proudly on my granddaughter's wedding day, May 28th. Thank you for having a trustworthy company. It arrived like it came off the rack. I will recommend you to ALL my friends!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nichole",
+   "Title": "It takes a lot for me to make a review",
+   "Description": "Apr 27, 2022\nIt takes a lot for me to make a review\nIt takes a lot for me to make a review. The Dress Outlet exceeded my expectations. I purchased my daughters prom dress and immediately received updates on shipping status. The dress matched the marketing and was beautiful! I had a question, texted the customer service (very cool option I am not yet used to) with a response within 30 seconds. Thank you for making this stressful senior year and last prom so very special!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Arishma Ashley Karan",
+   "Title": "Customer Service - Chelsea",
+   "Description": "Apr 25, 2022\nCustomer Service - Chelsea\nCustomer Service on this site is amazing. Chelsea helped me find my dress. I didn't know my measurements, so she helped me get them by providing me with advice. She helped me compare my measurements to the size guides on the site. In addition, she helped me pick out a color that would look good on my skin tone as well. Overall, very helpful and supportive customer service chat.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Diana",
+   "Title": "I needed help in ordering a dress and…",
+   "Description": "Apr 11, 2022\nI needed help in ordering a dress and…\nI needed help in ordering a dress and sizing. Customer service Representative Taylor was amazing she helped until the end of my order. Now just wish it comes on time. Thank you! :)",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "nicole aguilera",
+   "Title": "good customer service",
+   "Description": "Apr 8, 2022\ngood customer service\nI talked to a woman named, Pam. she was very sweet and helped me make sure my order was processed because i’ve had many issues in the past with other companies so i wanted to make sure my dress was ordered. thank you!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Shanz Prince",
+   "Title": "Great customer service",
+   "Description": "Apr 5, 2022\nGreat customer service",
+   "Rating": 5,
+   "Location": "AG"
+ },
+ {
+   "Name": "Hongsie Y",
+   "Title": "Thumbs up!!",
+   "Description": "Mar 27, 2022\nThumbs up!!\nI came across The Dress Outlet website whilst browsing for evening gowns. I wasn't sure if there's delivery to my country which is in South East Asia. So i decided to write in. Surprisingly, the response was very prompt. I placed my order & paid. However i forgot to use the welcome voucher of 15% discount. So i wrote to Tricia again to check if i would still qualify for the discount. I saw an email notification that a refund of the amount of discount gave been credited to me. Thank you so much!! I'm eagerly looking forward to the arrival of the parcel.",
+   "Rating": 5,
+   "Location": "MY"
+ },
+ {
+   "Name": "Vickey A",
+   "Title": "Unbelievable prices, quality and selection!",
+   "Description": "Mar 26, 2022\nUnbelievable prices, quality and selection!\nI needed a dress for a friend’s daughter’s wedding and was dreading paying a hefty price for something I probably wouldn’t wear again. When I found thedressoutlet.com site I saw a dress I had bought for my own daughter’s wedding for less than half the price I paid. It made me check them out further. I then saw 4 dresses that I really liked and the prices were so good I thought I would take a chance. What I was expecting to pay for one dress was what it cost me for those four. They all came within a week and three were just gorgeous! Excellent quality too. I love them soooo much. One had a flaw and when I notified the company through email late on a Saturday night they responded within an hour. I sent them photos and they sent me a return label shortly after. This company’s customer service was top notch. I can’t say enough about them and am telling all my friends to check them out!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Mary Abbott",
+   "Title": "Just ordered my dress from The Dress…",
+   "Description": "Mar 25, 2022\nJust ordered my dress from The Dress…\nJust ordered my dress from The Dress Outlet. I signed up to get the coupon and had not yet received it so I started the chat and Pam helped me. She was so good with her advice and help. She explained everything to me, was very patient and applied my coupon! Success! I cannot wait to see this dress! One more item checked off the list!!! Thank you Pam!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Idee Folami",
+   "Title": "Online assistance for my order placement",
+   "Description": "Mar 14, 2022\nOnline assistance for my order placement\nI have just placed a couple of orders on dressoutlet.com. I am not very techy with online shopping but I got some well needed assistance from Chelsea through the chat. Chelsea also refunded me the 15% first time purchase which I forgot to use at checkout. The immediate assistance for my order placement and guidance is very much appreciated. This order is to Canada so I cannot speak to the delivery promptness and duties/customs etc until I receive the order. Overall I am pleased with the service I have received on this site today. I pray my order comes on time and is as shown on the page. Thank you Chelsea for your assistance.",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "aurel Durrant",
+   "Title": "Great job",
+   "Description": "Mar 13, 2022\nGreat job\nI just finished working with Taylor, it was a great experience. The patience shown and the way I was treated made me aware that Taylor was a professional.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jess R maid of honor",
+   "Title": "Save yourself the headache and order elsewhere",
+   "Description": "Updated Mar 12, 2022\nSave yourself the headache and order elsewhere\nSave yourself the trouble and get your dress somewhere else. I am a maid of honor for my friend's wedding. I was originally excited to receive my dress. When I got it a huge string inbetween the mesh was still attached and showing. Wanted to return it, very noticeable. THEY TOLD ME TO TAKE A NEEDLE AND PULL IT THOUGH!! It would ruin the mesh completely if I did. Now they won't return it full price nor pay for shipping. They suggested store credit which would be fine but I never wanted to interact with this company again. They are just trying to save a dollar anywhere they can. DO NOT ORDER.... RUN! Not worth the time, energy, or the headache. Do not talk Tricia, you will have a conversation that goes in circles.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Heather Moore",
+   "Title": "Great experience",
+   "Description": "Mar 11, 2022\nGreat experience\nGreat experience! Excellent customer service and gorgeous dresses.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Linda Landers",
+   "Title": "GORGEOUS",
+   "Description": "Mar 8, 2022\nGORGEOUS\nReceived my daughters' dress today-absolutely beautiful-was a little big. I contacted customer service and chatted with Chelsea who walked me through what steps I needed to take to exchange the dress and helped me with the sizing. Wonerful customer service and gorgeous dresses..thank you Dress Outlet",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Noemi Espinal",
+   "Title": "Taylor's service is amazing!",
+   "Description": "Mar 7, 2022\nTaylor's service is amazing!\nTaylor from Customer Service Is excellent. I ordered the wrong color dress and she fixed it right up for me. I need it for a soon event and I needed Royal Blue! and I accidentally ordered navy. She changed the order for me and made my night! Thank you!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "jennifer",
+   "Title": "I purchased a dress online for my daughters wedding",
+   "Description": "Mar 5, 2022\nI purchased a dress online for my daughters wedding\nI purchased a dress online for my daughters wedding from The Dress Outlet.. It was just as in the picture.. Stunning and I received compliment after compliment. It was a perfect fit and I felt amazing in it.. I have just purchased another dress and am looking forward to its arrival 🙂\nJennifer Republic of Ireland 🇮🇪",
+   "Rating": 5,
+   "Location": "IE"
+ },
+ {
+   "Name": "Lady in Red",
+   "Title": "Customer service's desire to please",
+   "Description": "Mar 5, 2022\nCustomer service's desire to please\nI'm writing this review PRIOR to knowing if they will do what they said. I've been told that my issue would be resolved. If they do indeed follow through with what was agreed upon, then I can say it told some time, (2 days and three different staff members,) but they did refuse to let the ball be dropped. At this point, I am happy. Two or three weeks from now remains to be seen.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Julia Abouzeid",
+   "Title": "Customer Service is exceptional",
+   "Description": "Mar 5, 2022\nCustomer Service is exceptional\nI’m always worried about buying clothes online but The Dress Outlet made it extremely easy. Their customer service is amazing. My size wasn’t available so within an hour I received an email with options of colors that were in my size. I’ll be shopping online with them again!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cynthia",
+   "Title": "EXCELLENT",
+   "Description": "Mar 1, 2022\nEXCELLENT\nThe team at the dress outlet is amazing. I was hesitant to purchase a designer dress online but after seeing The Dress Outlet listed on the designer's site I went ahead. I was able to easily search size charts and while I ordered a size too big, the exchange policy was simple. I received my exchange within a few days and it is PERFECT. The service I received throughout was what you'd expect from a high end store without the aggravation of being in a store. I will purchase from them in the future and would highly recommend them.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Ceil Stolper",
+   "Title": "KUDOS FOR TAYLOR",
+   "Description": "Updated Feb 27, 2022\nKUDOS FOR TAYLOR\nI ordered a pants outfit and was supposed to get a discount. However not being computer savy, I did not see the discount when it gave me the total. I went to chat and spoke to Taylor. She tried to help me and was very patient and courteous. She wanted to take my order and by the time we got to that, the size was no longer available. However I said if I find something else I will ask her to order it for me. I thanked her. Nice to have someone to chat with if problems occur. By the way, I did not like the return policy. I like to get credit back on my credit card. Not store credit.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Danielle",
+   "Title": "Terrible experience with this company",
+   "Description": "Feb 25, 2022\nTerrible experience with this company\nTerrible experience with this company. My family and I picked out two potential dresses for my grandmother to wear at her funeral. She specifically wanted a salmon gown and we wanted to honor her wish. We made the purchase on Saturday and paid extra for 3 day shipping as it was needed by Wednesday by the funeral home. It arrived on Thursday. The funeral home was willing to work with us but we did find a replacement \"just in case\" and I reached out to the company to get reimbursed only for the 3 day shipped we paid for. They would not reimburse us. I let them know I wanted to return both and asked for a call tag. No call tags are given AND they charge a 20% re stocking fee... apparently to keep \"prices low\" .. low being $100 a piece. I will never work with this company again and I hope if you are in a crunch for time you steer clear. Obviously the sizing didnt matter much here but IF the sizes didnt fit I cant imagine paying 20% restocking just to return a dress. absolutely terrible experience during a really tough time in our lives.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Julianna Wiessner",
+   "Title": "I am extremely disappointed in your…",
+   "Description": "Feb 25, 2022\nI am extremely disappointed in your…\nI am extremely disappointed in your return policy.\nI recently purchased two gowns and kept the R&M Richards dress and returned the Dylan and David dress. Your policy has cost me 20% of the dress payment and I also had to lay out for return shipping of $24. I ordered 8 dresses online from various vendors. Not a single one penalized me in this way. You say it's because this is how you offer low prices? Not true - the same dress is less than $10 more on Amazon. If I'd purchased it there I would have saved the $30 of the $40 dollars I have laid out. I recently recommended you to some friends and have since texted them to not use your site.",
+   "Rating": 2,
+   "Location": "US"
+ },
+ {
+   "Name": "Eve McMahon-bell",
+   "Title": "Tricia and Leann from customer service…",
+   "Description": "Feb 22, 2022\nTricia and Leann from customer service…\nTricia and Leann from customer service were very helpful!",
+   "Rating": 5,
+   "Location": "GB"
+ },
+ {
+   "Name": "Jennifer McMillan",
+   "Title": "They do NOT have easy returns",
+   "Description": "5 days ago\nThey do NOT have easy returns\nThey do NOT have easy returns. You also have to pay a 20% restocking fee and return shipping. While every other website allows around 15-30 days to request return, they only allow 5. They shipped 2 of the dresses and then later shipped the 3rd dress b/c the one I ordered was out of stock and so they sent me a different color separate from the rest of the order. I was waiting to try on the 3rd dress before deciding which one to purchase. I went out of town and when I returned home to open the final dress and return the dresses I didn't want, I was told I couldn't b/c it was past the 5 days. Had they not shipped them separately I would've been able to fit in their tiny 5 day window :(. The whole process was inconvenient and aggravating.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Hal Val",
+   "Title": "If i could i gave them one star",
+   "Description": "Jul 8, 2022\nIf i could i gave them one star\nIf i could i gave them one star\nThey sent me wrong size and they charged me 12 dollars for shipping and deduct 20% stocking fee\nThey are scam please be aware",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "customer",
+   "Title": "A hassle",
+   "Description": "Jul 1, 2022\nA hassle\nIt took them almost 2 months to send the dress. I called them several times and the first time they said that it was a issue and that they had to check into it and get back with me. I ended up calling them again and she advised that I would receive it in 3 days weeks went by and I called again they asked me when did I need it. Smh. What difference does it make. It was a hassle dealing with them. Never again",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "LAURA MUSURAS",
+   "Title": "First time customer and even though my…",
+   "Description": "Jun 29, 2022\nFirst time customer and even though my…\nFirst time customer and even though my purchase didn’t work out they were nice enough to walk me through the return process and it was a breeze.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Mayan Muhee",
+   "Title": "The customer service is amazing",
+   "Description": "Jun 25, 2022\nThe customer service is amazing\nThe customer service is amazing. Chelsea helped me with all my questions about shipment. Highly recommend.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Amanda C",
+   "Title": "Pam was so helpful changing my shipping…",
+   "Description": "Jun 21, 2022\nPam was so helpful changing my shipping…\nPam was so helpful changing my shipping speed and helping with my needs last minute! Amazing customer service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "DENISE",
+   "Title": "Horrible 5 day return policy",
+   "Description": "Jun 20, 2022\nHorrible 5 day return policy\nThe Dress Outlet's return policy is 5 DAYS. Don't waste your time. You need more than 5 days to order from multiple websites and try dresses on in order to find the right fit and design for your event. Seriously?? What a scam.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ibis",
+   "Title": "DO NOT ORDER",
+   "Description": "Jun 18, 2022\nDO NOT ORDER\nDO NOT ORDER - Dress Outlet advertises and charges you for fast shipping. DHL worldwide was billed. They lied! Once you realize they've lied and try to get a refund, they tell you that you have to pay to send it back and only AFTER they receive it, then they will only refund you 80% of the cost of the dress!!!! A real SCAM. I wish I'd seen these other reviews before I ordered.",
+   "Rating": 1,
+   "Location": "SX"
+ },
+ {
+   "Name": "lv",
+   "Title": "NOT easy to return, and it costs you. Bad quality.",
+   "Description": "Jun 17, 2022\nNOT easy to return, and it costs you. Bad quality.\nTheir site spouts about easy returns. These returns are anything but easy. They charge a 20% restocking fee. Then, you have to pay the postage for that return as well. The form they provide for you to indicate how you want your return doesn't state where to send the dress back. When asked, I was talked to like an idiot as it was 'indicated on the form'. The address is the footer on the form. This could be headquarters, and not where they have their warehouse. How am I supposed to just guess about where to send the item when my $ back depends on sending it to the right place.\nI chose to return it because the material was very stiff and scratchy. I felt like I was wearing a mosquito net.\nDeciding not to go with this dress just cost me $50. Very disappointed.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Zan Taylor",
+   "Title": "They will ruin your special day…",
+   "Description": "May 21, 2022\nThey will ruin your special day…\nThe Dress Outlet advertises fast shipping and easy returns - not the case! I repeatedly called and emailed to assure a timely exchange for my daughter's prom dress. Very long story short, I paid for overnight delivery and they sent me the same dress size that I had returned. They then agreed to overnight me the dress in the correct size. That would be nice if the warehouse knew that UPS only delivers overnight Monday - Friday unless you check the box for a overnight weekend delivery. My daughter's prom dress arrived Monday after her prom. I have repeatedly asked for the manager to call me to explain how so many errors could have occurred. I have yet to hear from Elvia. I cannot begin to truly express my daughter's and my disappointment with the customer service we received from Trisha, Miaca, Megan and Leann. I was repeatedly told to be patient and that they were expediting the situation to the team. They will ruin your special day too!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Chloe Porter",
+   "Title": "Not worth the stress or the money",
+   "Description": "May 20, 2022\nNot worth the stress or the money\nI ordered myself a prom dress and verified beforehand with customer if the one I ordered was in stock in the colour and size I wanted. Order was confirmed and then a week later I got an email saying it was out of stock and that I’d have to pick another dress (either a different colour or there was a similar one available) was extremely dissapointed but picked a different colour.\nHowever then when messaging customer service again, turns out they can hold my payment until that dress comes back into stock. 2 weeks go by and no dice. THEN when browsing their website looking for a different dress because my prom is getting closer: they had a final sale of the exact dresses but was a size bigger. Contact customer service AGAIN and now that dress has been sent to me.\nI’d give the company slightly less than 3 stars however customer service was very helpful and my situation was dealt with very professionally and they were lovely! Fingers crossed it’s worth the £160 and three week wait\nEdit: they sent the wrong dress and I’m so unbelievably angry :)",
+   "Rating": 1,
+   "Location": "GB"
+ },
+ {
+   "Name": "Lucy Cervera",
+   "Title": "I ordered a a dress for my sons…",
+   "Description": "May 13, 2022\nI ordered a a dress for my sons…\nI ordered a a dress for my sons wedding. I had to return for 1 size up and told it was available. They received my return and when I called to check about shipping of the replacement dress they said it was out of stock. I paid freight charges to return it. Even though they could not fulfill my exchange they still charged a 20% restocking fee. Horrible business policy. Don’t buy from them!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Jenna MacKenzie",
+   "Title": "Sent me the wrong dress!!!",
+   "Description": "May 10, 2022\nSent me the wrong dress!!!\nI purchased a dress from this site for an event coming up in roughly 3 weeks. Put in for an expedited ship and everything. I'll ignore the fact that it came a day late (I get it, that happens), but they sent me THE WRONG DRESS. Item # was off by one digit. Not to mention the dress was *not* worth the amount of money it was listed for on the site. Super cheap, weird interfacing (plastic?) on the train... Just AWFUL.\nI emailed them right away, was given a return authorization number, then was completed ghosted by Tricia when I asked how they would make this right in time for my event in roughly 1.5 weeks from then. Filling out the return form, they charge a 20% restock fee--EXCUSE ME??! I DIDN'T GET THE RIGHT ITEM. I DON'T HAVE FAITH IN YOU GETTING ME THE RIGHT ITEM.\nNeedless to say, I'm pissed. I refuse to pay for this company's complete negligence. Tricia is horrible to work with, she'll completely go silent on you. Cannot rate this place low enough. AVOID THIS PLACE! DON'T GET SCREWED OVER LIKE I DID!!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "AnnEtta",
+   "Title": "We purchased a prom dress from there",
+   "Description": "May 4, 2022\nWe purchased a prom dress from there\nWe purchased a prom dress from there. It arrived with 3 major flaws even though being in plastic and with tags - rips on the side, missing hooks on the back, and straps that were missing main rhinestones. Material was very thin and crappy workmanship. We will not order from there again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Liz A",
+   "Title": "Great customer service",
+   "Description": "May 3, 2022\nGreat customer service\nGreat customer service. Chelsea was very responsive towards my question. Love the dress we bought for my daughters event. Will defintely be ordering a lot more dresses for upcoming events.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sofija Kochovska",
+   "Title": "Great customer service",
+   "Description": "May 2, 2022\nGreat customer service\nGreat customer service! I talked with Pam a few times, she helped me a lot!",
+   "Rating": 5,
+   "Location": "MK"
+ },
+ {
+   "Name": "Gaby Martell",
+   "Title": "Lack of Customer Service",
+   "Description": "May 1, 2022\nLack of Customer Service\nI bought this dress and immediately after I realized the size is not something that fits I attempted to request a new size, never received on what would be a label to return.\nSince I never seen on how to exchange (besides the fact that you always have to wait for a response for any type of exchange or what not) maybe an upgrade on the system would be helpful and would avoid these type of issues.\nI tried to return or exchange again and I can’t even get a store credit. Now I have a dress that is almost $200 sitting being useless.\nHow to improve customer service: at least allow store credit or exchanges SPECIALLY If your managing a dresses ONLINE! Keep in mind things take a while to arrive and ship and it’s not as easy to go to a store to exchange, also the fact that dresses might not fit so people have to exchange.\nWhat a steal of money.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Janice Carver Perry",
+   "Title": "LOVE MY OUTFIT!!!",
+   "Description": "May 1, 2022\nLOVE MY OUTFIT!!!\nLOVE the outfit I ordered through Amazon,but came from you. Contrary to other sites, my gorgeous outfit looks exactly like the picture. I LOVE it and will wear it proudly on my granddaughter's wedding day, May 28th. Thank you for having a trustworthy company. It arrived like it came off the rack. I will recommend you to ALL my friends!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nichole",
+   "Title": "It takes a lot for me to make a review",
+   "Description": "Apr 27, 2022\nIt takes a lot for me to make a review\nIt takes a lot for me to make a review. The Dress Outlet exceeded my expectations. I purchased my daughters prom dress and immediately received updates on shipping status. The dress matched the marketing and was beautiful! I had a question, texted the customer service (very cool option I am not yet used to) with a response within 30 seconds. Thank you for making this stressful senior year and last prom so very special!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Arishma Ashley Karan",
+   "Title": "Customer Service - Chelsea",
+   "Description": "Apr 25, 2022\nCustomer Service - Chelsea\nCustomer Service on this site is amazing. Chelsea helped me find my dress. I didn't know my measurements, so she helped me get them by providing me with advice. She helped me compare my measurements to the size guides on the site. In addition, she helped me pick out a color that would look good on my skin tone as well. Overall, very helpful and supportive customer service chat.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Diana",
+   "Title": "I needed help in ordering a dress and…",
+   "Description": "Apr 11, 2022\nI needed help in ordering a dress and…\nI needed help in ordering a dress and sizing. Customer service Representative Taylor was amazing she helped until the end of my order. Now just wish it comes on time. Thank you! :)",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "nicole aguilera",
+   "Title": "good customer service",
+   "Description": "Apr 8, 2022\ngood customer service\nI talked to a woman named, Pam. she was very sweet and helped me make sure my order was processed because i’ve had many issues in the past with other companies so i wanted to make sure my dress was ordered. thank you!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Shanz Prince",
+   "Title": "Great customer service",
+   "Description": "Apr 5, 2022\nGreat customer service",
+   "Rating": 5,
+   "Location": "AG"
+ },
+ {
+   "Name": "Hongsie Y",
+   "Title": "Thumbs up!!",
+   "Description": "Mar 27, 2022\nThumbs up!!\nI came across The Dress Outlet website whilst browsing for evening gowns. I wasn't sure if there's delivery to my country which is in South East Asia. So i decided to write in. Surprisingly, the response was very prompt. I placed my order & paid. However i forgot to use the welcome voucher of 15% discount. So i wrote to Tricia again to check if i would still qualify for the discount. I saw an email notification that a refund of the amount of discount gave been credited to me. Thank you so much!! I'm eagerly looking forward to the arrival of the parcel.",
+   "Rating": 5,
+   "Location": "MY"
+ },
+ {
+   "Name": "Vickey A",
+   "Title": "Unbelievable prices, quality and selection!",
+   "Description": "Mar 26, 2022\nUnbelievable prices, quality and selection!\nI needed a dress for a friend’s daughter’s wedding and was dreading paying a hefty price for something I probably wouldn’t wear again. When I found thedressoutlet.com site I saw a dress I had bought for my own daughter’s wedding for less than half the price I paid. It made me check them out further. I then saw 4 dresses that I really liked and the prices were so good I thought I would take a chance. What I was expecting to pay for one dress was what it cost me for those four. They all came within a week and three were just gorgeous! Excellent quality too. I love them soooo much. One had a flaw and when I notified the company through email late on a Saturday night they responded within an hour. I sent them photos and they sent me a return label shortly after. This company’s customer service was top notch. I can’t say enough about them and am telling all my friends to check them out!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Mary Abbott",
+   "Title": "Just ordered my dress from The Dress…",
+   "Description": "Mar 25, 2022\nJust ordered my dress from The Dress…\nJust ordered my dress from The Dress Outlet. I signed up to get the coupon and had not yet received it so I started the chat and Pam helped me. She was so good with her advice and help. She explained everything to me, was very patient and applied my coupon! Success! I cannot wait to see this dress! One more item checked off the list!!! Thank you Pam!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Idee Folami",
+   "Title": "Online assistance for my order placement",
+   "Description": "Mar 14, 2022\nOnline assistance for my order placement\nI have just placed a couple of orders on dressoutlet.com. I am not very techy with online shopping but I got some well needed assistance from Chelsea through the chat. Chelsea also refunded me the 15% first time purchase which I forgot to use at checkout. The immediate assistance for my order placement and guidance is very much appreciated. This order is to Canada so I cannot speak to the delivery promptness and duties/customs etc until I receive the order. Overall I am pleased with the service I have received on this site today. I pray my order comes on time and is as shown on the page. Thank you Chelsea for your assistance.",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "aurel Durrant",
+   "Title": "Great job",
+   "Description": "Mar 13, 2022\nGreat job\nI just finished working with Taylor, it was a great experience. The patience shown and the way I was treated made me aware that Taylor was a professional.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jess R maid of honor",
+   "Title": "Save yourself the headache and order elsewhere",
+   "Description": "Updated Mar 12, 2022\nSave yourself the headache and order elsewhere\nSave yourself the trouble and get your dress somewhere else. I am a maid of honor for my friend's wedding. I was originally excited to receive my dress. When I got it a huge string inbetween the mesh was still attached and showing. Wanted to return it, very noticeable. THEY TOLD ME TO TAKE A NEEDLE AND PULL IT THOUGH!! It would ruin the mesh completely if I did. Now they won't return it full price nor pay for shipping. They suggested store credit which would be fine but I never wanted to interact with this company again. They are just trying to save a dollar anywhere they can. DO NOT ORDER.... RUN! Not worth the time, energy, or the headache. Do not talk Tricia, you will have a conversation that goes in circles.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Heather Moore",
+   "Title": "Great experience",
+   "Description": "Mar 11, 2022\nGreat experience\nGreat experience! Excellent customer service and gorgeous dresses.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Linda Landers",
+   "Title": "GORGEOUS",
+   "Description": "Mar 8, 2022\nGORGEOUS\nReceived my daughters' dress today-absolutely beautiful-was a little big. I contacted customer service and chatted with Chelsea who walked me through what steps I needed to take to exchange the dress and helped me with the sizing. Wonerful customer service and gorgeous dresses..thank you Dress Outlet",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Noemi Espinal",
+   "Title": "Taylor's service is amazing!",
+   "Description": "Mar 7, 2022\nTaylor's service is amazing!\nTaylor from Customer Service Is excellent. I ordered the wrong color dress and she fixed it right up for me. I need it for a soon event and I needed Royal Blue! and I accidentally ordered navy. She changed the order for me and made my night! Thank you!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "jennifer",
+   "Title": "I purchased a dress online for my daughters wedding",
+   "Description": "Mar 5, 2022\nI purchased a dress online for my daughters wedding\nI purchased a dress online for my daughters wedding from The Dress Outlet.. It was just as in the picture.. Stunning and I received compliment after compliment. It was a perfect fit and I felt amazing in it.. I have just purchased another dress and am looking forward to its arrival 🙂\nJennifer Republic of Ireland 🇮🇪",
+   "Rating": 5,
+   "Location": "IE"
+ },
+ {
+   "Name": "Lady in Red",
+   "Title": "Customer service's desire to please",
+   "Description": "Mar 5, 2022\nCustomer service's desire to please\nI'm writing this review PRIOR to knowing if they will do what they said. I've been told that my issue would be resolved. If they do indeed follow through with what was agreed upon, then I can say it told some time, (2 days and three different staff members,) but they did refuse to let the ball be dropped. At this point, I am happy. Two or three weeks from now remains to be seen.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Julia Abouzeid",
+   "Title": "Customer Service is exceptional",
+   "Description": "Mar 5, 2022\nCustomer Service is exceptional\nI’m always worried about buying clothes online but The Dress Outlet made it extremely easy. Their customer service is amazing. My size wasn’t available so within an hour I received an email with options of colors that were in my size. I’ll be shopping online with them again!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cynthia",
+   "Title": "EXCELLENT",
+   "Description": "Mar 1, 2022\nEXCELLENT\nThe team at the dress outlet is amazing. I was hesitant to purchase a designer dress online but after seeing The Dress Outlet listed on the designer's site I went ahead. I was able to easily search size charts and while I ordered a size too big, the exchange policy was simple. I received my exchange within a few days and it is PERFECT. The service I received throughout was what you'd expect from a high end store without the aggravation of being in a store. I will purchase from them in the future and would highly recommend them.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Ceil Stolper",
+   "Title": "KUDOS FOR TAYLOR",
+   "Description": "Updated Feb 27, 2022\nKUDOS FOR TAYLOR\nI ordered a pants outfit and was supposed to get a discount. However not being computer savy, I did not see the discount when it gave me the total. I went to chat and spoke to Taylor. She tried to help me and was very patient and courteous. She wanted to take my order and by the time we got to that, the size was no longer available. However I said if I find something else I will ask her to order it for me. I thanked her. Nice to have someone to chat with if problems occur. By the way, I did not like the return policy. I like to get credit back on my credit card. Not store credit.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Danielle",
+   "Title": "Terrible experience with this company",
+   "Description": "Feb 25, 2022\nTerrible experience with this company\nTerrible experience with this company. My family and I picked out two potential dresses for my grandmother to wear at her funeral. She specifically wanted a salmon gown and we wanted to honor her wish. We made the purchase on Saturday and paid extra for 3 day shipping as it was needed by Wednesday by the funeral home. It arrived on Thursday. The funeral home was willing to work with us but we did find a replacement \"just in case\" and I reached out to the company to get reimbursed only for the 3 day shipped we paid for. They would not reimburse us. I let them know I wanted to return both and asked for a call tag. No call tags are given AND they charge a 20% re stocking fee... apparently to keep \"prices low\" .. low being $100 a piece. I will never work with this company again and I hope if you are in a crunch for time you steer clear. Obviously the sizing didnt matter much here but IF the sizes didnt fit I cant imagine paying 20% restocking just to return a dress. absolutely terrible experience during a really tough time in our lives.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Julianna Wiessner",
+   "Title": "I am extremely disappointed in your…",
+   "Description": "Feb 25, 2022\nI am extremely disappointed in your…\nI am extremely disappointed in your return policy.\nI recently purchased two gowns and kept the R&M Richards dress and returned the Dylan and David dress. Your policy has cost me 20% of the dress payment and I also had to lay out for return shipping of $24. I ordered 8 dresses online from various vendors. Not a single one penalized me in this way. You say it's because this is how you offer low prices? Not true - the same dress is less than $10 more on Amazon. If I'd purchased it there I would have saved the $30 of the $40 dollars I have laid out. I recently recommended you to some friends and have since texted them to not use your site.",
+   "Rating": 2,
+   "Location": "US"
+ },
+ {
+   "Name": "Eve McMahon-bell",
+   "Title": "Tricia and Leann from customer service…",
+   "Description": "Feb 22, 2022\nTricia and Leann from customer service…\nTricia and Leann from customer service were very helpful!",
+   "Rating": 5,
+   "Location": "GB"
+ },
+ {
+   "Name": "Alice Andre-Soares",
+   "Title": "was speaking to Chelsea on their chat…",
+   "Description": "Updated Feb 22, 2022\nwas speaking to Chelsea on their chat…\nwas speaking to Chelsea on their chat line and she was so patient and kind with me. I thought I had submitted a return/exchange and she confirmed I did not and she walked me through it. The best part was my laptop died and when I got restarted it was still her that was communicating with me. I did not have to go through the whole process of explaining again, we just continued where we left off. Keep up the great work! Thanks-D.M.",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "Elba Espinal",
+   "Title": "excellent person Leann helped me…",
+   "Description": "Feb 16, 2022\nexcellent person Leann helped me…\nexcellent person Leann helped me immediately I am happy",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nicole",
+   "Title": "SHORT RETURN POLICY",
+   "Description": "Feb 13, 2022\nSHORT RETURN POLICY\nI was outside of the return policy which is very ridiculously short (5 days return policy). I am now stuck w/ a dress that does not fit. I would have considered a store credit but they would not even give me that. I was ok to pay the restocking fee but still no refund. I can't say anything positive about a store who won't accommodate a first time (now last time) customer",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Maddie Norwood-Bailey",
+   "Title": "Customer Service 👍👍",
+   "Description": "Feb 10, 2022\nCustomer Service 👍👍\nTaylor is amazing and kinda knew exactly what I needed to look for. She have me options to choose from and was so sweet and kind. 10/10 would definitely do again.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Alexia Rahn",
+   "Title": "this is a really good site and Taylor…",
+   "Description": "Feb 7, 2022\nthis is a really good site and Taylor…\nthis is a really good site and Taylor is really good and needs a promotion she has really good taste and is really helpful",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Kalei & Ang",
+   "Title": "I have no words but so Grateful to…",
+   "Description": "Feb 6, 2022\nI have no words but so Grateful to…\nI have no words but so Grateful to Chelsea to assist me in getting a dress in jus under a week! Great customer service she went over and beyond her call of duty giving her 100% and more to assist me. What I thought my dress wouldn't be in on time she worked it and got my dress to be delivered a day before the event my heart skipped with gratefulness of Gratitude. This company will get you what you want jus be patient as they to are patient and will assist you and answer all your questions. Thank you Chelsea for your hard work assisting me I'll definitely purchase from Dress outlet more often because if your Awesome Customer service to your customers have a blessed day",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cathy",
+   "Title": "Chelsea helped me find what I was…",
+   "Description": "Feb 6, 2022\nChelsea helped me find what I was…\nChelsea helped me find what I was looking for and also help me get my 15% discount. Very nice rep you have working for you. :)",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Aariona Fennell",
+   "Title": "I would suggest this site for anyone",
+   "Description": "Feb 5, 2022\nI would suggest this site for anyone\nI would suggest this site for anyone. They have great customer service and are always ready to help!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Alyssa Cheeks",
+   "Title": "Didn’t get the dress",
+   "Description": "Updated Feb 10, 2022\nDidn’t get the dress\nSaid they had the dress online (GL2825\nGL2825 GLS by Gloria\nLace Embellished V-Neck Chiffon Long Dress w/ Mesh Sleeve.) They didn’t. I got our money returned luckily, but with hassle to buy another dress.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Holly",
+   "Title": "Delightful shopping",
+   "Description": "Jan 27, 2022\nDelightful shopping\nI ordered two black pant suits on Saturday, they both arrived the following Tuesday. I am in the process of returning one.\nThe pantsuit I kept was perfect for my occasion, well made, fit perfectly and looks great. This is the easiest I have ever had buying an evening outfit.\nThis site is my go to place for evening wear!!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Bentley Burnside",
+   "Title": "I had the best customer service yessirrrrrrrrrrrr",
+   "Description": "Jan 27, 2022\nI had the best customer service yessirrrrrrrrrrrr\nI had the best customer service. I would recommend this website it anyone.",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "chloe lancaster",
+   "Title": "bestie..",
+   "Description": "Jan 23, 2022\nbestie..\nbestie... so helpful my girl Britney helped me at 10pm and found me a dress i really liked 14/10 would recommend !",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cindy Petruska",
+   "Title": "Love the dress I ordered",
+   "Description": "Jan 22, 2022\nLove the dress I ordered\nLove the dress I ordered. However it was too small so I am in the process of exchanging it. They were very quick to respond and help me.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Ms. Charles",
+   "Title": "Briteny was excellent",
+   "Description": "Jan 20, 2022\nBriteny was excellent\nBriteny was excellent. She was patient and really tried her best to assist with my shopping. I told her what I wanted and she gave me several options. If all customer services reps were like her, shopping online would be fabulous!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Dorothy Littlejohn",
+   "Title": "Give Brittany a Raise!!!",
+   "Description": "Jan 19, 2022\nGive Brittany a Raise!!!\nBrittany you are very helpful person. I really appreciate you so much!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jennifer Ek",
+   "Title": "Brittany was very helpful",
+   "Description": "Jan 18, 2022\nBrittany was very helpful\nBrittany was very helpful. She walked me through my issue and got it all resolved quickly.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Courtney George",
+   "Title": "Britney was super helpful and patient…",
+   "Description": "Jan 10, 2022\nBritney was super helpful and patient…\nBritney was super helpful and patient with my requests! So much cheaper then on regular retail. Now I just need to go on every day and hope they have my correct size and dress for my daughters upcoming wedding! Thanks",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "maleia",
+   "Title": "the service was amazing",
+   "Description": "Jan 7, 2022\nthe service was amazing\nthe service was amazing, i was upset that there is no physical store to try on but other then that no issues, the workers are caring and very patient. they take what you want in and help you find the closet thing to it.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Myra ferguson",
+   "Title": "smart shopper tricked",
+   "Description": "Jan 7, 2022\nsmart shopper tricked\nI’m a smart shopper and can see “final sale not returnable “ when I shop. Don’t waste your $ shopping here. If you use a discount or if it’s on sale for any reason, they consider it nonreturnable! I recently bought a MOB dress, used a discount but it was too tight. They refused to accept it as a return, saying it was “on sale!”",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Shelley Donahue",
+   "Title": "Terrible return policy",
+   "Description": "Dec 29, 2021\nTerrible return policy\nTerrible return policy. The dress I received was beautiful. Received the day before I left for an out of town wedding. Dress didn't fit, so I planned to return it when I got back to town after the wedding. I didn't realize the return policy required notifying them within 5 days(!!!) so I missed the window to return. Most businesses are more generous with their holiday return windows, but Dress Outlet was inflexible. Will never use this company again and will let everyone I know not to use it.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Mya McCann",
+   "Title": "I was looking for a gr 8 grad dress and…",
+   "Description": "Dec 27, 2021\nI was looking for a gr 8 grad dress and…\nI was looking for a gr 8 grad dress and Britney helped me so much! She found me exactly what I was looking for!! The help was amazing:)",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "Rene Rivers",
+   "Title": "Excellent Customer Service",
+   "Description": "Dec 17, 2021\nExcellent Customer Service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Teresa Ribble",
+   "Title": "Outstanding customer service",
+   "Description": "Dec 4, 2021\nOutstanding customer service\nMy experience with The Dress Outlet has been outstanding. In my opinion, the customer service is extraordinary and is rare with many companies. Thank you, and I will use your site again and will recommend it to friends and family!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "transplantwest",
+   "Title": "Their return policy is misleading. You have five days. PERIOD.",
+   "Description": "Nov 30, 2021\nTheir return policy is misleading. You have five days. PERIOD.\nTheir return policy is misleading. The day your package arrives file for a return whether you need to return it or not. You only have five days. Period. I'm stuck with two outfits I do not want that were never even tried on. NO returns after five days. Given our shipping and availability issues now, this is just not good business. I will not order from them again because of this, whereas I might have had this been stated clearly and handled differently. I'm reporting them to my credit card company, the California Consumer protection agency as well as the better business bureau and complaining to their corporate office.",
+   "Rating": 1,
+   "Location": "US"
+ },
+  {
+   "Name": "Jasna",
+   "Title": "Ordered a dress and needed to follow up…",
+   "Description": "Nov 23, 2021\nOrdered a dress and needed to follow up…\nOrdered a dress and needed to follow up with a chat on the delivery time. Got 'Britney' who was very helpful! She quickly looked up the order and updated me on the delivery date. Fast, Courteous and friendly customer service. Great prices and variety of sizes.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Gisela Perez Navarro",
+   "Title": "Thanks",
+   "Description": "Nov 19, 2021\nThanks\nThanks, Britney.\nShe was the customer service specialist, that walk me through my return journey.\nShe was knowledgeable and took the time to answer my questions, she was informative, kind, professional, and friendly.\nThanks, Britney\nGiselle",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "winter Princess",
+   "Title": "Sweet 16 dress",
+   "Description": "Nov 13, 2021\nSweet 16 dress\nMs. Britney was very helpful with me finding my daughter Sweet 16 dress.\nShe was patience and very knowledgeable of all my questions and needs.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Mona alassil",
+   "Title": "Best online store in USA",
+   "Description": "Nov 13, 2021\nBest online store in USA\nThis website is the better to buy from, great quality, same as I see in the picture.\nall the customer service are great, they answer very fast and solve any question great, many thanks for Britney.",
+   "Rating": 5,
+   "Location": "EG"
+ },
+ {
+   "Name": "Jessee G.",
+   "Title": "Britany from customer service was such…",
+   "Description": "Nov 8, 2021\nBritany from customer service was such…\nBritany from customer service was such a help! I was looking for a homecoming dress and had a very strict dress regulations and she tried her best to help me find one. We didn’t find one but she was super helpful!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Prom Dress",
+   "Title": "Just trying to get a hold of customer…",
+   "Description": "Nov 5, 2021\nJust trying to get a hold of customer…\nJust trying to get a hold of customer service. My dress should arrive in 5 days. Day 5 has passed & still no dress. No customer service to even answer the phone. Emails have been sent as well.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "SO",
+   "Title": "Do not buy from this website",
+   "Description": "Updated Nov 9, 2021\nDo not buy from this website\nDo not buy from this website. They have a 20% fee for stocking. Horrible policy when selling cloth online. Even when the dress is poorly made. Glitter everywhere and the cheap fabric. I don't recall checking any box to acknowledge the fee. Also I had to pay the shipping to return both dresses. Still in the market that yoy are handleding it is ridiculous. When the people are buying based on a photo. The money that you are keeping from me for \"restocking fee\" plus the shipping is almost the price of one of the dresses. I believe that your company knows that. That's why you don't allow your costumer to review at your website at the bottom of the article just like other websites. I learned my lesson not yo buy cloth from store or brands that I'm not familiar. The dresses have been mailed back to you. With shipping fees that I also paid.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ms. Fee",
+   "Title": "Customer service on front end is great",
+   "Description": "Nov 1, 2021\nCustomer service on front end is great\nBritney helped me tonight and it is late around 9:40pm. She was patient and offered suggestions on dresses and even provided suggestions on dress measurements. I will let you know once my dress gets in the efficiency and accuracy of the order.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Makenna Jackson",
+   "Title": "I have had such a great experience today!",
+   "Description": "Oct 31, 2021\nI have had such a great experience today!\nI have had such a great experience with this shop! I got a girl named Britney she was so sweet and helpful! She knew exactly what I wanted right away! I’ve been starting to look for prom dresses this year and she was so helpful!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Judy Calvitto",
+   "Title": "yahooo",
+   "Description": "Oct 29, 2021\nyahooo\ni got my order today is beautiful 3 piece outfit slate blue from R&M richards order number 7772w best outfit i have ever bought it looks light blue but its really blue grey very nice sizing is perfect check it out normally wear 16w but to big so ordered 14w fits great",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "dorothy madej",
+   "Title": "Returns are terrible",
+   "Description": "Oct 21, 2021\nReturns are terrible\nI ordered a dress didn’t fit right. I was told I needed to pay a restocking fee of 20% or get a gc . I had to pay a shipping fee of 25.00. I will not be ordering from them again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Maria Rivera",
+   "Title": "They have phenomenal customer service",
+   "Description": "Oct 14, 2021\nThey have phenomenal customer service\nThey have phenomenal customer service! I made a mistake when placing my order and the team was fast in resolving the issue. Most companies would say there nothing they can do but they fixed my order and removed and extra item. I have ordered from here before and they have amazing prices. I bought a dress from dillards for $199 and It cost $78 on this website. I returned the dillards one and saved a lot for the exact same dress.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Lori Tingler",
+   "Title": "Do NOT buy from Dress Outlet if you are…",
+   "Description": "Oct 8, 2021\nDo NOT buy from Dress Outlet if you are…\nDo NOT buy from Dress Outlet if you are a busy person and can't return the dress in 5 days. It's that issue that I'm disgusted with. I had an event and as it got closer I tried the dress on and the shoulders were too big. My seamstress advised against taking it in as it would make my Jovani dress choppy looking and who would do that to Jovani? Loved the dress and the shipping turnaround time. Do Not Love that I'm stuck with a $590 dress that I'll never get my money out of and I was willing to pay the restocking fee. 5 days is just ridiculous. I wanted to return mine with tags in less than 30. Macy's has 90 day return and other companies have 45-60 so I don't understand this at all!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Donna Neumeier",
+   "Title": "The two dresses I ordered were…",
+   "Description": "Oct 4, 2021\nThe two dresses I ordered were…\nThe two dresses I ordered were gorgeous. But didn’t fit me well. Customer service was great. I’ll for sure order my next dresses here!",
+   "Rating": 5,
+   "Location": "US"
+ }, 
+  {
+   "Name": "ana felix",
+   "Title": "Trustworthy!!",
+   "Description": "Oct 4, 2021\nTrustworthy!!\nI recently made a purchase of three dresses and the whole experiencias was amazing, fast shipping, beautiful dresses and amazing staff!!!",
+   "Rating": 5,
+   "Location": "MX"
+ },
+ {
+   "Name": "Carmen Berry",
+   "Title": "I ordered the wrong color and size…",
+   "Description": "Oct 3, 2021\nI ordered the wrong color and size…\nI ordered the wrong color and size homecoming dress for my daughter. I was able to go online and do a quick chat with Brittany. She was able to change the order to what I actually needed to order! Thank you so much for righting my mistake so quickly!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Una Ni Ghogain",
+   "Title": "Very good customer service!!",
+   "Description": "Oct 2, 2021\nVery good customer service!!\nOrdered two dresses. Despatched efficiently. Delivered to Ireland but by some extraordinary inexplicable circumstances (perhaps customs related even though duty was paid) they were returned to sender. When I informed the vendor the matter was investigated and a FULL refund including shipping was issued. Sterling service.",
+   "Rating": 4,
+   "Location": "IE"
+ },
+ {
+   "Name": "Mari Fraire",
+   "Title": "Unable to return or exchange",
+   "Description": "Sep 30, 2021\nUnable to return or exchange\nAll I can say is you better know your size when you order or you're straight out of luck! I ordered 4 dresses, got stuck with 3 that didn't fit properly since they give you 7 DAYS to return the dress!!! SEVEN. oh and you have to submit a return request to which nobody answers.. so then 7 days have passed and you're stuck with another dress. All in all the quality is good since they're name brands but spend that money at a store where you can actually TRY ON and return or exchange if necessary.",
+   "Rating": 2,
+   "Location": "US"
+ },
+ {
+   "Name": "Kate",
+   "Title": "Britney was helpful to find dress for…",
+   "Description": "Sep 30, 2021\nBritney was helpful to find dress for…\nBritney was helpful to find dress for my flower girl and she also replied quickly and answered all my questions.\nGreat customer service!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Michelle Lavin",
+   "Title": "They keep 20% and make you pay for shipping",
+   "Description": "Updated Sep 29, 2021\nThey keep 20% and make you pay for shipping\nIn a time where physical inventory in most stores is about nil, the only way to try on clothes is to order them online.\nAt the dress outlet, not only do they NOT give you a full refund (they keep 20% for \"restocking\"), but they make you pay for the shipping ($10).\nEvery other store I have ordered from has given me a full refund and paid for shipping - not just Amazon, but Windsor and Macy's.\nThat was the last time I ever shop for, let alone buy, anything at this store.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Carol Lynne",
+   "Title": "Britney was amazing!",
+   "Description": "Sep 26, 2021\nBritney was amazing!\nBritney was amazing!! I accidently ordered a dress in the wrong size - and Britney was able to change the order quickly and professionally prior to shipping! Great place to online shop!! Thank you",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Brittany Cheeks",
+   "Title": "Dress came within a week and was…",
+   "Description": "Sep 25, 2021\nDress came within a week and was…\nDress came within a week and was gorgeous. Haven’t tried it on yet but am sure it should fit perfectly and if not I should 10 pounds down by than lol. So happy I can across this website I was stumped looking for a gown for a plus size body.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Brenda Freeman",
+   "Title": "I was pleased with the outcome of my…",
+   "Description": "Sep 24, 2021\nI was pleased with the outcome of my…\nI was pleased with the outcome of my order. I had ordered a size larger on an outfit because evening wear outfits seem to run small, but it was not the case and I was allowed to get a company credit to send back the too large on sale outfit. I was well pleased with this and returned the item. I am looking forward to my next order to use the credit. Now I know to order my regular size!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Kim Reusch",
+   "Title": "I love the dress I bought",
+   "Description": "Updated Sep 22, 2021\nI love the dress I bought\nI love the dress I bought. Just didn’t fit. Delivered in 2 days as promised.\nCustomer Service was wonderful in the process of returning the dress. Definitely will be a return customer again!",
+   "Rating": 5,
+   "Location": "US"
+ },{
+   "Name": "Debbie Shaffer",
+   "Title": "Excellent help!",
+   "Description": "Sep 21, 2021\nExcellent help!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sherry",
+   "Title": "These guys are great!",
+   "Description": "Sep 19, 2021\nThese guys are great!\nThese guys are great!! I ordered an outfit for my niece’s wedding and put in the promo code. It said it would deduct it at the end but for some reason it didn’t.\nI called right away and the sweet customer service gal immediately credited me the 15%.\nSuch great service. This is the second outfit I’ve ordered from them. Fast delivery and free returns. Now I just hope this one fits as good as the other.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Rit Sinha",
+   "Title": "Quick response",
+   "Description": "Sep 18, 2021\nQuick response\nGod speed people! Quick response.",
+   "Rating": 5,
+   "Location": "IN"
+ },
+ {
+   "Name": "Krystala",
+   "Title": "Britney was quick to get back to me and…",
+   "Description": "Sep 17, 2021\nBritney was quick to get back to me and…\nBritney was quick to get back to me and was able to answer every question I had! She was a pleasure speaking with.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Aja Conn",
+   "Title": "Great customer service",
+   "Description": "Sep 16, 2021\nGreat customer service\nI accidentally ordered the wrong size pant suit. I immediately sent an email to customer service. They replied quickly and changed my order. They were in constant contact with me and took care of my mistake immediately. I was extremely pleased with their quick response and service.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Stacy Dale",
+   "Title": "Great prices",
+   "Description": "Sep 16, 2021\nGreat prices\nGreat prices, fast delivery! True to size! I received both dresses in 4 business days! I will be using this company again! So happy!! Thank you!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "celeste lopez",
+   "Title": "this is a very good website and the…",
+   "Description": "Sep 13, 2021\nthis is a very good website and the…\nthis is a very good website and the customer service was very helpful they were nice and understanding i will use this website again",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Hazel Peterkin Ware",
+   "Title": "Brittany was very helpful in helping me…",
+   "Description": "Sep 10, 2021\nBrittany was very helpful in helping me…\nBrittany was very helpful in helping me to find a dress or pantsuit for my niece's wedding, I felt her spirit as we txt (no I am not a psychic, but a woman of God) looking for a garment, it was warm and gentle and she was very patient. but all larger sizes were gone.... Thanks again Brittany for your help",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Jennifer Kennedy",
+   "Title": "Plus Size Happy",
+   "Description": "Sep 10, 2021\nPlus Size Happy\nFirst off, I was new to this site and they sent me a welcome discount which I did not attach to my order by accident. I sent an email and received a response in a short amount of time. I was assured the discount would be refunded and it was the next day.\nI received a shipment and was confused as I thought both items I ordered would be in the package but only one was. I opened chat on the website and asked about it and promptly received an answer from Britney that the other dress was on the way! I am very pleased with the dress that has arrived already. It is beautiful on my daughter! I hope that the one I ordered for myself is just as pretty and fits the same way as hers does! I will definitely keep thedressoutlet.com in my bookmarks for future purchases. I am a plus size person and so is my daughter and I am just so unbelievably happy that they have a large variety of plus size dresses to choose from. By the way, the dress I did order for my daughter runs a little big which was a good thing also because for plus size women they all seem to run small. So, I was pleasantly surprised that it had some room in it.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Mikayla Vitanovic",
+   "Title": "Got a Mac Duggal gown I love for my…",
+   "Description": "Sep 5, 2021\nGot a Mac Duggal gown I love for my…\nGot a Mac Duggal gown I love for my sisters wedding! Got here quick! Great service . . .",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Karen Kapelka",
+   "Title": "The Dress Outlet have been very helpful…",
+   "Description": "Sep 5, 2021\nThe Dress Outlet have been very helpful…\nThe Dress Outlet have been very helpful and quick to help when emailed.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Kathy Van Wyk - Banda",
+   "Title": "I just had the best online…",
+   "Description": "Sep 4, 2021\nI just had the best online…\nI just had the best online chat/assistance service. Britney was very helpful and so so friendly omw I felt like I was having a face to face interaction, and the dresses are so beautiful. I will definitely buy a few dresses.\nKeep up the good work Brit and stay the helpful and friendly humankind that you are. Stay Blessed",
+   "Rating": 5,
+   "Location": "ZA"
+ },
+ {
+   "Name": "Jennifer McMillan",
+   "Title": "They do NOT have easy returns",
+   "Description": "5 days ago\nThey do NOT have easy returns\nThey do NOT have easy returns. You also have to pay a 20% restocking fee and return shipping. While every other website allows around 15-30 days to request return, they only allow 5. They shipped 2 of the dresses and then later shipped the 3rd dress b/c the one I ordered was out of stock and so they sent me a different color separate from the rest of the order. I was waiting to try on the 3rd dress before deciding which one to purchase. I went out of town and when I returned home to open the final dress and return the dresses I didn't want, I was told I couldn't b/c it was past the 5 days. Had they not shipped them separately I would've been able to fit in their tiny 5 day window :(. The whole process was inconvenient and aggravating.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Hal Val",
+   "Title": "If i could i gave them one star",
+   "Description": "Jul 8, 2022\nIf i could i gave them one star\nIf i could i gave them one star\nThey sent me wrong size and they charged me 12 dollars for shipping and deduct 20% stocking fee\nThey are scam please be aware",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "customer",
+   "Title": "A hassle",
+   "Description": "Jul 1, 2022\nA hassle\nIt took them almost 2 months to send the dress. I called them several times and the first time they said that it was a issue and that they had to check into it and get back with me. I ended up calling them again and she advised that I would receive it in 3 days weeks went by and I called again they asked me when did I need it. Smh. What difference does it make. It was a hassle dealing with them. Never again",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "LAURA MUSURAS",
+   "Title": "First time customer and even though my…",
+   "Description": "Jun 29, 2022\nFirst time customer and even though my…\nFirst time customer and even though my purchase didn’t work out they were nice enough to walk me through the return process and it was a breeze.",
+   "Rating": 4,
+   "Location": "US"
+ },
+  {
+   "Name": "Mayan Muhee",
+   "Title": "The customer service is amazing",
+   "Description": "Jun 25, 2022\nThe customer service is amazing\nThe customer service is amazing. Chelsea helped me with all my questions about shipment. Highly recommend.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Amanda C",
+   "Title": "Pam was so helpful changing my shipping…",
+   "Description": "Jun 21, 2022\nPam was so helpful changing my shipping…\nPam was so helpful changing my shipping speed and helping with my needs last minute! Amazing customer service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "DENISE",
+   "Title": "Horrible 5 day return policy",
+   "Description": "Jun 20, 2022\nHorrible 5 day return policy\nThe Dress Outlet's return policy is 5 DAYS. Don't waste your time. You need more than 5 days to order from multiple websites and try dresses on in order to find the right fit and design for your event. Seriously?? What a scam.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ibis",
+   "Title": "DO NOT ORDER",
+   "Description": "Jun 18, 2022\nDO NOT ORDER\nDO NOT ORDER - Dress Outlet advertises and charges you for fast shipping. DHL worldwide was billed. They lied! Once you realize they've lied and try to get a refund, they tell you that you have to pay to send it back and only AFTER they receive it, then they will only refund you 80% of the cost of the dress!!!! A real SCAM. I wish I'd seen these other reviews before I ordered.",
+   "Rating": 1,
+   "Location": "SX"
+ },
+ {
+   "Name": "lv",
+   "Title": "NOT easy to return, and it costs you. Bad quality.",
+   "Description": "Jun 17, 2022\nNOT easy to return, and it costs you. Bad quality.\nTheir site spouts about easy returns. These returns are anything but easy. They charge a 20% restocking fee. Then, you have to pay the postage for that return as well. The form they provide for you to indicate how you want your return doesn't state where to send the dress back. When asked, I was talked to like an idiot as it was 'indicated on the form'. The address is the footer on the form. This could be headquarters, and not where they have their warehouse. How am I supposed to just guess about where to send the item when my $ back depends on sending it to the right place.\nI chose to return it because the material was very stiff and scratchy. I felt like I was wearing a mosquito net.\nDeciding not to go with this dress just cost me $50. Very disappointed.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Zan Taylor",
+   "Title": "They will ruin your special day…",
+   "Description": "May 21, 2022\nThey will ruin your special day…\nThe Dress Outlet advertises fast shipping and easy returns - not the case! I repeatedly called and emailed to assure a timely exchange for my daughter's prom dress. Very long story short, I paid for overnight delivery and they sent me the same dress size that I had returned. They then agreed to overnight me the dress in the correct size. That would be nice if the warehouse knew that UPS only delivers overnight Monday - Friday unless you check the box for a overnight weekend delivery. My daughter's prom dress arrived Monday after her prom. I have repeatedly asked for the manager to call me to explain how so many errors could have occurred. I have yet to hear from Elvia. I cannot begin to truly express my daughter's and my disappointment with the customer service we received from Trisha, Miaca, Megan and Leann. I was repeatedly told to be patient and that they were expediting the situation to the team. They will ruin your special day too!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Chloe Porter",
+   "Title": "Not worth the stress or the money",
+   "Description": "May 20, 2022\nNot worth the stress or the money\nI ordered myself a prom dress and verified beforehand with customer if the one I ordered was in stock in the colour and size I wanted. Order was confirmed and then a week later I got an email saying it was out of stock and that I’d have to pick another dress (either a different colour or there was a similar one available) was extremely dissapointed but picked a different colour.\nHowever then when messaging customer service again, turns out they can hold my payment until that dress comes back into stock. 2 weeks go by and no dice. THEN when browsing their website looking for a different dress because my prom is getting closer: they had a final sale of the exact dresses but was a size bigger. Contact customer service AGAIN and now that dress has been sent to me.\nI’d give the company slightly less than 3 stars however customer service was very helpful and my situation was dealt with very professionally and they were lovely! Fingers crossed it’s worth the £160 and three week wait\nEdit: they sent the wrong dress and I’m so unbelievably angry :)",
+   "Rating": 1,
+   "Location": "GB"
+ },
+   {
+   "Name": "Lucy Cervera",
+   "Title": "I ordered a a dress for my sons…",
+   "Description": "May 13, 2022\nI ordered a a dress for my sons…\nI ordered a a dress for my sons wedding. I had to return for 1 size up and told it was available. They received my return and when I called to check about shipping of the replacement dress they said it was out of stock. I paid freight charges to return it. Even though they could not fulfill my exchange they still charged a 20% restocking fee. Horrible business policy. Don’t buy from them!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Jenna MacKenzie",
+   "Title": "Sent me the wrong dress!!!",
+   "Description": "May 10, 2022\nSent me the wrong dress!!!\nI purchased a dress from this site for an event coming up in roughly 3 weeks. Put in for an expedited ship and everything. I'll ignore the fact that it came a day late (I get it, that happens), but they sent me THE WRONG DRESS. Item # was off by one digit. Not to mention the dress was *not* worth the amount of money it was listed for on the site. Super cheap, weird interfacing (plastic?) on the train... Just AWFUL.\nI emailed them right away, was given a return authorization number, then was completed ghosted by Tricia when I asked how they would make this right in time for my event in roughly 1.5 weeks from then. Filling out the return form, they charge a 20% restock fee--EXCUSE ME??! I DIDN'T GET THE RIGHT ITEM. I DON'T HAVE FAITH IN YOU GETTING ME THE RIGHT ITEM.\nNeedless to say, I'm pissed. I refuse to pay for this company's complete negligence. Tricia is horrible to work with, she'll completely go silent on you. Cannot rate this place low enough. AVOID THIS PLACE! DON'T GET SCREWED OVER LIKE I DID!!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "AnnEtta",
+   "Title": "We purchased a prom dress from there",
+   "Description": "May 4, 2022\nWe purchased a prom dress from there\nWe purchased a prom dress from there. It arrived with 3 major flaws even though being in plastic and with tags - rips on the side, missing hooks on the back, and straps that were missing main rhinestones. Material was very thin and crappy workmanship. We will not order from there again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Liz A",
+   "Title": "Great customer service",
+   "Description": "May 3, 2022\nGreat customer service\nGreat customer service. Chelsea was very responsive towards my question. Love the dress we bought for my daughters event. Will defintely be ordering a lot more dresses for upcoming events.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sofija Kochovska",
+   "Title": "Great customer service",
+   "Description": "May 2, 2022\nGreat customer service\nGreat customer service! I talked with Pam a few times, she helped me a lot!",
+   "Rating": 5,
+   "Location": "MK"
+ },
+ {
+   "Name": "Gaby Martell",
+   "Title": "Lack of Customer Service",
+   "Description": "May 1, 2022\nLack of Customer Service\nI bought this dress and immediately after I realized the size is not something that fits I attempted to request a new size, never received on what would be a label to return.\nSince I never seen on how to exchange (besides the fact that you always have to wait for a response for any type of exchange or what not) maybe an upgrade on the system would be helpful and would avoid these type of issues.\nI tried to return or exchange again and I can’t even get a store credit. Now I have a dress that is almost $200 sitting being useless.\nHow to improve customer service: at least allow store credit or exchanges SPECIALLY If your managing a dresses ONLINE! Keep in mind things take a while to arrive and ship and it’s not as easy to go to a store to exchange, also the fact that dresses might not fit so people have to exchange.\nWhat a steal of money.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Janice Carver Perry",
+   "Title": "LOVE MY OUTFIT!!!",
+   "Description": "May 1, 2022\nLOVE MY OUTFIT!!!\nLOVE the outfit I ordered through Amazon,but came from you. Contrary to other sites, my gorgeous outfit looks exactly like the picture. I LOVE it and will wear it proudly on my granddaughter's wedding day, May 28th. Thank you for having a trustworthy company. It arrived like it came off the rack. I will recommend you to ALL my friends!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nichole",
+   "Title": "It takes a lot for me to make a review",
+   "Description": "Apr 27, 2022\nIt takes a lot for me to make a review\nIt takes a lot for me to make a review. The Dress Outlet exceeded my expectations. I purchased my daughters prom dress and immediately received updates on shipping status. The dress matched the marketing and was beautiful! I had a question, texted the customer service (very cool option I am not yet used to) with a response within 30 seconds. Thank you for making this stressful senior year and last prom so very special!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Arishma Ashley Karan",
+   "Title": "Customer Service - Chelsea",
+   "Description": "Apr 25, 2022\nCustomer Service - Chelsea\nCustomer Service on this site is amazing. Chelsea helped me find my dress. I didn't know my measurements, so she helped me get them by providing me with advice. She helped me compare my measurements to the size guides on the site. In addition, she helped me pick out a color that would look good on my skin tone as well. Overall, very helpful and supportive customer service chat.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Diana",
+   "Title": "I needed help in ordering a dress and…",
+   "Description": "Apr 11, 2022\nI needed help in ordering a dress and…\nI needed help in ordering a dress and sizing. Customer service Representative Taylor was amazing she helped until the end of my order. Now just wish it comes on time. Thank you! :)",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "nicole aguilera",
+   "Title": "good customer service",
+   "Description": "Apr 8, 2022\ngood customer service\nI talked to a woman named, Pam. she was very sweet and helped me make sure my order was processed because i’ve had many issues in the past with other companies so i wanted to make sure my dress was ordered. thank you!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Shanz Prince",
+   "Title": "Great customer service",
+   "Description": "Apr 5, 2022\nGreat customer service",
+   "Rating": 5,
+   "Location": "AG"
+ },
+  {
+   "Name": "Hongsie Y",
+   "Title": "Thumbs up!!",
+   "Description": "Mar 27, 2022\nThumbs up!!\nI came across The Dress Outlet website whilst browsing for evening gowns. I wasn't sure if there's delivery to my country which is in South East Asia. So i decided to write in. Surprisingly, the response was very prompt. I placed my order & paid. However i forgot to use the welcome voucher of 15% discount. So i wrote to Tricia again to check if i would still qualify for the discount. I saw an email notification that a refund of the amount of discount gave been credited to me. Thank you so much!! I'm eagerly looking forward to the arrival of the parcel.",
+   "Rating": 5,
+   "Location": "MY"
+ },
+ {
+   "Name": "Vickey A",
+   "Title": "Unbelievable prices, quality and selection!",
+   "Description": "Mar 26, 2022\nUnbelievable prices, quality and selection!\nI needed a dress for a friend’s daughter’s wedding and was dreading paying a hefty price for something I probably wouldn’t wear again. When I found thedressoutlet.com site I saw a dress I had bought for my own daughter’s wedding for less than half the price I paid. It made me check them out further. I then saw 4 dresses that I really liked and the prices were so good I thought I would take a chance. What I was expecting to pay for one dress was what it cost me for those four. They all came within a week and three were just gorgeous! Excellent quality too. I love them soooo much. One had a flaw and when I notified the company through email late on a Saturday night they responded within an hour. I sent them photos and they sent me a return label shortly after. This company’s customer service was top notch. I can’t say enough about them and am telling all my friends to check them out!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Mary Abbott",
+   "Title": "Just ordered my dress from The Dress…",
+   "Description": "Mar 25, 2022\nJust ordered my dress from The Dress…\nJust ordered my dress from The Dress Outlet. I signed up to get the coupon and had not yet received it so I started the chat and Pam helped me. She was so good with her advice and help. She explained everything to me, was very patient and applied my coupon! Success! I cannot wait to see this dress! One more item checked off the list!!! Thank you Pam!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Idee Folami",
+   "Title": "Online assistance for my order placement",
+   "Description": "Mar 14, 2022\nOnline assistance for my order placement\nI have just placed a couple of orders on dressoutlet.com. I am not very techy with online shopping but I got some well needed assistance from Chelsea through the chat. Chelsea also refunded me the 15% first time purchase which I forgot to use at checkout. The immediate assistance for my order placement and guidance is very much appreciated. This order is to Canada so I cannot speak to the delivery promptness and duties/customs etc until I receive the order. Overall I am pleased with the service I have received on this site today. I pray my order comes on time and is as shown on the page. Thank you Chelsea for your assistance.",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "aurel Durrant",
+   "Title": "Great job",
+   "Description": "Mar 13, 2022\nGreat job\nI just finished working with Taylor, it was a great experience. The patience shown and the way I was treated made me aware that Taylor was a professional.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jess R maid of honor",
+   "Title": "Save yourself the headache and order elsewhere",
+   "Description": "Updated Mar 12, 2022\nSave yourself the headache and order elsewhere\nSave yourself the trouble and get your dress somewhere else. I am a maid of honor for my friend's wedding. I was originally excited to receive my dress. When I got it a huge string inbetween the mesh was still attached and showing. Wanted to return it, very noticeable. THEY TOLD ME TO TAKE A NEEDLE AND PULL IT THOUGH!! It would ruin the mesh completely if I did. Now they won't return it full price nor pay for shipping. They suggested store credit which would be fine but I never wanted to interact with this company again. They are just trying to save a dollar anywhere they can. DO NOT ORDER.... RUN! Not worth the time, energy, or the headache. Do not talk Tricia, you will have a conversation that goes in circles.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Heather Moore",
+   "Title": "Great experience",
+   "Description": "Mar 11, 2022\nGreat experience\nGreat experience! Excellent customer service and gorgeous dresses.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Linda Landers",
+   "Title": "GORGEOUS",
+   "Description": "Mar 8, 2022\nGORGEOUS\nReceived my daughters' dress today-absolutely beautiful-was a little big. I contacted customer service and chatted with Chelsea who walked me through what steps I needed to take to exchange the dress and helped me with the sizing. Wonerful customer service and gorgeous dresses..thank you Dress Outlet",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Noemi Espinal",
+   "Title": "Taylor's service is amazing!",
+   "Description": "Mar 7, 2022\nTaylor's service is amazing!\nTaylor from Customer Service Is excellent. I ordered the wrong color dress and she fixed it right up for me. I need it for a soon event and I needed Royal Blue! and I accidentally ordered navy. She changed the order for me and made my night! Thank you!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "jennifer",
+   "Title": "I purchased a dress online for my daughters wedding",
+   "Description": "Mar 5, 2022\nI purchased a dress online for my daughters wedding\nI purchased a dress online for my daughters wedding from The Dress Outlet.. It was just as in the picture.. Stunning and I received compliment after compliment. It was a perfect fit and I felt amazing in it.. I have just purchased another dress and am looking forward to its arrival 🙂\nJennifer Republic of Ireland 🇮🇪",
+   "Rating": 5,
+   "Location": "IE"
+ },
+  {
+   "Name": "Lady in Red",
+   "Title": "Customer service's desire to please",
+   "Description": "Mar 5, 2022\nCustomer service's desire to please\nI'm writing this review PRIOR to knowing if they will do what they said. I've been told that my issue would be resolved. If they do indeed follow through with what was agreed upon, then I can say it told some time, (2 days and three different staff members,) but they did refuse to let the ball be dropped. At this point, I am happy. Two or three weeks from now remains to be seen.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Julia Abouzeid",
+   "Title": "Customer Service is exceptional",
+   "Description": "Mar 5, 2022\nCustomer Service is exceptional\nI’m always worried about buying clothes online but The Dress Outlet made it extremely easy. Their customer service is amazing. My size wasn’t available so within an hour I received an email with options of colors that were in my size. I’ll be shopping online with them again!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cynthia",
+   "Title": "EXCELLENT",
+   "Description": "Mar 1, 2022\nEXCELLENT\nThe team at the dress outlet is amazing. I was hesitant to purchase a designer dress online but after seeing The Dress Outlet listed on the designer's site I went ahead. I was able to easily search size charts and while I ordered a size too big, the exchange policy was simple. I received my exchange within a few days and it is PERFECT. The service I received throughout was what you'd expect from a high end store without the aggravation of being in a store. I will purchase from them in the future and would highly recommend them.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Ceil Stolper",
+   "Title": "KUDOS FOR TAYLOR",
+   "Description": "Updated Feb 27, 2022\nKUDOS FOR TAYLOR\nI ordered a pants outfit and was supposed to get a discount. However not being computer savy, I did not see the discount when it gave me the total. I went to chat and spoke to Taylor. She tried to help me and was very patient and courteous. She wanted to take my order and by the time we got to that, the size was no longer available. However I said if I find something else I will ask her to order it for me. I thanked her. Nice to have someone to chat with if problems occur. By the way, I did not like the return policy. I like to get credit back on my credit card. Not store credit.",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Danielle",
+   "Title": "Terrible experience with this company",
+   "Description": "Feb 25, 2022\nTerrible experience with this company\nTerrible experience with this company. My family and I picked out two potential dresses for my grandmother to wear at her funeral. She specifically wanted a salmon gown and we wanted to honor her wish. We made the purchase on Saturday and paid extra for 3 day shipping as it was needed by Wednesday by the funeral home. It arrived on Thursday. The funeral home was willing to work with us but we did find a replacement \"just in case\" and I reached out to the company to get reimbursed only for the 3 day shipped we paid for. They would not reimburse us. I let them know I wanted to return both and asked for a call tag. No call tags are given AND they charge a 20% re stocking fee... apparently to keep \"prices low\" .. low being $100 a piece. I will never work with this company again and I hope if you are in a crunch for time you steer clear. Obviously the sizing didnt matter much here but IF the sizes didnt fit I cant imagine paying 20% restocking just to return a dress. absolutely terrible experience during a really tough time in our lives.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Julianna Wiessner",
+   "Title": "I am extremely disappointed in your…",
+   "Description": "Feb 25, 2022\nI am extremely disappointed in your…\nI am extremely disappointed in your return policy.\nI recently purchased two gowns and kept the R&M Richards dress and returned the Dylan and David dress. Your policy has cost me 20% of the dress payment and I also had to lay out for return shipping of $24. I ordered 8 dresses online from various vendors. Not a single one penalized me in this way. You say it's because this is how you offer low prices? Not true - the same dress is less than $10 more on Amazon. If I'd purchased it there I would have saved the $30 of the $40 dollars I have laid out. I recently recommended you to some friends and have since texted them to not use your site.",
+   "Rating": 2,
+   "Location": "US"
+ },
+ {
+   "Name": "Eve McMahon-bell",
+   "Title": "Tricia and Leann from customer service…",
+   "Description": "Feb 22, 2022\nTricia and Leann from customer service…\nTricia and Leann from customer service were very helpful!",
+   "Rating": 5,
+   "Location": "GB"
+ },
+ {
+   "Name": "Alice Andre-Soares",
+   "Title": "was speaking to Chelsea on their chat…",
+   "Description": "Updated Feb 22, 2022\nwas speaking to Chelsea on their chat…\nwas speaking to Chelsea on their chat line and she was so patient and kind with me. I thought I had submitted a return/exchange and she confirmed I did not and she walked me through it. The best part was my laptop died and when I got restarted it was still her that was communicating with me. I did not have to go through the whole process of explaining again, we just continued where we left off. Keep up the great work! Thanks-D.M.",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "Elba Espinal",
+   "Title": "excellent person Leann helped me…",
+   "Description": "Feb 16, 2022\nexcellent person Leann helped me…\nexcellent person Leann helped me immediately I am happy",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Nicole",
+   "Title": "SHORT RETURN POLICY",
+   "Description": "Feb 13, 2022\nSHORT RETURN POLICY\nI was outside of the return policy which is very ridiculously short (5 days return policy). I am now stuck w/ a dress that does not fit. I would have considered a store credit but they would not even give me that. I was ok to pay the restocking fee but still no refund. I can't say anything positive about a store who won't accommodate a first time (now last time) customer",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Maddie Norwood-Bailey",
+   "Title": "Customer Service 👍👍",
+   "Description": "Feb 10, 2022\nCustomer Service 👍👍\nTaylor is amazing and kinda knew exactly what I needed to look for. She have me options to choose from and was so sweet and kind. 10/10 would definitely do again.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Alexia Rahn",
+   "Title": "this is a really good site and Taylor…",
+   "Description": "Feb 7, 2022\nthis is a really good site and Taylor…\nthis is a really good site and Taylor is really good and needs a promotion she has really good taste and is really helpful",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Kalei & Ang",
+   "Title": "I have no words but so Grateful to…",
+   "Description": "Feb 6, 2022\nI have no words but so Grateful to…\nI have no words but so Grateful to Chelsea to assist me in getting a dress in jus under a week! Great customer service she went over and beyond her call of duty giving her 100% and more to assist me. What I thought my dress wouldn't be in on time she worked it and got my dress to be delivered a day before the event my heart skipped with gratefulness of Gratitude. This company will get you what you want jus be patient as they to are patient and will assist you and answer all your questions. Thank you Chelsea for your hard work assisting me I'll definitely purchase from Dress outlet more often because if your Awesome Customer service to your customers have a blessed day",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cathy",
+   "Title": "Chelsea helped me find what I was…",
+   "Description": "Feb 6, 2022\nChelsea helped me find what I was…\nChelsea helped me find what I was looking for and also help me get my 15% discount. Very nice rep you have working for you. :)",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Aariona Fennell",
+   "Title": "I would suggest this site for anyone",
+   "Description": "Feb 5, 2022\nI would suggest this site for anyone\nI would suggest this site for anyone. They have great customer service and are always ready to help!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Alyssa Cheeks",
+   "Title": "Didn’t get the dress",
+   "Description": "Updated Feb 10, 2022\nDidn’t get the dress\nSaid they had the dress online (GL2825\nGL2825 GLS by Gloria\nLace Embellished V-Neck Chiffon Long Dress w/ Mesh Sleeve.) They didn’t. I got our money returned luckily, but with hassle to buy another dress.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Holly",
+   "Title": "Delightful shopping",
+   "Description": "Jan 27, 2022\nDelightful shopping\nI ordered two black pant suits on Saturday, they both arrived the following Tuesday. I am in the process of returning one.\nThe pantsuit I kept was perfect for my occasion, well made, fit perfectly and looks great. This is the easiest I have ever had buying an evening outfit.\nThis site is my go to place for evening wear!!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Bentley Burnside",
+   "Title": "I had the best customer service yessirrrrrrrrrrrr",
+   "Description": "Jan 27, 2022\nI had the best customer service yessirrrrrrrrrrrr\nI had the best customer service. I would recommend this website it anyone.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "chloe lancaster",
+   "Title": "bestie..",
+   "Description": "Jan 23, 2022\nbestie..\nbestie... so helpful my girl Britney helped me at 10pm and found me a dress i really liked 14/10 would recommend !",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Cindy Petruska",
+   "Title": "Love the dress I ordered",
+   "Description": "Jan 22, 2022\nLove the dress I ordered\nLove the dress I ordered. However it was too small so I am in the process of exchanging it. They were very quick to respond and help me.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Ms. Charles",
+   "Title": "Briteny was excellent",
+   "Description": "Jan 20, 2022\nBriteny was excellent\nBriteny was excellent. She was patient and really tried her best to assist with my shopping. I told her what I wanted and she gave me several options. If all customer services reps were like her, shopping online would be fabulous!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Dorothy Littlejohn",
+   "Title": "Give Brittany a Raise!!!",
+   "Description": "Jan 19, 2022\nGive Brittany a Raise!!!\nBrittany you are very helpful person. I really appreciate you so much!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jennifer Ek",
+   "Title": "Brittany was very helpful",
+   "Description": "Jan 18, 2022\nBrittany was very helpful\nBrittany was very helpful. She walked me through my issue and got it all resolved quickly.",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Courtney George",
+   "Title": "Britney was super helpful and patient…",
+   "Description": "Jan 10, 2022\nBritney was super helpful and patient…\nBritney was super helpful and patient with my requests! So much cheaper then on regular retail. Now I just need to go on every day and hope they have my correct size and dress for my daughters upcoming wedding! Thanks",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "maleia",
+   "Title": "the service was amazing",
+   "Description": "Jan 7, 2022\nthe service was amazing\nthe service was amazing, i was upset that there is no physical store to try on but other then that no issues, the workers are caring and very patient. they take what you want in and help you find the closet thing to it.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Myra ferguson",
+   "Title": "smart shopper tricked",
+   "Description": "Jan 7, 2022\nsmart shopper tricked\nI’m a smart shopper and can see “final sale not returnable “ when I shop. Don’t waste your $ shopping here. If you use a discount or if it’s on sale for any reason, they consider it nonreturnable! I recently bought a MOB dress, used a discount but it was too tight. They refused to accept it as a return, saying it was “on sale!”",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Shelley Donahue",
+   "Title": "Terrible return policy",
+   "Description": "Dec 29, 2021\nTerrible return policy\nTerrible return policy. The dress I received was beautiful. Received the day before I left for an out of town wedding. Dress didn't fit, so I planned to return it when I got back to town after the wedding. I didn't realize the return policy required notifying them within 5 days(!!!) so I missed the window to return. Most businesses are more generous with their holiday return windows, but Dress Outlet was inflexible. Will never use this company again and will let everyone I know not to use it.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Mya McCann",
+   "Title": "I was looking for a gr 8 grad dress and…",
+   "Description": "Dec 27, 2021\nI was looking for a gr 8 grad dress and…\nI was looking for a gr 8 grad dress and Britney helped me so much! She found me exactly what I was looking for!! The help was amazing:)",
+   "Rating": 5,
+   "Location": "CA"
+ },
+   {
+   "Name": "Rene Rivers",
+   "Title": "Excellent Customer Service",
+   "Description": "Dec 17, 2021\nExcellent Customer Service",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Teresa Ribble",
+   "Title": "Outstanding customer service",
+   "Description": "Dec 4, 2021\nOutstanding customer service\nMy experience with The Dress Outlet has been outstanding. In my opinion, the customer service is extraordinary and is rare with many companies. Thank you, and I will use your site again and will recommend it to friends and family!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "transplantwest",
+   "Title": "Their return policy is misleading. You have five days. PERIOD.",
+   "Description": "Nov 30, 2021\nTheir return policy is misleading. You have five days. PERIOD.\nTheir return policy is misleading. The day your package arrives file for a return whether you need to return it or not. You only have five days. Period. I'm stuck with two outfits I do not want that were never even tried on. NO returns after five days. Given our shipping and availability issues now, this is just not good business. I will not order from them again because of this, whereas I might have had this been stated clearly and handled differently. I'm reporting them to my credit card company, the California Consumer protection agency as well as the better business bureau and complaining to their corporate office.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Jasna",
+   "Title": "Ordered a dress and needed to follow up…",
+   "Description": "Nov 23, 2021\nOrdered a dress and needed to follow up…\nOrdered a dress and needed to follow up with a chat on the delivery time. Got 'Britney' who was very helpful! She quickly looked up the order and updated me on the delivery date. Fast, Courteous and friendly customer service. Great prices and variety of sizes.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Gisela Perez Navarro",
+   "Title": "Thanks",
+   "Description": "Nov 19, 2021\nThanks\nThanks, Britney.\nShe was the customer service specialist, that walk me through my return journey.\nShe was knowledgeable and took the time to answer my questions, she was informative, kind, professional, and friendly.\nThanks, Britney\nGiselle",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "winter Princess",
+   "Title": "Sweet 16 dress",
+   "Description": "Nov 13, 2021\nSweet 16 dress\nMs. Britney was very helpful with me finding my daughter Sweet 16 dress.\nShe was patience and very knowledgeable of all my questions and needs.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Mona alassil",
+   "Title": "Best online store in USA",
+   "Description": "Nov 13, 2021\nBest online store in USA\nThis website is the better to buy from, great quality, same as I see in the picture.\nall the customer service are great, they answer very fast and solve any question great, many thanks for Britney.",
+   "Rating": 5,
+   "Location": "EG"
+ },
+    {
+   "Name": "Jessee G.",
+   "Title": "Britany from customer service was such…",
+   "Description": "Nov 8, 2021\nBritany from customer service was such…\nBritany from customer service was such a help! I was looking for a homecoming dress and had a very strict dress regulations and she tried her best to help me find one. We didn’t find one but she was super helpful!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Prom Dress",
+   "Title": "Just trying to get a hold of customer…",
+   "Description": "Nov 5, 2021\nJust trying to get a hold of customer…\nJust trying to get a hold of customer service. My dress should arrive in 5 days. Day 5 has passed & still no dress. No customer service to even answer the phone. Emails have been sent as well.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "SO",
+   "Title": "Do not buy from this website",
+   "Description": "Updated Nov 9, 2021\nDo not buy from this website\nDo not buy from this website. They have a 20% fee for stocking. Horrible policy when selling cloth online. Even when the dress is poorly made. Glitter everywhere and the cheap fabric. I don't recall checking any box to acknowledge the fee. Also I had to pay the shipping to return both dresses. Still in the market that yoy are handleding it is ridiculous. When the people are buying based on a photo. The money that you are keeping from me for \"restocking fee\" plus the shipping is almost the price of one of the dresses. I believe that your company knows that. That's why you don't allow your costumer to review at your website at the bottom of the article just like other websites. I learned my lesson not yo buy cloth from store or brands that I'm not familiar. The dresses have been mailed back to you. With shipping fees that I also paid.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Ms. Fee",
+   "Title": "Customer service on front end is great",
+   "Description": "Nov 1, 2021\nCustomer service on front end is great\nBritney helped me tonight and it is late around 9:40pm. She was patient and offered suggestions on dresses and even provided suggestions on dress measurements. I will let you know once my dress gets in the efficiency and accuracy of the order.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Makenna Jackson",
+   "Title": "I have had such a great experience today!",
+   "Description": "Oct 31, 2021\nI have had such a great experience today!\nI have had such a great experience with this shop! I got a girl named Britney she was so sweet and helpful! She knew exactly what I wanted right away! I’ve been starting to look for prom dresses this year and she was so helpful!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Judy Calvitto",
+   "Title": "yahooo",
+   "Description": "Oct 29, 2021\nyahooo\ni got my order today is beautiful 3 piece outfit slate blue from R&M richards order number 7772w best outfit i have ever bought it looks light blue but its really blue grey very nice sizing is perfect check it out normally wear 16w but to big so ordered 14w fits great",
+   "Rating": 5,
+   "Location": "CA"
+ },
+   {
+   "Name": "dorothy madej",
+   "Title": "Returns are terrible",
+   "Description": "Oct 21, 2021\nReturns are terrible\nI ordered a dress didn’t fit right. I was told I needed to pay a restocking fee of 20% or get a gc . I had to pay a shipping fee of 25.00. I will not be ordering from them again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Maria Rivera",
+   "Title": "They have phenomenal customer service",
+   "Description": "Oct 14, 2021\nThey have phenomenal customer service\nThey have phenomenal customer service! I made a mistake when placing my order and the team was fast in resolving the issue. Most companies would say there nothing they can do but they fixed my order and removed and extra item. I have ordered from here before and they have amazing prices. I bought a dress from dillards for $199 and It cost $78 on this website. I returned the dillards one and saved a lot for the exact same dress.",
+   "Rating": 5,
+   "Location": "US"
+ },
+  {
+   "Name": "Lori Tingler",
+   "Title": "Do NOT buy from Dress Outlet if you are…",
+   "Description": "Oct 8, 2021\nDo NOT buy from Dress Outlet if you are…\nDo NOT buy from Dress Outlet if you are a busy person and can't return the dress in 5 days. It's that issue that I'm disgusted with. I had an event and as it got closer I tried the dress on and the shoulders were too big. My seamstress advised against taking it in as it would make my Jovani dress choppy looking and who would do that to Jovani? Loved the dress and the shipping turnaround time. Do Not Love that I'm stuck with a $590 dress that I'll never get my money out of and I was willing to pay the restocking fee. 5 days is just ridiculous. I wanted to return mine with tags in less than 30. Macy's has 90 day return and other companies have 45-60 so I don't understand this at all!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Donna Neumeier",
+   "Title": "The two dresses I ordered were…",
+   "Description": "Oct 4, 2021\nThe two dresses I ordered were…\nThe two dresses I ordered were gorgeous. But didn’t fit me well. Customer service was great. I’ll for sure order my next dresses here!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "ana felix",
+   "Title": "Trustworthy!!",
+   "Description": "Oct 4, 2021\nTrustworthy!!\nI recently made a purchase of three dresses and the whole experiencias was amazing, fast shipping, beautiful dresses and amazing staff!!!",
+   "Rating": 5,
+   "Location": "MX"
+ },
+ {
+   "Name": "Carmen Berry",
+   "Title": "I ordered the wrong color and size…",
+   "Description": "Oct 3, 2021\nI ordered the wrong color and size…\nI ordered the wrong color and size homecoming dress for my daughter. I was able to go online and do a quick chat with Brittany. She was able to change the order to what I actually needed to order! Thank you so much for righting my mistake so quickly!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Una Ni Ghogain",
+   "Title": "Very good customer service!!",
+   "Description": "Oct 2, 2021\nVery good customer service!!\nOrdered two dresses. Despatched efficiently. Delivered to Ireland but by some extraordinary inexplicable circumstances (perhaps customs related even though duty was paid) they were returned to sender. When I informed the vendor the matter was investigated and a FULL refund including shipping was issued. Sterling service.",
+   "Rating": 4,
+   "Location": "IE"
+ },
+ {
+   "Name": "Mari Fraire",
+   "Title": "Unable to return or exchange",
+   "Description": "Sep 30, 2021\nUnable to return or exchange\nAll I can say is you better know your size when you order or you're straight out of luck! I ordered 4 dresses, got stuck with 3 that didn't fit properly since they give you 7 DAYS to return the dress!!! SEVEN. oh and you have to submit a return request to which nobody answers.. so then 7 days have passed and you're stuck with another dress. All in all the quality is good since they're name brands but spend that money at a store where you can actually TRY ON and return or exchange if necessary.",
+   "Rating": 2,
+   "Location": "US"
+ },
+  {
+   "Name": "Kate",
+   "Title": "Britney was helpful to find dress for…",
+   "Description": "Sep 30, 2021\nBritney was helpful to find dress for…\nBritney was helpful to find dress for my flower girl and she also replied quickly and answered all my questions.\nGreat customer service!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Michelle Lavin",
+   "Title": "They keep 20% and make you pay for shipping",
+   "Description": "Updated Sep 29, 2021\nThey keep 20% and make you pay for shipping\nIn a time where physical inventory in most stores is about nil, the only way to try on clothes is to order them online.\nAt the dress outlet, not only do they NOT give you a full refund (they keep 20% for \"restocking\"), but they make you pay for the shipping ($10).\nEvery other store I have ordered from has given me a full refund and paid for shipping - not just Amazon, but Windsor and Macy's.\nThat was the last time I ever shop for, let alone buy, anything at this store.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Carol Lynne",
+   "Title": "Britney was amazing!",
+   "Description": "Sep 26, 2021\nBritney was amazing!\nBritney was amazing!! I accidently ordered a dress in the wrong size - and Britney was able to change the order quickly and professionally prior to shipping! Great place to online shop!! Thank you",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Brittany Cheeks",
+   "Title": "Dress came within a week and was…",
+   "Description": "Sep 25, 2021\nDress came within a week and was…\nDress came within a week and was gorgeous. Haven’t tried it on yet but am sure it should fit perfectly and if not I should 10 pounds down by than lol. So happy I can across this website I was stumped looking for a gown for a plus size body.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Brenda Freeman",
+   "Title": "I was pleased with the outcome of my…",
+   "Description": "Sep 24, 2021\nI was pleased with the outcome of my…\nI was pleased with the outcome of my order. I had ordered a size larger on an outfit because evening wear outfits seem to run small, but it was not the case and I was allowed to get a company credit to send back the too large on sale outfit. I was well pleased with this and returned the item. I am looking forward to my next order to use the credit. Now I know to order my regular size!!",
+   "Rating": 5,
+   "Location": "US"
+ },
+{
+   "Name": "Kim Reusch",
+   "Title": "I love the dress I bought",
+   "Description": "Updated Sep 22, 2021\nI love the dress I bought\nI love the dress I bought. Just didn’t fit. Delivered in 2 days as promised.\nCustomer Service was wonderful in the process of returning the dress. Definitely will be a return customer again!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Debbie Shaffer",
+   "Title": "Excellent help!",
+   "Description": "Sep 21, 2021\nExcellent help!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Sherry",
+   "Title": "These guys are great!",
+   "Description": "Sep 19, 2021\nThese guys are great!\nThese guys are great!! I ordered an outfit for my niece’s wedding and put in the promo code. It said it would deduct it at the end but for some reason it didn’t.\nI called right away and the sweet customer service gal immediately credited me the 15%.\nSuch great service. This is the second outfit I’ve ordered from them. Fast delivery and free returns. Now I just hope this one fits as good as the other.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Rit Sinha",
+   "Title": "Quick response",
+   "Description": "Sep 18, 2021\nQuick response\nGod speed people! Quick response.",
+   "Rating": 5,
+   "Location": "IN"
+ },
+ {
+   "Name": "Krystala",
+   "Title": "Britney was quick to get back to me and…",
+   "Description": "Sep 17, 2021\nBritney was quick to get back to me and…\nBritney was quick to get back to me and was able to answer every question I had! She was a pleasure speaking with.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Aja Conn",
+   "Title": "Great customer service",
+   "Description": "Sep 16, 2021\nGreat customer service\nI accidentally ordered the wrong size pant suit. I immediately sent an email to customer service. They replied quickly and changed my order. They were in constant contact with me and took care of my mistake immediately. I was extremely pleased with their quick response and service.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Stacy Dale",
+   "Title": "Great prices",
+   "Description": "Sep 16, 2021\nGreat prices\nGreat prices, fast delivery! True to size! I received both dresses in 4 business days! I will be using this company again! So happy!! Thank you!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "celeste lopez",
+   "Title": "this is a very good website and the…",
+   "Description": "Sep 13, 2021\nthis is a very good website and the…\nthis is a very good website and the customer service was very helpful they were nice and understanding i will use this website again",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Hazel Peterkin Ware",
+   "Title": "Brittany was very helpful in helping me…",
+   "Description": "Sep 10, 2021\nBrittany was very helpful in helping me…\nBrittany was very helpful in helping me to find a dress or pantsuit for my niece's wedding, I felt her spirit as we txt (no I am not a psychic, but a woman of God) looking for a garment, it was warm and gentle and she was very patient. but all larger sizes were gone.... Thanks again Brittany for your help",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Jennifer Kennedy",
+   "Title": "Plus Size Happy",
+   "Description": "Sep 10, 2021\nPlus Size Happy\nFirst off, I was new to this site and they sent me a welcome discount which I did not attach to my order by accident. I sent an email and received a response in a short amount of time. I was assured the discount would be refunded and it was the next day.\nI received a shipment and was confused as I thought both items I ordered would be in the package but only one was. I opened chat on the website and asked about it and promptly received an answer from Britney that the other dress was on the way! I am very pleased with the dress that has arrived already. It is beautiful on my daughter! I hope that the one I ordered for myself is just as pretty and fits the same way as hers does! I will definitely keep thedressoutlet.com in my bookmarks for future purchases. I am a plus size person and so is my daughter and I am just so unbelievably happy that they have a large variety of plus size dresses to choose from. By the way, the dress I did order for my daughter runs a little big which was a good thing also because for plus size women they all seem to run small. So, I was pleasantly surprised that it had some room in it.",
+   "Rating": 4,
+   "Location": "US"
+ },
+   {
+   "Name": "Mikayla Vitanovic",
+   "Title": "Got a Mac Duggal gown I love for my…",
+   "Description": "Sep 5, 2021\nGot a Mac Duggal gown I love for my…\nGot a Mac Duggal gown I love for my sisters wedding! Got here quick! Great service . . .",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Karen Kapelka",
+   "Title": "The Dress Outlet have been very helpful…",
+   "Description": "Sep 5, 2021\nThe Dress Outlet have been very helpful…\nThe Dress Outlet have been very helpful and quick to help when emailed.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Kathy Van Wyk - Banda",
+   "Title": "I just had the best online…",
+   "Description": "Sep 4, 2021\nI just had the best online…\nI just had the best online chat/assistance service. Britney was very helpful and so so friendly omw I felt like I was having a face to face interaction, and the dresses are so beautiful. I will definitely buy a few dresses.\nKeep up the good work Brit and stay the helpful and friendly humankind that you are. Stay Blessed",
+   "Rating": 5,
+   "Location": "ZA"
+ },
+ {
+   "Name": "adelina reponte",
+   "Title": "The dress was amazing",
+   "Description": "Sep 4, 2021\nThe dress was amazing\nThe dress was amazing! The shape of it is so flattering to my body, and it’s great material! Much better than I expected. 100% recommended",
+   "Rating": 5,
+   "Location": "PH"
+ },
+ {
+   "Name": "Naz Lewis",
+   "Title": "Love love loveeee this site",
+   "Description": "Sep 3, 2021\nLove love loveeee this site\nLove love loveeee this site! Ordered a Alex evening dress that I had also seen on other sites and Nordstrom for literally half the price. Shipping was free. Will order again. 5 stars!",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Tricia Pertubal",
+   "Title": "Excellent customer service and quality…",
+   "Description": "Sep 3, 2021\nExcellent customer service and quality…\nExcellent customer service and quality dresses! I'll surely buy more dresses from this shop and tell my friends about them. Satisfied customer here! :)",
+   "Rating": 5,
+   "Location": "PH"
+ },
+ {
+   "Name": "Valerie Haughtington Dohner",
+   "Title": "Beware of the return policy",
+   "Description": "Sep 2, 2021\nBeware of the return policy\nBeware of the return policy! I do a lot of online shopping and often have to return items that are not as they appear or don't fit. This is expected when shopping online. This company has such a stringent return policy that you might as well plan on being stuck with whatever you buy.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Bertha Joyner",
+   "Title": "I had the pleasure of chatting with…",
+   "Description": "Sep 1, 2021\nI had the pleasure of chatting with…\nI had the pleasure of chatting with Britney this morning. she was very helpful with my concerns. She answered some of my questions before I asked. She was exactly who I needed to help me with what I thought was a problem. Her mannerism was awesome. Being a Senior citizen it meant a lot to me. She's a Keeper.\nBertha Joyner 9/1/2021",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "S K",
+   "Title": "Overall good experience",
+   "Description": "Sep 1, 2021\nOverall good experience\nI ordered a dress for my grandmother on this website that I had initially seen at Macy’s. I chose the flat rate Canada shipping and it came within seven days. Very happy with everything. I just wish they had more colors but overall great!",
+   "Rating": 4,
+   "Location": "DE"
+ },
+ {
+   "Name": "Nicola Assmann",
+   "Title": "Very good service and beautiful outfits",
+   "Description": "Aug 31, 2021\nVery good service and beautiful outfits\nI was looking for a cute outfit and found this Site. Really nice outfits! Even though I live in Germany I ordered and it arrived within 10 days, very fast shipping! It was even cheaper comparing to the same outfit at Galeria Kaufhof! very happy and will definitely order again!",
+   "Rating": 5,
+   "Location": "DE"
+ },
+ {
+   "Name": "Gilda somekh",
+   "Title": "I purchased an evening dress recently…",
+   "Description": "Aug 31, 2021\nI purchased an evening dress recently…\nI purchased an evening dress recently and I am very satisfied. Very kind and caring customer service. Great quality and prices. I am also very happy and thankful about the fast shipping.\nGreat experience and recommendable.",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "Tanin",
+   "Title": "I got a super cute dress for my sisters…",
+   "Description": "Aug 31, 2021\nI got a super cute dress for my sisters…\nI got a super cute dress for my sisters wedding. Looked so expensive but was price was so low, I couldn’t believe it! The dress came super fast. Definitely recommend 10/10",
+   "Rating": 5,
+   "Location": "US"
+ },
+    {
+   "Name": "Erin Pullen",
+   "Title": "I didn’t read any reviews before I…",
+   "Description": "Aug 29, 2021\nI didn’t read any reviews before I…\nI didn’t read any reviews before I ordered my wedding dress, and I am glad I didn’t. My dress is perfect. It is exactly as advertised. It showed up in 6 business days from the States to Canada. I Followed the size guide, checked the dress against other sites carrying the same designer to make sure it’s what I wanted, and then ordered. People usually only write reviews to complain… if you do your homework and FOLLOW THE SIZE GUIDE, you should be fine",
+   "Rating": 5,
+   "Location": "CA"
+ },
+ {
+   "Name": "Patient and Fair",
+   "Title": "Order still not delivered after 30 days",
+   "Description": "Updated Sep 4, 2021\nOrder still not delivered after 30 days\nUpdate: I did get a full refund just a few days after canceling the order that had not arrived after 30 days.\nOriginal review: I ordered a duster jacket pant ensemble on 7/18/21 for an event on 8/7/21. It is now 8/18/21, and the ensemble has still not been delivered. I did return to the Dress Outlet website and start a chat to inform the customer service rep* that I was canceling the order and not paying any \"restocking fee.\"\n*Brittany typed that the full amount would be credited to my credit card account. We shall see.\nThis is a ridiculous business model. Since I wasn't ordering through Amazon, I wasn't expecting next-day delivery, but I did expect the order to arrive within 14 days. It makes me question my efforts to order directly from merchants to avoid Amazon when possible. What I have learned from this experience is that Amazon's clients offer quicker turn-around and are much more reliable.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Claudia Baggot",
+   "Title": "Stay away",
+   "Description": "Jul 27, 2021\nStay away\nStay away. Dress arrived late. Had to get another dress for my daughter's wedding. Never even opened the packaging. They have to approve a return even for store credit and I was told it was outside there return window after it took them a day to get back to me. No other store Ever has a 5 day turn around but it is fine that they were late with delivery and I had to chase the dress down and keep asking why no delivery update. Stay Away! Horrible company!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Sandra Peltier",
+   "Title": "Be ready to accept bad service",
+   "Description": "Jul 23, 2021\nBe ready to accept bad service\nThey have such a tight, not well publicized refund time, plus 20% restocking fee!!!\nSteer clear of this web site!!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Percy Rodriguez",
+   "Title": "Percy, need a contact number",
+   "Description": "Jul 12, 2021\nPercy, need a contact number\nPercy,\nI place an order but no body answer to me, would you please give me a phone number or email I can contact you",
+   "Rating": 5,
+   "Location": "US"
+ },
+ {
+   "Name": "J Roy",
+   "Title": "Great prices and customer service",
+   "Description": "May 8, 2021\nGreat prices and customer service\nI ordered several dresses from here. Arrived quickly. I knew there was a 20% restocking fee. It is very clearly stated. I returned my dresses that didn’t work and the refund was prompt. I found my MOB dress. I would shop here again.",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Kelly Larson",
+   "Title": "Do not order from here",
+   "Description": "Apr 17, 2021\nDo not order from here\nDo not order from here - their return policy is ridiculous. They give you a mere 5 day window from the time of delivery to request a return, AND you will incur a 20% restocking fee. NO ONE operates this way. There are plenty of other sites to shop that have reasonable return policies for unworn dresses.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Natalie Komari",
+   "Title": "NOT EASY RETURNS",
+   "Description": "Apr 4, 2021\nNOT EASY RETURNS\nNOT EASY RETURNS - In addition to the 20% restocking fee (which is clearly stated and I saw that from the beginning) they make you pay your own return shipping AND return shipping for any exchanges which supposedly are \"free.\" Completely misleading.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Esty Boorstein",
+   "Title": "Bad return policy, go elsewhere",
+   "Description": "Updated Oct 13, 2020\nVerified\nBad return policy, go elsewhere\nThey got the dress to me right away came within 5 days, however they are VERY unclear about their return policy, which I feel makes for dishonesty and overall didn't have a good experience with them. They would not let me return the dresses that I got from them, after less than 30 days which is standard on all shopping sites. Their return policy is that you need to return your item in 5 days of receiving the order, and they charge a 20% restocking fee (or full refund for store credit only) Would recommend going somewhere else, not worth the trouble if something doesn't fit right or just doesn't fit with what is needed don't expect to get your money back.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Carrie Smith",
+   "Title": "I agree with other reviews DO NOT BUY FROM THEM",
+   "Description": "Sep 23, 2020\nI agree with other reviews DO NOT BUY FROM THEM\nI agree with other reviews. DON'T BUY FROM THIS COMPANY! They do not take returns and claim that it is clearly stated on their website. It does say no returns but at the very bottom and in small print. It is to risky to buy formal dresses with no returns",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Sherry Kaiser",
+   "Title": "DON'T ORDER FROM THIS COMPANY!!!!",
+   "Description": "Sep 1, 2020\nDON'T ORDER FROM THIS COMPANY!!!!\nDON'T ORDER FROM THIS COMPANY!!!!\nI bought 3 dresses for my daughter's wedding, thinking I would like at least one of them but they did not arrive in time for the wedding! I had to find a different dress to wear.\nWhen I contacted customer service, they blamed the delay on UPS and said I only had 5 days to return. 5 DAYS!!!! I was even willing to pay the 20% restocking fee but they would not do a return at all. In all my emails back and forth, they did not mention the return policy.\nVery disappointed in this company. I will never buy from them again! I just wish I would have read the reviews before I placed my order.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Katherine Foster",
+   "Title": "Quite impressed with the customer…",
+   "Description": "Aug 12, 2020\nQuite impressed with the customer…\nQuite impressed with the customer service. I ordered a dress for so a wedding and received a different one. Reached out by email of course a little skeptical but was contacted immediately by Tricia. She immediately sent me a return label, confirmed the actual dress I ordered was in stock and upon my return of then incorrect item, had received my dress in couple of days!!! She stayed in touch a lot and offered great help all the way through the process to make sure my order was complete. Thumbs up to her and the Dress Outlet !!! Definitely will order again when needed",
+   "Rating": 4,
+   "Location": "US"
+ },
+ {
+   "Name": "Astrid Sperber",
+   "Title": "Trying to return a Suit",
+   "Description": "Jul 24, 2020\nTrying to return a Suit\nTrying to return a Suit, emailed a requested for a return with order number, they respond to me several times with a different order number, so this went back und forward for several Days, I think they don’t want you’re Return, I am so frosted tried calling them no result, will never buy from them again 😡😡😡😡😡",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Chiara Cibola Barbagallo",
+   "Title": "Ghost dress",
+   "Description": "Jun 29, 2020\nGhost dress\nI needed a dress, so I start looking on the internet and I find one on their website. I really liked it, it was the last one, a great deal. I buy it and I start waiting, dreaming about my wedding dress. It took me months to find one that I really liked. The day finally comes. I open the box and... It's the wrong dress! Turns out, they got messed up and the one listed doesn't actually exist. The customer service first lied to cover it up, then admitted it and said \"Unfortunately, this style is no longer available. Please let us know how we can help.\" Mistakes happen, but I consider this a bad experience. I won't use this website ever again.",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Bella Schekalo",
+   "Title": "DO NOT BUY HERE!!!!!!",
+   "Description": "Jun 2, 2020\nDO NOT BUY HERE!!!!!!\nDO NOT BUY HERE!!!!!!! They have horrible customer service . I bought a dress and found out there is a 20 percent restocking fee and a 10 percent cancellation fee. They wont even work with u . Worst company and website ive seen and ever delt with . Very rude !!!!!!! I dont even want to give them a1 star",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "Maria Z",
+   "Title": "bad customer service",
+   "Description": "May 14, 2020\nbad customer service\nMake sure you read the \"easy returns\" not so easy. They charge 20% restocking fee and you have to pay shipping for returns. My daughter's prom was cancelled so i needed to send the dress back. Even during these covid19 times they wouldn't even work with me on 10% nothing! I will never shop there again and will tell all my friends not to shop there. Bad customer service!",
+   "Rating": 1,
+   "Location": "US"
+ },
+ {
+   "Name": "TY NO",
+   "Title": "Canadian",
+   "Description": "Updated Mar 9, 2020\nCanadian\nI have ordered 2 dresses from this web site. Prices are reasonable. Both needed some alterations compare to the size chart hence the 4* review. Delivery was as expected. Both dresses as described. If I will need an occasion/evening dress again,this is the only site I would order from.\nDid not have to pay any duty which is a bonus.",
+   "Rating": 4,
+   "Location": "CA"
+ },
+    {
+   "Name": "Dana",
+   "Title": "DO NOT ORDER HERE!!!!!!",
+   "Description": "May 7, 2019\nDO NOT ORDER HERE!!!!!!\nI ordered a dress 05/02/2019, paid good money for a great looking dress from The Dress Outlet (who claim next day shipping btw.) After not receiving any \"shipped\" notifications and downloading their recommended \"Arrive\" app to my phone, I contacted them via their website. Today, 5/7 after having to contact them myself, I was told that they do not have the dress in stock and to choose another......... I searched for days to find the perfect dress and now I have to start all over!! Their only saving grace was quick responses and $10 off the replacement dress. I'm going to promgirl.",
+   "Rating": 2,
+   "Location": "US"
+ }
+]
+const displaytrustPageNav = trustperPage => {
+
+  let trustpagination =``
+  const trusttotalItems = trustdataSet.length
+  trustperPage = trustperPage ? trustperPage : 1
+  const trustpages = Math.ceil(trusttotalItems/trustperPage)
+  
+  for(let i = 1; i <= trustpages; i++) {
+    trustpagination += `<a data-id="${i}" href="#" onClick="displaytrustItems(${i},${trustperPage})" >${i}</a>`
+  }
+
+  document.getElementById('trustpagination').innerHTML = trustpagination
+  
+}
+const displaytrustItems = ( page = 1, trustperPage = 2 ) => {
+ let index, trustoffSet
+   if(page == 1 || page <=0)  {
+    index = 0
+    trustoffSet = trustperPage
+  } else if(page > trustdataSet.length) {
+    index = page - 1
+    trustoffSet = trustdataSet.length
+  } else {
+    index = page * trustperPage - trustperPage
+    trustoffSet = index + trustperPage
+  }
+  const trustslicedItems = trustdataSet.slice(index, trustoffSet)
+    var $listItems = $('div#trustpagination a');
+   $listItems.removeClass('active');
+   $('div#trustpagination a[data-id=' + page + ']').addClass('active');
+  console.log(trustslicedItems);
+  console.log();
+ const html = trustslicedItems.map(item => 
+`<div class="panel panel-default ${item.Rating}" data-rating="${item.Rating}">
+<div class="panel-heading">
+<div class="auth-date"><div class="author">By
+<a rel="author" class="url fn n" target="_blank" href="https://www.trustpilot.com/review/thedressoutlet.com" data-uw-rm-brl="exc">${item.Name} </a>
+<div class="custom_loc">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 368.666 368.666" style="enable-background:new 0 0 368.666 368.666" xml:space="preserve"><g id="XMLID_2_"><g><g><path d="M184.333,0C102.01,0,35.036,66.974,35.036,149.297c0,33.969,11.132,65.96,32.193,92.515
+c27.27,34.383,106.572,116.021,109.934,119.479l7.169,7.375l7.17-7.374c3.364-3.46,82.69-85.116,109.964-119.51
+c21.042-26.534,32.164-58.514,32.164-92.485C333.63,66.974,266.656,0,184.333,0z M285.795,229.355
+c-21.956,27.687-80.92,89.278-101.462,110.581c-20.54-21.302-79.483-82.875-101.434-110.552
+c-18.228-22.984-27.863-50.677-27.863-80.087C55.036,78.002,113.038,20,184.333,20c71.294,0,129.297,58.002,129.296,129.297
+C313.629,178.709,304.004,206.393,285.795,229.355z"/><path d="M184.333,59.265c-48.73,0-88.374,39.644-88.374,88.374c0,48.73,39.645,88.374,88.374,88.374s88.374-39.645,88.374-88.374
+S233.063,59.265,184.333,59.265z M184.333,216.013c-37.702,0-68.374-30.673-68.374-68.374c0-37.702,30.673-68.374,68.374-68.374
+s68.373,30.673,68.374,68.374C252.707,185.341,222.035,216.013,184.333,216.013z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+<span class="typography_location" data-consumer-country-typography="true">${item.Location}</span>
+</div>
+</div>
+<div class="date"><svg height="-437" viewBox="20.5 248.5 600 147.3" width="2500" xmlns="http://www.w3.org/2000/svg"><path d="m178.2 300.7h60.7v11.3h-23.9v63.7h-13.1v-63.7h-23.8zm58.1 20.7h11.2v10.5h.2c.4-1.5 1.1-2.9 2.1-4.3s2.2-2.7 3.7-3.8c1.4-1.2 3-2.1 4.8-2.8 1.7-.7 3.5-1.1 5.3-1.1 1.4 0 2.4.1 2.9.1.5.1 1.1.2 1.6.2v11.5c-.8-.2-1.7-.3-2.6-.4s-1.7-.2-2.6-.2c-2 0-3.9.4-5.7 1.2s-3.3 2-4.7 3.5c-1.3 1.6-2.4 3.5-3.2 5.8s-1.2 5-1.2 8v25.8h-12zm86.8 54.3h-11.8v-7.6h-.2c-1.5 2.8-3.7 4.9-6.6 6.6s-5.9 2.5-8.9 2.5c-7.1 0-12.3-1.7-15.5-5.3-3.2-3.5-4.8-8.9-4.8-16v-34.5h12v33.3c0 4.8.9 8.2 2.8 10.1 1.8 2 4.4 3 7.7 3 2.5 0 4.6-.4 6.3-1.2s3.1-1.8 4.1-3.1c1.1-1.3 1.8-2.9 2.3-4.7s.7-3.8.7-5.9v-31.5h12v54.3zm20.4-17.4c.4 3.5 1.7 5.9 4 7.4 2.3 1.4 5.1 2.1 8.3 2.1 1.1 0 2.4-.1 3.8-.3s2.8-.5 4-1c1.3-.5 2.3-1.2 3.1-2.2s1.2-2.2 1.1-3.7-.6-2.8-1.7-3.8-2.4-1.7-4-2.4c-1.6-.6-3.5-1.1-5.6-1.5s-4.2-.9-6.4-1.4-4.4-1.1-6.5-1.8-3.9-1.6-5.6-2.9c-1.6-1.2-3-2.7-3.9-4.6-1-1.9-1.5-4.1-1.5-6.9 0-3 .7-5.4 2.2-7.4 1.4-2 3.3-3.6 5.5-4.8s4.7-2.1 7.4-2.6 5.3-.7 7.7-.7c2.8 0 5.5.3 8 .9s4.9 1.5 6.9 2.9c2.1 1.3 3.8 3.1 5.1 5.2 1.4 2.1 2.2 4.7 2.6 7.7h-12.5c-.6-2.9-1.9-4.8-3.9-5.8-2.1-1-4.4-1.5-7.1-1.5-.8 0-1.9.1-3 .2-1.2.2-2.2.4-3.3.8-1 .4-1.9 1-2.6 1.7s-1.1 1.7-1.1 2.9c0 1.5.5 2.6 1.5 3.5s2.3 1.6 4 2.3c1.6.6 3.5 1.1 5.6 1.5s4.3.9 6.5 1.4 4.3 1.1 6.4 1.8 4 1.6 5.6 2.9c1.6 1.2 3 2.7 4 4.5s1.5 4.1 1.5 6.7c0 3.2-.7 5.9-2.2 8.2-1.5 2.2-3.4 4.1-5.7 5.5s-5 2.4-7.8 3.1c-2.9.6-5.7 1-8.5 1-3.4 0-6.6-.4-9.5-1.2s-5.5-2-7.6-3.5c-2.1-1.6-3.8-3.5-5-5.9-1.2-2.3-1.9-5.1-2-8.4h12.1v.1zm39.5-36.9h9.1v-16.4h12v16.3h10.8v8.9h-10.8v29c0 1.3.1 2.3.2 3.3.1.9.4 1.7.7 2.3.4.6 1 1.1 1.7 1.4.8.3 1.8.5 3.2.5.8 0 1.7 0 2.5-.1s1.7-.2 2.5-.4v9.3c-1.3.2-2.6.3-3.9.4-1.3.2-2.5.2-3.9.2-3.2 0-5.7-.3-7.6-.9s-3.4-1.5-4.5-2.6c-1.1-1.2-1.8-2.6-2.2-4.3s-.6-3.8-.7-6v-32h-9.1v-9.1zm40.3 0h11.3v7.4h.2c1.7-3.2 4-5.4 7-6.8s6.2-2.1 9.8-2.1c4.3 0 8 .7 11.2 2.3 3.2 1.5 5.8 3.5 7.9 6.2 2.1 2.6 3.7 5.7 4.7 9.2s1.6 7.3 1.6 11.2c0 3.7-.5 7.2-1.4 10.6-1 3.4-2.4 6.5-4.3 9.1s-4.3 4.7-7.3 6.3-6.4 2.4-10.4 2.4c-1.7 0-3.5-.2-5.2-.5s-3.4-.8-5-1.5-3.1-1.6-4.4-2.7c-1.4-1.1-2.5-2.4-3.4-3.8h-.2v27.1h-12v-74.4zm41.9 27.2c0-2.4-.3-4.8-1-7.1-.6-2.3-1.6-4.3-2.9-6.1s-2.9-3.2-4.7-4.3c-1.9-1.1-4.1-1.6-6.5-1.6-5 0-8.8 1.7-11.4 5.2-2.5 3.5-3.8 8.2-3.8 14 0 2.8.3 5.3 1 7.6s1.6 4.3 3 6c1.3 1.7 2.9 3 4.8 4s4 1.5 6.5 1.5c2.8 0 5-.6 6.9-1.7s3.4-2.6 4.7-4.3c1.2-1.8 2.1-3.8 2.6-6.1.5-2.4.8-4.7.8-7.1zm21.1-47.9h12v11.3h-12zm0 20.7h12v54.3h-12zm22.7-20.7h12v75h-12zm48.6 76.5c-4.3 0-8.2-.7-11.6-2.2s-6.2-3.4-8.6-5.9c-2.3-2.5-4.1-5.6-5.3-9.1s-1.9-7.4-1.9-11.5.6-7.9 1.9-11.4c1.2-3.5 3-6.5 5.3-9.1 2.3-2.5 5.2-4.5 8.6-5.9s7.3-2.2 11.6-2.2 8.2.7 11.6 2.2c3.4 1.4 6.2 3.4 8.6 5.9 2.3 2.5 4.1 5.6 5.3 9.1s1.9 7.3 1.9 11.4c0 4.2-.6 8-1.9 11.5s-3 6.5-5.3 9.1c-2.3 2.5-5.2 4.5-8.6 5.9s-7.2 2.2-11.6 2.2zm0-9.5c2.6 0 5-.6 6.9-1.7 2-1.1 3.5-2.6 4.8-4.4s2.2-3.9 2.8-6.1c.6-2.3.9-4.6.9-7 0-2.3-.3-4.6-.9-6.9s-1.5-4.3-2.8-6.1-2.9-3.2-4.8-4.3c-2-1.1-4.3-1.7-6.9-1.7s-5 .6-6.9 1.7c-2 1.1-3.5 2.6-4.8 4.3-1.3 1.8-2.2 3.8-2.8 6.1s-.9 4.6-.9 6.9c0 2.4.3 4.7.9 7s1.5 4.3 2.8 6.1 2.9 3.3 4.8 4.4c2 1.2 4.3 1.7 6.9 1.7zm31-46.3h9.1v-16.4h12v16.3h10.8v8.9h-10.8v29c0 1.3.1 2.3.2 3.3.1.9.4 1.7.7 2.3.4.6 1 1.1 1.7 1.4.8.3 1.8.5 3.2.5.8 0 1.7 0 2.5-.1s1.7-.2 2.5-.4v9.3c-1.3.2-2.6.3-3.9.4-1.3.2-2.5.2-3.9.2-3.2 0-5.7-.3-7.6-.9s-3.4-1.5-4.5-2.6c-1.1-1.2-1.8-2.6-2.2-4.3s-.6-3.8-.7-6v-32h-9.1v-9.1z"/><path d="m164.2 300.7h-54.9l-16.9-52.2-17 52.2-54.9-.1 44.4 32.3-17 52.2 44.4-32.3 44.4 32.3-16.9-52.2z" fill="#00b67a"/><path d="m123.6 344.7-3.8-11.8-27.4 19.9z" fill="#005128"/></svg></div>
+</div><h4 class="panel-title">        
+<img loading="lazy" width="100px" src="https://cdn.shopify.com/s/files/1/1109/3312/files/stars-${item.Rating}.svg?v=1658744154">
+</h4>   	
+  </div>  
+<div class="panel-review">	
+<div class="panel-body">
+<div data-title="a"><div class="rte">${item.Description}</div></div></div></div>
+  </div>`)  
+  document.querySelector('#container .trustreviewdata').innerHTML = html.join('')
+}
+let trustperPage = 20
+displaytrustPageNav(trustperPage)
+displaytrustItems(1, trustperPage)
+    $('.trustapp #ratingFilter').change(function() {
+  var reviews = $(this).val();
+  if (reviews === 'all') {
+    $('.trustreviewdata > div').fadeIn(450);
+  } else {
+    $('.trustreviewdata > div').fadeIn(450);
+    $('.trustreviewdata > div').not('.' + reviews).hide();
+  }
+
+});
+</script>

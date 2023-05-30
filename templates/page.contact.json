@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "3453de9d-6a09-4165-8981-18ca32a24099": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "contact-template",
+      "custom_css": [
+        ".map {margin-bottom: 16px;}"
+      ],
+      "settings": {
+        "display_google_map": true,
+        "google_map_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3306.345052479124!2d-118.25882328530118!3d34.035018926086046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b953cee9fa5d%3A0x497f1cad35f1de06!2sThe%20Dress%20Outlet!5e0!3m2!1sen!2sin!4v1651640741925!5m2!1sen!2sin\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+        "contact_title": "",
+        "contact_text_desc": "",
+        "contact_your_name": "",
+        "contact_phone_number": "",
+        "contact_your_email": "",
+        "display_location": true,
+        "location_code": "<p>Finding your dress shouldn't be stressful, contact us to help you find the best dress for your next occasion. Use our Live Chat for immediate assistance or send us an email with your question. (Se Habla Espanol)<\/p>\n<h5>Email: <a href=\"mailto:info@thedressoutlet.com\">info@thedressoutlet.com<\/a>\n<\/h5>\n<h5>Call: <a href=\"tel:+1(888)%20861-1422\" title=\"Call (888) 861-1422\">(888) 861-1422<\/a> <\/h5>\n<h5>Text: <a href=\"sms:+1(888)%20861-1422\" title=\"Text us (888) 861-1422\">(888) 861-1422<\/a>\n<\/h5>\n<a href=\"https:\/\/www.google.com\/maps\/place\/The+Dress+Outlet\/@34.035032,-118.2653894,15z\/data=!3m1!4b1!4m5!3m4!1s0x80c2b953cee9fa5d:0x497f1cad35f1de06!8m2!3d34.0350145!4d-118.2566346\" target=\"_blank\" rel=\"noopener\">\n      <h5>  Address:  \n                      1220  Maple Ave, Suite 1205 <br>Los Angeles CA 90015<\/h5>\n<\/a>",
+        "link": "shopify:\/\/pages\/returns-verify",
+        "linktext": "Request a Return"
+      }
+    },
+    "1639391063b734fff2": {
+      "type": "home-custom-block-baner",
+      "blocks": {
+        "1639391063120d27c6-0": {
+          "type": "largeImg",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOCATIONS_1_1289x.progressive_1ac91967-db1e-4892-a19d-e018f940e613.jpg",
+            "display_parallax": false,
+            "dpl_down_arrow": false,
+            "height_img_parallax": "970px",
+            "content_style": "style_1",
+            "display_bg_animation": false,
+            "color_bg_animation": "#f6f6f6",
+            "alignment": "left",
+            "banner_heading": "",
+            "font_size_banner_heading": "40px",
+            "color_banner_heading": "#232323",
+            "color_banner_heading_style2": "#10ffda",
+            "color_banner_heading_mb": "#232323",
+            "banner_sub_heading": "",
+            "font_size_banner_sub_heading": "13px",
+            "color_banner_sub_heading": "#ffffff",
+            "color_banner_sub_heading_mb": "#232323",
+            "banner_des": "",
+            "font_size_banner_des": "12px",
+            "color_banner_des": "#232323",
+            "color_banner_des_mb": "#232323",
+            "countdown": "",
+            "banner_button": "",
+            "link": "",
+            "bg_banner_button": "#232323",
+            "border_banner_button": "#232323",
+            "color_banner_button": "#ffffff",
+            "bg_banner_button_mb": "#232323",
+            "border_banner_button_mb": "#232323",
+            "color_banner_button_mb": "#ffffff",
+            "min_width_banner_button": "237px"
+          }
+        }
+      },
+      "block_order": [
+        "1639391063120d27c6-0"
+      ],
+      "settings": {
+        "class": "class",
+        "layout": "full",
+        "layout_style": "layout_style_1",
+        "display_bg_banner": false,
+        "bg_color_banner": "#f5f5f5",
+        "widget_title": "",
+        "widget_des": "",
+        "title_style": "style_1",
+        "img_align": "center",
+        "margin_bottom_mb": 25,
+        "margin_bottom_tab": 30,
+        "margin_bottom": 30
+      }
+    },
+    "contactbottom": {
+      "type": "contact-rich-text",
+      "disabled": true,
+      "settings": {
+        "content_top": "",
+        "content_bottom": "",
+        "font_size": "14px",
+        "text_alignment": "center",
+        "button_text_more": "Read More",
+        "button_text_less": "Read Less",
+        "color_text": "",
+        "margin_bottom_mb": 50,
+        "margin_bottom_tab": 65,
+        "margin_bottom": 65
+      }
+    }
+  },
+  "order": [
+    "3453de9d-6a09-4165-8981-18ca32a24099",
+    "main",
+    "1639391063b734fff2",
+    "contactbottom"
+  ]
+}

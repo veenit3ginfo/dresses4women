@@ -1,0 +1,1424 @@
+ <div id="container" class="googleapp">
+   <select id="ratingFilter">
+     <option  value="">All ratings</option>  
+  <option value="5">5 stars</option>
+  <option value="4">4 stars</option>
+  <option value="3">3 stars</option>
+  <option value="2">4 stars</option>
+  <option value="1">1 stars</option>
+</select>
+  <div class="reviewdata">
+        </div>  
+      <div id="pagination"></div>
+    </div>
+<script>
+const dataSet = [
+  {
+    "index":1,
+    "Review_url": "https://www.google.com/maps/contrib/105351525980978063374/place/ChIJXfrpzlO5woARBt7xNa0cf0k/@34.0350145,-154.1160096,3z/data=!4m6!1m5!8m4!1e1!2s105351525980978063374!3m1!1e1?hl=en-US",
+    "Author": "Jennifer O Brien",
+    "Content": "I purchased a dress for my daughters wedding from The Dress Outlet. I was a bit apprehensive as it was coming from USA and I live in Ireland.. Will it be here on time? Will it be the correct size? How do I exchange if needed...",
+    "Rating": 5
+  },
+  {
+    "index":2,
+    "Review_url": "https://www.google.com/maps/contrib/109788173659757598449/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Arishma Ashley Karan",
+    "Content": "The customer service on this site is amazing. You just click to chat with a stylist. Chelsea helped me in getting my measurements, and then gave recommendations for comparing my measurements with the size guides on the site. Additionally, she helped me pick out a color for the dress that I wanted that complimented my skin tone. Overall, the customer service (chat) on this site is very supportive and helpful. I'd definitely recommend buying a dress from here, especially online, where the option to chat with a stylist is accessible.",
+    "Rating": 2
+  },
+  {
+        "index":3,
+    "Review_url": "https://www.google.com/maps/contrib/117408558993896932948/reviews/@31.2811809,-99.7582434,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Tiffany Martin",
+    "Content": "l know how online clothe shopping goes.. I only paid $100 and this dress exceeded my expectations 100%. The best quality and the color was stunning!",
+    "Rating": 3
+  },
+  {
+        "index":4,
+    "Review_url": "https://www.google.com/maps/contrib/113125882651700618917/reviews/@37.3133146,-101.672664,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Janet Taylor",
+    "Content": "The Dress Outlet advertises fast shipping and easy returns - not the case! I repeatedly called and emailed to assure a timely exchange for my daughter's prom dress. Buyer beware - you will pay the cost of returned items in addition to a 20% restocking fee. Very long story short, I paid for overnight delivery and they sent me the same dress size that I had returned. They then agreed to overnight me the dress in the correct size. That would be nice if the warehouse knew that UPS only delivers overnight Monday - Friday unless you check the box for a overnight weekend delivery. My daughter's prom dress arrived Monday after her prom. I have repeatedly asked for the manager to call me to explain how so many errors could have occurred. I have yet to hear from Elvia. I cannot begin to truly express my daughter's and my disappointment with the customer service we received from Trisha, Miaca, Megan and Leann. I was repeatedly told to be patient and that they were expediting the situation to the team. They will ruin your special day too!",
+    "Rating": 1
+  },
+  {
+        "index":5,
+    "Review_url": "https://www.google.com/maps/contrib/108598876031221303517/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Charles Pope",
+    "Content": "I had to return this dress for the same dress in the same color, but a different size.  I chatted with Chelsea via the chat option.  She was very helpful and handled my questions efficiently.  My other dress will be in the mail tomorrow.  The dress quality is excellent and the price is perfect!  Thank you!",
+    "Rating": 5
+  },
+  {
+        "index":6,
+    "Review_url": "https://www.google.com/maps/contrib/109930992218238421253/reviews?hl=en-US",
+    "Author": "Yolanda Abubo",
+    "Content": "I would like everyone to know that our experience ordering from dress outlet has been amazing! Our order came in two days and we were refunded our 3 day delivery fee! The dress is above the quality that I expected for the affordable price too. Definitely will use this site again and highly recommend to others",
+    "Rating": 5
+  },
+  {
+        "index":7,
+    "Review_url": "https://www.google.com/maps/contrib/112122549543905841499/reviews?hl=en-US",
+    "Author": "Katherine Boelts",
+    "Content": "Amazing Customer Service!!  Last minute dress shopping for prom, the dress we got was smaller than we thought it would be, but only had days before the prom.  Called them and they worked to get the exchange processed quickly!  The dress …",
+    "Rating": 5
+  },
+  {
+      "index":8,
+    "Review_url": "https://www.google.com/maps/contrib/114445141842028681688/reviews?hl=en-US",
+    "Author": "Milissa Wilson-Smith",
+    "Content": "My daughter bought a dress from this company and had to return it.  However, she had some problems with the return process. Marcia was so accommodating, kind and helpful. My daughter would have never made it to her Prom if they did not bend …\nMore",
+    "Rating": 4
+  },
+  {
+        "index":9,
+    "Review_url": "https://www.google.com/maps/contrib/101072763763626341466/reviews?hl=en-US",
+    "Author": "vaisakhi muddana",
+    "Content": "I recently purchased a dress that was 2 sizes bigger than my size but I couldn't return it as it had a restocking fee. But as I spoke with the customer service agent Ms. Taylor, she has been an incredible help to me when I mentioned my …",
+    "Rating": 4
+  },
+  {
+        "index":10,
+    "Review_url": "https://www.google.com/maps/contrib/107092020941662211999/reviews/@33.4014766,-107.578917,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Moriah Singleton",
+    "Content": "I have ordered from this company twice, within the last two months. With the first dress that I ordered,  customer service reached out and stated that the dress was not available. They asked me did I want to exchange it for another dress an I did. My event was on that Saturday, and the dress came on a Friday. I was a little annoyed that I paid for three day shipping to receive the dress in time, and it came borderline to my event. I didn't leave a review the first time because I absolutely loved the dress. I placed a second order on this Monday, for an event that will happen on this Saturday. I got an email from customer service stating that the dress was out of stock. This is the second time that they've emailed me stating that the inventory of the dress is not in stock. When a customer is rush ordering a dress, we expect for the store to have it in stock. Not only did customer service reach  out to me and state they didn't have the dress in stock, they had my order completely wrong. I ordered a medium in the dress, and they stated that they were out of stock in the extra large. I explained to them that I did not order a extra large dress and sent a screenshot showing the order of the medium. I asked them could they switch it out for another dress and have it to me by Friday for my event that is on Saturday and they cannot accommodate. I canceled my order because this is just ridiculous that they can't accommodate a customer for their mess ups. I refuse to order from this company again. Hopefully they can get their inventory together and learn to accommodate customers when they are in the wro",
+    "Rating": 1
+  },
+  
+  {
+        "index":11,
+    "Review_url": "https://www.google.com/maps/contrib/102578336723555436920/reviews/@30.9572927,-100.477403,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Teresa Ribble",
+    "Content": "I had a leaking toilet. Gerald took care of the issue quickly and efficiently. He seems extremely knowledgeable and is very personable.",
+    "Rating": 5
+  },
+  {
+        "index":12,
+    "Review_url": "https://www.google.com/maps/contrib/103601353237616243189/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Joselyn Fernandez",
+    "Content": "Incredible customer service , beautiful dresses, they were super patience and kind, and helpful with everything. I ended up buying 2 dresses !! 100% recommended …",
+    "Rating": 5
+  },
+  {
+        "index":13,
+    "Review_url": "https://www.google.com/maps/contrib/115481677362930711050/reviews/@38.5153691,-94.6211304,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Pamela Gainey",
+    "Content": "I have used their training program, the dog park and day care and was very impressed with the staff and convenience of scheduling.",
+    "Rating": 5
+  },
+  {
+        "index":14,
+    "Review_url": "https://www.google.com/maps/contrib/105331604635290569463/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Leyna Cooke",
+    "Content": "I had to go to different sites and go to the customer help page and start a conversation with them, and determine whether it was a real person that I was chatting with or an A.I. The person who spent a few minutes chatting with me was really nice and wasn't upset that i was asking about \"pizza length\" dresses...",
+    "Rating": 5
+  },
+  {
+        "index":15,
+    "Review_url": "https://www.google.com/maps/contrib/110892205082840520878/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Sheida Anvari",
+    "Content": "I bought a dress for my best friend’s wedding, and I got so many compliments wearing it. They have great customer service and beautiful products. The brand I purchased …",
+    "Rating": 5
+  },
+  {
+        "index":16,
+    "Review_url": "https://www.google.com/maps/contrib/102343982837667978988/reviews/@27.6790965,-138.0570733,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Randyn's Stop Motion",
+    "Content": "I just ordered my daughter’s senior prom dress. Can’t wait to see it. I was chatting with Chelsea online and she was very helpful.",
+    "Rating": 5
+  },
+  {
+        "index":17,
+    "Review_url": "https://www.google.com/maps/contrib/114969906368768083964/reviews/@36.303864,-119.8612816,7z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Sara Garcia",
+    "Content": "Alchemy Salon and Spa is an experience in and of itself! Service is always excellent and stylists greet you warmly every time. It’s got a really cool ambiance upon arrival, you’re offered a beverage and a smile. I came to Alchemy following Omar Padilla, my stylist of over ten years. He is the best in the business and has excellent technical skills and always listens and delivers great results! I have never dyed my hair but I have friends who swear by him! If you’re in the Sacramento area, give them a visit and support this amazing establishment! 💕",
+    "Rating": 5
+  },
+  {
+        "index":18,
+    "Review_url": "https://www.google.com/maps/contrib/117095119498913912409/reviews/@36.4650151,-97.6653878,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "K. Klodi",
+    "Content": "This is the first time I ordered from The Dress Outlet. I ordered accidentally two dresses instead of one when I added them in the cart. The order was processed for two instead of one. I reached out by chat and Maica helped me out with canceling one of the dresses. Additionally, she went over the return policy and very politely walked me through the return process. I am very happy with their customer service.",
+    "Rating": 5
+  },
+  {
+      "index":19,
+    "Review_url": "https://www.google.com/maps/contrib/111366918906239333732/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Linda Hedges",
+    "Content": "I recently purchased a Mother of the Bride Dress from the Dress Outlet and after I completed my purchase I discovered that by mistake I had purchased 2 of the same dress.  I immediately reached out to The Dress Outlet requesting they refund me the money for one of the dresses as I  only need one.  I was helped by Tricia and her customer service provided to me was exceptional!  Tricia advised me that she processed a refund for one of the dresses and that I would see the credit within 3-5 business days.  Was a pleasure dealing with Tricia!  Thanks again it is much appreciated!",
+    "Rating": 5
+  },
+  {
+        "index":20,
+    "Review_url": "https://www.google.com/maps/contrib/104289190216154860354/reviews?hl=en-US",
+    "Author": "Annabel Reynaga",
+    "Content": "I've never been so satisfied with an online service as much I've been with the dress outlet! I changed my mind on so many different dresses & they were always there to help me with the process very quick & super easy! The dresses are great quality & the service was excellent! If you have questions or concerns chat with them & they will help you immediately!",
+    "Rating": 5
+  },
+  {
+        "index":21,
+    "Review_url": "https://www.google.com/maps/contrib/111003198450372943053/reviews?hl=en-US",
+    "Author": "C. V.",
+    "Content": "Everyone was great. Robert was very helpful and knowledgeable!",
+    "Rating": 5
+  },
+  {
+        "index":22,
+    "Review_url": "https://www.google.com/maps/contrib/107691500769059304619/reviews/@33.9816178,-101.3776688,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Sofia Tognotti",
+    "Content": "Tricia helped me so much through my prom dress shopping experience! The dress I fell in love with was out of stock and so she looked up numerous dresses very similar. Her response time was very fast and filled with kindness. This is my first time ordering a dress from here and I 100% will order my future dresses from here!",
+    "Rating": 5
+  },
+  {
+        "index":23,
+    "Review_url": "https://www.google.com/maps/contrib/117677556769916313450/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Grace Villegas",
+    "Content": "I ordered a few dresses for my daughters wedding, it was a destination wedding, one was too big and the other was the wrong color. I was unable to return them within the 14 days but Tricia from the Dress Outlet was gracious enough to give me store credit. I so appreciate the gesture and would definitely order again.",
+    "Rating": 5
+  },
+  {
+        "index":24,
+    "Review_url": "https://www.google.com/maps/contrib/105011134730495859203/reviews/@36.4762658,-119.6692253,7z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "claudia conte",
+    "Content": "Thank you Dress Outlet and Tricia for your awesome correspondence. My daughter loves her prom dress and your customer service with our returns and exchanges was outstanding. Thank you for a wonderful experience to what could have been a very stressful time! We will definitely recommend you to all our friends.",
+    "Rating": 5
+  },
+  {
+        "index":25,
+    "Review_url": "https://www.google.com/maps/contrib/101151056212367569160/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "tb",
+    "Content": "My experience with The Dress Outlet was great! The purchases were shipped quickly. They made a concession for an error on my part AND refunded part of my purchase when the item arrived with a mild issue. I would totally shop with them again! AND they are local to my home...amazing! Thanks Tricia!",
+    "Rating": 5
+  },
+  {
+        "index":26,
+    "Review_url": "https://www.google.com/maps/contrib/109800628962111177178/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Nadine Gayasingh",
+    "Content": "I purchased four gowns, as my son is getting married May 2021. Low and behold, they arrived, and I tried them on and was really impressed with quality, look and prices. I was skeptical, but with COVID, most stores are closed in my city and …",
+    "Rating": 5
+  },
+  {
+        "index":27,
+    "Review_url": "https://www.google.com/maps/contrib/112868308171371593327/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Addison Eckle",
+    "Content": "The photos, information and ability to sort by color, size, etc. Made this an easy shopping experience. There are coupons for newbies and spring collection on top of the decently priced items with lots of flair. I have purchased many R&M",
+    "Rating": 5
+  },
+  {
+        "index":28,
+    "Review_url": "https://www.google.com/maps/contrib/107166111150412853038/reviews/@36.9947955,-96.9214246,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ann Rosario",
+    "Content": "The best customer service ever! The delivery is also fast and my dress is gorgeous",
+    "Rating": 5
+  },
+  {
+        "index":29,
+    "Review_url": "https://www.google.com/maps/contrib/107992898326322993321/reviews/@37.3932799,-96.115112,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Jackie Morgan",
+    "Content": "Dashawn and Chase were the absolute best! Had so much fun here!!!!",
+    "Rating": 5
+  },
+  {
+        "index":30,
+    "Review_url": "https://www.google.com/maps/contrib/113739890827098903956/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Layan R. Naser",
+    "Content": "great experience. the customer service was amazing. they helped me received the dress as soon as possible. the dress looked exactly like how it was portrayed on their website. same color shade and true to size. I would definitely recommend the dress outlet to my friends and surrounding. the only idea i would suggest is to work with other shippers such as DHL, ARAMEX, etc.",
+    "Rating": 5
+  },
+  {
+    "index":31,
+    "Review_url": "https://www.google.com/maps/contrib/105762558909975088935/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "DB Harlowe",
+    "Content": "Just chatted with Brittany, and she was so helpful helping me know what style would look best one me. She was very polite and friendly, and was easy to chat with. The Dresses on the site are absolutely gorgeous!",
+    "Rating": 5
+  },
+  {
+    "index":32,
+    "Review_url": "https://www.google.com/maps/contrib/113611378692727917785/reviews?hl=en-US",
+    "Author": "Jo Z",
+    "Content": "Today, after spending months looking & ordering multiple evening gowns for our daughter's upcoming wedding, I was fortunate to cross paths with Maica from The Dress Outlet. She was by far the most helpful, knowledgeable associate I have …",
+    "Rating": 5
+  },
+  {
+    "index":33,
+    "Review_url": "https://www.google.com/maps/contrib/114970694335468179837/reviews/@0.1214559,-163.6512222,3z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Elly Grimmett",
+    "Content": "Zac was very pleasant. The dead locks are good and all the mess was cleaned up. Thanks Zac and Brandon’s communication and my booking was done in a timely manner. cheers Elly",
+    "Rating": 5
+  },
+  {
+    "index":34,
+    "Review_url": "https://www.google.com/maps/contrib/108661732090305335712/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Vickie Clark",
+    "Content": "I ordered a pantsuit for my nephews wedding and after I ordered it I seen all the bad reviews and was really worried. The pantsuit came in about two weeks and was just what I expected. It was GREAT …",
+    "Rating": 5
+  },
+  {
+    "index":35,
+    "Review_url": "https://www.google.com/maps/contrib/114171709174014904617/reviews/@41.1203913,-109.7843043,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "elise s",
+    "Content": "i want to personally thank maica for being such a sweet customer service rep!! my dress fits like magic, and when they went out of stock of the one i originally ordered, she offered a refund and other dress options! super fast shipping, such amazing customer service! i recommend 100%.",
+    "Rating": 5
+  },
+  {
+    "index":36,
+    "Review_url": "https://www.google.com/maps/contrib/116514006348941927250/reviews/@37.2320847,-101.195119,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kettely Jeanty",
+    "Content": "George did a great job, getting my phone running again. Real life saver. Will use again.",
+    "Rating": 5
+  },
+  {
+    "index":37,
+    "Review_url": "https://www.google.com/maps/contrib/111431336441159248412/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "tina Jaeger",
+    "Content": "I had the most wonderful experience ordering a pant suit for my Niece's wedding in June. I did the online chat and spoke with Maica. She was outstanding. Very patient and willing to help me find exactly what i wanted. I found an outfit and",
+    "Rating": 5
+  },
+  {
+    "index":38,
+    "Review_url": "https://www.google.com/maps/contrib/115951065949423213291/reviews/@37.9495171,-103.0962511,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Deborah Doucet",
+    "Content": "Nurses are totally understaffed,and cannot take care of patients properly. They are in a hurry as they have",
+    "Rating": 5
+  },
+  {
+    "index":39,
+    "Review_url": "https://www.google.com/maps/contrib/116351384643975518227/reviews/@41.2853724,-108.1310231,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Marjorie Webb",
+    "Content": "Our guide was knowledgeable, friendly and courteous. We saw 3 humpback whales and 2 minkes. The captain drove by us by a place where we also saw lots of sea lions. The trip was worth it! Even if we saw nothing, the boat ride was a fun trip and definitely worth your time and expense.",
+    "Rating": 5
+  },
+  {
+    "index":40,
+    "Review_url": "https://www.google.com/maps/contrib/107095146038631330343/reviews/@39.2524918,-103.105212,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "CAROLE KUPERSMITH",
+    "Content": "Thanks for the positive feedback. We appreciate it.",
+    "Rating": 5
+  },
+  {
+     "index":41,
+    "Review_url": "https://www.google.com/maps/contrib/117961773734745141738/reviews/@37.4788216,-96.1140203,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Dolores Othman",
+    "Content": "Brought my cat Tutu as he is 19yrs old and was losing weight. The vet along with the staff took care of my Tutu and guided us in explaining in …",
+    "Rating": 5
+  },
+  {
+   "index":42,
+    "Review_url": "https://www.google.com/maps/contrib/103014865993537878650/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Jacoby Five",
+    "Content": "Such great dress options that are different and unique! This rating is specific to the quality of the customer service - Attention to their customers concerns and requests is immediate and effective! SO PLEASED. Will definitely search for dressed here again!",
+    "Rating": 5
+  },
+  {
+     "index":43,
+    "Review_url": "https://www.google.com/maps/contrib/105538827503777439864/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "chantel phillipsanthony",
+    "Content": "I was in love with the dress I bought in may for my prom! It fit me beautifully, it arrived to my house within 2 weeks! I recommend The Dress Outlet! Their prices are very affordable and the items they have are amazing!",
+    "Rating": 5
+  },
+  {
+     "index":44,
+    "Review_url": "https://www.google.com/maps/contrib/103651863985584397429/reviews/@39.8126769,-95.7038673,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Shari Molenaar",
+    "Content": "Being the wife of an owner operator we have had many experiences with the buying and selling of trucks. This place has far exceeded any poor customer service we have received and would highly suggest going elsewhere. If you do decide to",
+    "Rating": 5
+  },
+  {
+     "index":45,
+    "Review_url": "https://www.google.com/maps/contrib/116553833496450359950/reviews/@33.2337124,-97.707097,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "becky ollison",
+    "Content": "Today was my first visit with Dr Callahan and I found her absolutely delightful! She explained that due to the process of my insurance requirements and the necessity of jumping through the necessary hoops it will take some time before she …",
+    "Rating": 5
+  },
+  {
+     "index":46,
+    "Review_url": "https://www.google.com/maps/contrib/112343511041952178054/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Donnis Sewell",
+    "Content": "I needed a dress for my granddaughters wedding and could not search the traditional way because of the virus.... I had to go online.. I found The Dress Outlet and what a blessing it turned out to be. I had no idea what size, so I ordered several. They had so many designs to chose from. They made several shipments to me and I had no problem returning the unwanted items. Customer Service was great.... answered all my questions. I feel like Tricia is my personal friend because of all the help she gave me. I would highly recommend shopping with them.",
+    "Rating": 5
+  },
+  {
+     "index":47,
+    "Review_url": "https://www.google.com/maps/contrib/114732974034361639095/reviews/@37.7868982,-100.9468803,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Luticia Bennett",
+    "Content": "This location is super fast and the staff is super friendly. I actually live closer the BMV on Navarre than I do this location. I always come to this location because they get you in and out. The longest I have had to wait was 45 minutes and that was after the BMV opened back up after the statewide shut down.",
+    "Rating": 5
+  },
+  {
+     "index":48,
+    "Review_url": "https://www.google.com/maps/contrib/105941048363279575784/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Elise Duran",
+    "Content": "Avoid this company at all costs. My 14 year old daughter found a picture of a nice dress that was offered in an XS. I begrudgingly agreed to allow her to purchase the $110 dress as she was so excited about the upcoming middle school social. …",
+    "Rating": 1
+  },
+  {
+     "index":49,
+    "Review_url": "https://www.google.com/maps/contrib/109973448838928567681/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Zayne ryousef",
+    "Content": "I really needed help finding a specific dress, and Maica from customer service was so helpful and was not only able to find the dress, but was also able to facilitate a quick and easy way for me to pick up the dress before the time I needed it by! She was also so kind and quick with her responses throughout our conversation :)",
+    "Rating": 5
+  },
+  {
+     "index":50,
+    "Review_url": "https://www.google.com/maps/contrib/109210826149887587136/reviews/@37.0713928,-100.7023077,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Melissa Atkins-Miller",
+    "Content": "I was able to quickly schedule an appointment. Bobbie did a great job concentrating on problem areas as well as whole body. Very reasonably priced. Highly recommended!",
+    "Rating": 5
+  },
+  {
+    "index":51,
+    "Review_url": "https://www.google.com/maps/contrib/111921161741560341491/reviews?hl=en-US",
+    "Author": "Deede Murdock",
+    "Content": "I needed a Mother of the Bride dress. I searched many places and had no luck. I found the Dress Outlet via a web search. I ordered a dress, it was beautiful, but not the right size. I returned it, no hassle. Tricia, at The Dress Outlet,",
+    "Rating": 5
+  },
+  {
+    "index":52,
+    "Review_url": "https://www.google.com/maps/contrib/100400144438068158884/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "tamra delello",
+    "Content": "I would like to send the highest praises for the dress outlet!! I absolutely love the team who helped me with my dress for my only daughters wedding... I ordered my dress and it was 2 sizes to big and couldn’t afford to send it back over …",
+    "Rating": 5
+  },
+  {
+    "index":53,
+    "Review_url": "https://www.google.com/maps/contrib/113646738737615131016/reviews/@33.6424582,-117.8182413,9z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Marsha Morris",
+    "Content": "I recently had my wedding at Pins N Pockets. Most people, including myself; would say \"I am not having my wedding at a bowling alley, but when you go inside this place is amazing, and the staff was incredible.",
+    "Rating": 5
+  },
+  {
+    "index":54,
+    "Review_url": "https://www.google.com/maps/contrib/109165238477460525176/reviews/@29.8142383,-99.3068562,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Maria Teresa Sotomayor",
+    "Content": "Tricia was a lot of help by helping me online chatting giving me information about the dress I want it. Availability and expedite delivery. It's really helpful to have someone to chat and taking the time to help you while you are shopping, not everyone have this type of service. Thank you Tricia.",
+    "Rating": 5
+  },
+  {
+    "index":55,
+    "Review_url": "https://www.google.com/maps/contrib/111279380987640934533/reviews?hl=en-US",
+    "Author": "Laura Musuras",
+    "Content": "Unfortunately, my purchase didn’t work out…but returning was a breeze and they were very prompt in their response",
+    "Rating": 5
+  },
+  {
+    "index":56,
+    "Review_url": "https://www.google.com/maps/contrib/111279380987640934533/place/ChIJgTWsp5PkDogRQegWpr4r6UU/@37.9247821,-103.1151378,5z/data=!4m6!1m5!8m4!1e1!2s111279380987640934533!3m1!1e1?hl=en-US",
+    "Author": "Extra Space Storage",
+    "Content": "Unfortunately, my purchase didn’t work out…but returning was a breeze and they were very prompt in their response",
+    "Rating": 5
+  },
+  {
+    "index":57,
+    "Review_url": "https://www.google.com/maps/contrib/117316293620967340909/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "John Knox",
+    "Content": "I had a problem with my discount code being applied to my order today. I contacted customer service via chat. i talked with Maica and she straightened out my issue immediately! she was great to deal with and i was impressed with her and this company!",
+    "Rating": 5
+  },
+  {
+    "index":58,
+    "Review_url": "https://www.google.com/maps/contrib/110562948276451332470/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Josephine Spady",
+    "Content": "I received the dress today for my mom. I am very pleased. The dress is lovely and it fits her perfectly. She will be beautiful at her grandson's wedding. Thank you",
+    "Rating": 5
+  },
+  {
+    "index":59,
+    "Review_url": "https://www.google.com/maps/contrib/103278486361178654011/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Buckie Meyer",
+    "Content": "A-1 experience, I had ordered my 1st dress for our son's wedding, it arrived quickly and unfortunately was a bit small, I shipped it back with no issues for an even exchange in a larger size, again arrived quickly. Then the unthinkable …",
+    "Rating": 5
+  },
+  {
+    "index":60,
+    "Review_url": "https://www.google.com/maps/contrib/105484200446338668681/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Lorie",
+    "Content": "I needed to return 2 dresses for my son's wedding and Tricia was very helpful in sending me the Return Forms I needed to fill out. The dresses are gorgeous I'm just having problems finding a dress that fits and is comfortable. Thank you again Tricia for all your help",
+    "Rating": 5
+  },
+  {
+      "index":61,
+    "Review_url": "https://www.google.com/maps/contrib/109385485336844426973/reviews?hl=en-US",
+    "Author": "Selena Churaman",
+    "Content": "I go here quite often because its close to work. Usually my experience is nice but today it was just awful. The cashier was on his phone during my transaction (I don't care if you don't have customers but I was placing my order)",
+    "Rating": 5
+  },
+  {
+     "index":62,
+    "Review_url": "https://www.google.com/maps/contrib/115025157888663787632/reviews/@36.4868504,-106.2773168,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kim Marshall",
+    "Content": "I had my dryer vent cleaned as my clothes were taking longer than one cycle to dry. I wish I could post pictures so you could see how clogged my rooftop",
+    "Rating": 5
+  },
+  {
+     "index":63,
+    "Review_url": "https://www.google.com/maps/contrib/106393034141900876657/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "DX Bayern",
+    "Content": "Great variety of options for plus size, however the website was very slow so it made the experience a little less enjoyable. Shipping was fast, dresses were true to description, I however received an …",
+    "Rating": 3
+  },
+  {
+     "index":64,
+    "Review_url": "https://www.google.com/maps/contrib/105200196527376578884/reviews/@33.2866281,-101.3112533,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "LEAH K",
+    "Content": "Olansky Dermatology & Aesthetics (formerly Olansky Dermatology Associates)",
+    "Rating": 5
+  },
+  {
+     "index":65,
+    "Review_url": "https://www.google.com/maps/contrib/109968498201049464539/reviews/@33.7119661,-101.3423036,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ariana Clay",
+    "Content": "Pam was very helpful in assisting me with the perfect color/size for prom.",
+    "Rating": 5
+  },
+  {
+     "index":66,
+    "Review_url": "https://www.google.com/maps/contrib/100127708098141520794/reviews/@31.2516969,-99.2529758,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Karima Foustok",
+    "Content": "The office is clean and so is the bathroom. All staff wear a mask and so do the clients. All of the staff are professional polite and very patient. The explain everything you need to kno",
+    "Rating": 5
+  },
+  {
+     "index":67,
+    "Review_url": "https://www.google.com/maps/contrib/113903926237979196623/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Brenda",
+    "Content": "This was without a doubt the best online shopping experience I have ever had! I received my purchase in less than a week and unfortunately had to return it, but The Dress Outlet was so prompt in assisting me in doing so. I will definitely order from this company again!",
+    "Rating": 5
+  },
+  {
+     "index":68,
+    "Review_url": "https://www.google.com/maps/contrib/117336964181922491752/reviews/@37.5491106,-103.0999577,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Debra Claunch",
+    "Content": "Read reviews prior to going to the store. Almost all were positive with the exception of one referring to personnel in the store as a used car salesman. Well, I'm old enough to read reviews and tell when someone is just not a nice person …",
+    "Rating": 5
+  },
+  {
+     "index":69,
+    "Review_url": "https://www.google.com/maps/contrib/111244954806724448844/reviews/@26.7909575,1.6077337,3z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Priya Kothiwan",
+    "Content": "Delicious food, ambience is okay.. but the food is too good👍🏻 it's a Family restaurant so a plus here too.",
+    "Rating": 5
+  },
+  {
+     "index":70,
+    "Review_url": "https://www.google.com/maps/contrib/116491602657409889168/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "rebecca moser",
+    "Content": "I had purchased a dress for my grandson wedding, when I received it ,it was to long and I could not get it zipped up, it was a medium..I returned it and requested the shorter version, same style, but a tea length.I received the replacement …",
+    "Rating": 5
+  },
+  {
+      "index":71,
+    "Review_url": "https://www.google.com/maps/contrib/113963846431403272610/reviews?hl=en-US",
+    "Author": "Helen Wong",
+    "Content": "I just wanted to say that Maica has been super sweet, patient, and helpful to me getting my dress ordered properly and giving me advice on sizing and disclosing all of the information necessary for me to know. Thank you, Maica!",
+    "Rating": 5
+  },
+  {
+      "index":72,
+    "Review_url": "https://www.google.com/maps/contrib/112060331460204219458/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ann McGrath",
+    "Content": "I ordered a dress for my son's wedding on May 8, 2018. Paid for it at the time. Never got no info on my order..After a few messages, three phone calls (and off course it went to message machine, with no return call on their part, and a few more emails, I finally got the info. To me they got a very bad customer service . Finally got the dress today to find out I had to pay more money at the post office when I went to pick it up..I will never deal with The Dress Outlet again, and never recommend it to anyone.",
+    "Rating": 1
+  },
+  {
+      "index":73,
+    "Review_url": "https://www.google.com/maps/contrib/118295951413617572328/reviews/@38.1510263,-95.0506865,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Lil L",
+    "Content": "Customer Service Specialist's Maica and Tricia were truly the biggest help!! They understood what I was looking for and even though we did not find exactly what I wanted they made it a lot easier for me to look around with the options they …",
+    "Rating": 5
+  },
+  {
+      "index":74,
+    "Review_url": "https://www.google.com/maps/contrib/105403556422280444620/reviews/@37.4876604,-96.1250507,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Josie Telese",
+    "Content": "Good experience. Employees and doctor made me feel comfortable. Definitely recommend this facility.",
+    "Rating": 5
+  },
+  {
+      "index":75,
+    "Review_url": "https://www.google.com/maps/contrib/108607939116938755225/reviews/@31.1641246,-134.8820546,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Brian Ladd",
+    "Content": "Daniel, our technician when above and beyond. He took care of every detail. Whenever I need service of repair on my garage door, I will use Arizona’s Best! Thank you Daniel!",
+    "Rating": 5
+  },
+  {
+      "index":76,
+    "Review_url": "https://www.google.com/maps/contrib/112823359240002998547/reviews?hl=en-US",
+    "Author": "Sonja Elkins",
+    "Content": "They have replaced several phone screens and repaired a laptop that my daughter spilled sweet tea on. Prices are good! Laptop was $75!!!",
+    "Rating": 5
+  },
+  {
+      "index":77,
+    "Review_url": "https://www.google.com/maps/contrib/106141463704365201747/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Delores Wilson",
+    "Content": "Customer Service was great. I used the chat feature to ask a question. My representative was able to research my question and provide assistance. The website was easy to navigate and the product I wanted was available. I will definitely be shopping at the Dress Outlet again.",
+    "Rating": 5
+  },
+  {
+      "index":78,
+    "Review_url": "https://www.google.com/maps/contrib/101019918958052673660/reviews/@37.6416127,-102.0424713,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Angie Stoops",
+    "Content": "The ladies that worked with me were amazing! The answered my questions and were pleasant!",
+    "Rating": 5
+  },
+  {
+      "index":79,
+    "Review_url": "https://www.google.com/maps/contrib/111550210965309517036/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "chloe lancaster",
+    "Content": "bestie... so helpful my girl Britney helped me at 10pm and found me a dress i really liked 14/10 would recommend !",
+    "Rating": 5
+  },
+  {
+      "index":80,
+    "Review_url": "https://www.google.com/maps/contrib/110359744913510854633/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "EMMA SANTIAGO-HERNANDEZ",
+    "Content": "For a month I orderd so many dresses from various websites, including the Dress Outlet. com. They had the best looking dresses but arrived late for one of the four events. Nevertheless, I did get to wear an R&M style dress for a retirement …",
+    "Rating": 5
+  },
+  {
+     "index":81,
+    "Review_url": "https://www.google.com/maps/contrib/111873279707071505194/reviews/@37.3465179,-99.1551842,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Rose Pierro",
+    "Content": "Lacey was very kind, very personable, and very knowledgeable. She took the time at the beginning to ask all the right questions to insure that she understood what I wanted and to get the best cut and style. She did a fantastic job and I am very happy with the results!!!! Thanks again Lacey",
+    "Rating": 5
+  },
+  {
+     "index":82,
+    "Review_url": "https://www.google.com/maps/contrib/101300117352198770625/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kim page",
+    "Content": "The dresses on your site are beautiful and so affordable! I am currently a local executive director through the Miss America Organization. I will most definitely be recommending you to my current and future titleholders!",
+    "Rating": 5
+  },
+  {
+     "index":83,
+    "Review_url": "https://www.google.com/maps/contrib/116845500996848604844/reviews?hl=en-US",
+    "Author": "Wendy T",
+    "Content": "Logan was awesome! Arrived on time, explained everything to me. He even let me hang around and watch. Thank you Logan for going above and beyond. You made my day!",
+    "Rating": 5
+  },
+  {
+     "index":84,
+    "Review_url": "https://www.google.com/maps/contrib/102978731583096301180/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "doug white",
+    "Content": "Well It is Yvonne posting here. I ordered a pantsuit that I ordered way too big. Totally my fault. It is beautiful and I am exchanging it for a smaller size. I will be shopping here a lot!",
+    "Rating": 5
+  },
+  {
+     "index":85,
+    "Review_url": "https://www.google.com/maps/contrib/115101208532190255333/reviews?hl=en-US",
+    "Author": "Carla Smith",
+    "Content": "Customer Service agent Britney was able to help me solve my issue in a matter of minutes! Thanks for the great service!",
+    "Rating": 5
+  },
+  {
+     "index":86,
+    "Review_url": "https://www.google.com/maps/contrib/100080300878119692192/reviews?hl=en-US",
+    "Author": "Lisa Thomas",
+    "Content": "I am so happy to have found The Dress Outlet. My daughters wedding is in June. I had ordered a dress and had to exchange it, Michelle was so very helpful. I have my dress and I'm ready for the wedding. Thank you so much for all your help. I will shop here again.",
+    "Rating": 5
+  },
+  {
+     "index":87,
+    "Review_url": "https://www.google.com/maps/contrib/100099692762443752623/reviews/@36.5837972,-106.9872383,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kevin Haverkamp",
+    "Content": "Service",
+    "Rating": 5
+  },
+  {
+     "index":88,
+    "Review_url": "https://www.google.com/maps/contrib/110181129749844292412/reviews?hl=en-US",
+    "Author": "Betty Sanchez",
+    "Content": "It was my 60th birthday Celebration and I wanted a fantabulous dress. Visited several department stores to no avail. Got tired of struggling inside fitting rooms that claim to be wheelchair accessible yet didn't have any bar to help me …",
+    "Rating": 5
+  },
+  {
+     "index":89,
+    "Review_url": "https://www.google.com/maps/contrib/110507662139796005577/reviews?hl=en-US",
+    "Author": "Trish Dawes",
+    "Content": "I have ordered a couple of dresses from the Dress Outlet and have been totally satisfied not only with the product but also with their customer service. I found them very easy and reasonable to deal with and I will most likely make future purchases from them.",
+    "Rating": 5
+  },
+  {
+     "index":90,
+    "Review_url": "https://www.google.com/maps/contrib/116953303140972381462/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Vickie Crosley",
+    "Content": "I ordered a dress for my sons wedding. I recieved it within a couple days. The size i ordered and the size I recieved was 10 sizes off. I called no answer. Emailed them and got an answer with in minutes. stating as soon as the recieved",
+    "Rating": 1
+  },
+  {
+     "index":91,
+    "Review_url": "https://www.google.com/maps/contrib/111645171441030799534/reviews?hl=en-US",
+    "Author": "Suzanne Willett",
+    "Content": "Always beautiful flowers and delivery right on time. Makes my sister-in-law smile. Thank you!",
+    "Rating": 5
+  },
+  {
+     "index":92,
+    "Review_url": "https://www.google.com/maps/contrib/110192613510565608960/reviews/@38.5083544,-101.9770884,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kim Barwin",
+    "Content": "I found a dress for my mother for a fraction of the price on other websites or in stores. The customer service was wonderful and we had a great experience. I would recommend them to everyone!",
+    "Rating": 5
+  },
+  {
+     "index":93,
+    "Review_url": "https://www.google.com/maps/contrib/118185645960804132994/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Margaret Masumbu",
+    "Content": "excellent customer service. Tricia was able to guide me through my online shopping ,was patient and very informative which enabled me to buy the best well fitting dress online, Thanks for your help Tricia.",
+    "Rating": 5
+  },
+  {
+     "index":94,
+    "Review_url": "https://www.google.com/maps/contrib/103772147603130012010/reviews?hl=en-US",
+    "Author": "Anat S",
+    "Content": "This review was previousely a raving 5-star recommendation. After I made the horrible mistake of ordering another item from The Dress Outlet, I discovered that they take no responsibility for delayed deliveries and lost packages",
+    "Rating": 1
+  },
+  {
+     "index":95,
+    "Review_url": "https://www.google.com/maps/contrib/117673128518898642622/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Vicki Pierce",
+    "Content": "The customer service was extremely helpful. The dresses were beautiful. It’s hard to find pretty plus size dresses!",
+    "Rating": 5
+  },
+  {
+     "index":96,
+    "Review_url": "https://www.google.com/maps/contrib/114048047390848905557/reviews?hl=en-US",
+    "Author": "Sharon King",
+    "Content": "Tricia also helped me with a situation I had and it was resolved ASAP. I ordered 2 dresses and pray I get them in time for my event.",
+    "Rating": 5
+  },
+  {
+     "index":97,
+    "Review_url": "https://www.google.com/maps/contrib/115105142816046941812/reviews?hl=en-US",
+    "Author": "Blanche Myron",
+    "Content": "I never had such wonderful results from a company like The Dress Outlet The best is that they were very honest about the sizing. I will recomend this co. The gown is wonderful an fits well..Bless the person who sold the gown to me",
+    "Rating": 5
+  },
+  {
+     "index":98,
+    "Review_url": "https://www.google.com/maps/contrib/101991908089606906134/reviews/@33.0731939,-96.6444132,10z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Alden Sepmoree",
+    "Content": "I had a lot of help from them picking out a bunch of dresses that narrowed my search for a wedding party dress for this upcoming september!! i will be returning to the company later!",
+    "Rating": 5
+  },
+  {
+     "index":99,
+    "Review_url": "https://www.google.com/maps/contrib/112314605646582595390/reviews/@32.2031219,-82.0815718,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Darla Park",
+    "Content": "Absolutely love this place! Great dresses and outfits. Excellent prices, quality clothing, fast and caring customer service! I will definitely recommend and use their services again! Thanks Tricia for all you do!",
+    "Rating": 5
+  },
+  {
+     "index":100,
+    "Review_url": "https://www.google.com/maps/contrib/106180888402460822391/reviews?hl=en-US",
+    "Author": "Desiree' Stanley",
+    "Content": "I just came in with a friend, and we both walked out smiling! Would recommend to everyone! We came in to get our nails done for homecoming! Best service ever for it being my first time getting my nails done!!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113870791789494533190/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Jai-lynn South",
+    "Content": "I would definitely recommend this dress shop. Even if you need help.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105776258667673219580/reviews/@37.4331021,-96.4085457,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Natalie Forood",
+    "Content": "Had a problem with an order. I chatted with Maica in Customer Service and she resolved it quickly! She was so helpful and patient with me and my issues. Thank you Maica!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115743509719705152306/reviews/@37.5782091,-100.7210175,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Robert Bruno",
+    "Content": "Excellent customer service with technical issues.....Analyzed the problem and solved it...a great shopping experience on -line...Thank you Chelsea!!!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/103930988820498164275/reviews/@39.5457362,-105.5308128,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kristi Ray",
+    "Content": "Due to the quarantine, I was a few days late with my return. Tricia was very good to work with me. Because of her outstanding service, I will order from The Dress Outlet again!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/110737711929238121456/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Na'Kiyah Lanigan",
+    "Content": "They have the best service they guide you and help you find the perfect dress your looking for im shopping for my 8th grade graduation and i found the perfect match for me thanks to \"tricia\" <her name i recommend you shop here.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114755374881218096018/reviews/@43.9165053,-41.2226655,3z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ruth B.",
+    "Content": "BEWARE!!! Received a dress that not only has been worn previously, but REEKED OF ONIONS AND STALE PERFUME. Wanted to contact them for a refund without paying the 20%,",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105972544966363974299/reviews/@38.6138041,-94.6730542,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Bernadette Szumiesz",
+    "Content": "When I initially ordered my dress it was to small when I received it, the staff was great in guiding me in returning it, and get a different size. The staff was so responsive it put me at ease, I will definitely utilize there services again.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111843076512610904879/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Debra Seger",
+    "Content": "My experience with The Dress Outlet was a great one! I am very hard to fit. The customer service department was very helpful. I love the dress I bought-it is beautiful and very high quality.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/110883121261408749929/reviews?hl=en-US",
+    "Author": "Jennifer S",
+    "Content": "1 star was unfortunately the lowest rating I could give to leave a review. First off DO NOT ORDER FROM THEM! I had originally ordered a dress on May 14th. They had contacted me the next day about not having a specific color and offered",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105756075146964114931/reviews/@29.2027367,-113.8771072,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Natalie Forood",
+    "Content": "Beware that they will charge you a 20% restocking fee on your return. No other online merchant does this. They say it's because this is the fee their vendors charge and since they are a wholesaler selling dresses for outlet prices, they have to charge this fee. I lost $200 on my $700 purchase. Disappointed.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114457243464651576872/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Julieta Ribeiro",
+    "Content": "I ordered this black sleeveless mother of dress last week and received it the other day, it was a fast transaction I did not expect it to receive that early. I really like the texture of the poly spandex fabric its so smooth!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114457243464651576872/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Julieta Ribeiro",
+    "Content": "I ordered this black sleeveless mother of dress last week and received it the other day, it was a fast transaction I did not expect it to receive that early. I really like the texture of the poly spandex fabric its so smooth!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/116176811907150089070/reviews/@37.3775579,-95.9947399,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Alex Mooklal",
+    "Content": "Let me start by saying this company has no communication skills at all. All issues are handled thru emails but no one responds to the email. I purchased an item for my upcoming birthday party this weekend, USPS claims it was delivered at my …",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/117953888360055254909/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Rose",
+    "Content": "I received my dress today. I ordered it last week and it arrived in 5 days. The dress is everything I was expecting and more. The color and the beading is gorgeous",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105514949763292124319/reviews?hl=en-US",
+    "Author": "Karen Boan",
+    "Content": "I received my dress, but it didn't quite work out for me. Tricia helped me with the return process and was awesome!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/103348479816824122251/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Mari Cortes",
+    "Content": "I highly recommend The Dress Outlet. The products are excellent and just as displayed, high quality, great price, shipped promptly and they have an excellent customer service.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/107120044236760417453/reviews/@37.7088276,-95.2795012,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "SOLANGE ABDUL-KARIM",
+    "Content": "very helpful and patient with me, Tricia, spend time with me , looking for a dress to wear for my son's wedding, she send me couple of the pictures of the dresses, that I really like ,ask me questions regarding my style ,her service was really appreciated.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111840452385857125345/reviews/@42.0003793,-92.2782638,7z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "RN pinoakrd",
+    "Content": "5 stars for customer service! A promo code discount didn't apply on an order and all it took was one email and CS quickly resolved with a refund for the discount.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/109442440239106689977/reviews/@30.6746864,-99.7701346,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Don and June",
+    "Content": "Maica was absolutely wonderful kind caring and took care of my error in ordering more than one dress immediately I highy recommend that she be praised for her wonderful expedient reply to ease my anxiety....I am anticipating the dress thart is forthcoming will be my choice for my graandaughters wedding..thank you Maica...",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111830648999689781890/reviews/@36.1258344,-99.8334637,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Abier Saad",
+    "Content": "the customer support person was extremely helpful in helping me find dresses even though my order was picky, she was quick and didn't use any rude attitude at all,prices were reasonable and the styles were cute, I would highly recommend this place.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113638802136952432552/reviews/@37.7275559,-100.1808113,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Caroline Faragher",
+    "Content": "The pantsuit I purchased was prettier than I thought it would be. The color was spot on of what I wanted. I received it less than a week of when I ordered it. I am more than satisfied.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113385235135050369171/reviews/@37.2832051,-96.2250509,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Lyn Asombrado",
+    "Content": "One of the best and honest business I've ever encountered here in the US of A. Customer service and response time is beyond par. The quality of each item was of the highest ... more than expected.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106878235151352135065/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kathy McDonald",
+    "Content": "Dealt with agent, Tricia, and dealing with plus size on tight budget was quite a challenge. She found everything I needed on 3 sites. Kudos!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113255002444297467475/reviews/@42.2829785,-85.4710147,8z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "colleen comden",
+    "Content": "Beware of the restocking fee. They cleverly hide it in the small print. You could end paying more to return it after restocking and shipping fees. Stick with an honest up front company not one who doesn't disclose the restocking fee until you try to return it.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/102817202252697828865/reviews/@30.7232768,76.6971184,15z/data=!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Louise Freeman",
+    "Content": "I haven't tried to buy a formal dress online but had to because of the urgency! I was a bit hesistant at first but I saw they have a size guide on their site that really helped!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/103238893133995317466/reviews/@33.5249243,-95.6888972,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "fr tri",
+    "Content": "Thank you Tricia for understanding. Great dresses and my mom was very happy. Great customer service.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115793471649148964428/reviews/@37.3952615,-95.7550366,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Kim Colonna",
+    "Content": "Tricia, with the online chat, was very helpful. I will say that the size chart is not totally accurate, and we should have just followed my daughter's usual size.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/102435631661982488908/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Tato the potato",
+    "Content": "As a plus size person it’s always nice to ask questions ahead of time before purchasing, so naturally I had a couple questions and maica was so nice and helpful defiantly some great customer service!!!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/100047096678967299894/reviews/@40.1556857,-74.0855951,12z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Denise Quattrochi",
+    "Content": "I won't hesitate to order from here again. The dress is beautiful. The fabric is high quality, service was great!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/110017246524847488635/reviews/@30.7232768,76.6971184,15z/data=!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Cassidy Gehman",
+    "Content": "They did a good job at helping me find a dress. They were also patient and respectful. I will definitely go back to them next time I am going to get a dress.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/104517832581352315604/reviews/@35.5390601,-109.6437083,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Linda Roberts",
+    "Content": "Pam was very helpful online with a multitude of questions.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/112145591872689512336/reviews/@30.7232768,76.6971184,15z/data=!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Cathy Gurnee",
+    "Content": "The dresses are beautiful- and the customer service is great! I'll be a repeat customer!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/103895235836372509534/reviews/@36.6055703,-97.5479991,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "V H",
+    "Content": "OUTSTANDING customer service. Fast and responsive. Lovely dresses - great quality, will DEFINITELY use again",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/116698246161830980657/reviews?hl=en-US",
+    "Author": "Siobhan Rice",
+    "Content": "Britney in customer service was so helpful with sizing and with styling.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/100315603690088178328/reviews/@30.7232768,76.6971184,15z/data=!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Isabelle Osborne",
+    "Content": "Really happy I got my long formal dress on this store! It looked perfect on my best friend's wedding! THANKS a lot!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/116673349066938256322/reviews?hl=en-US",
+    "Author": "E. Burke",
+    "Content": "The Dress Outlet has the prettiest dresses at the most affordable prices! The customer service is absolutely the best! Enjoy wearing your lovely dress from The Dress Outlet!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111364154171384754485/reviews?hl=en-US",
+    "Author": "sonia Comboy",
+    "Content": "very helpful and patient with me, Tricia, spend time with me , looking for a dress to wear for my son's wedding, she send me couple of the pictures of the dresses, that I really like ,ask me questions regarding my style ,her service was really appreciated.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/109781284571590192844/reviews?hl=en-US",
+    "Author": "Helen Parkhurst",
+    "Content": "Tricia responded quickly , answered my questions & directed me to a site for further help. Getting ready to place my order.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113170748298202673997/reviews?hl=en-US",
+    "Author": "Stephanie Meyer",
+    "Content": "5 starts for support! Chat support was awesome! I'll repost when dress gets here! :",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/118250179762449044630/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Maricruz Ruiz",
+    "Content": "I've been trying to get a old of someone, but haven't had any luck.. :( I've also noticed in the recorded message that it says that they are not open to the public, is that indeed true?? Please help, looking for a dress.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106011033743715158077/reviews?hl=en-US",
+    "Author": "Judith Somekh",
+    "Content": "Ordered a original Dress from here which was half the price of a department store and got it within 2 days! Perfect!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/101177475280103520428/reviews?hl=en-US",
+    "Author": "SUZETTE NEW",
+    "Content": "I had a great experience with ordering a dress on the Dress Outlet wehsite!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106466129708337866212/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Sunny Noel",
+    "Content": "Fast shipping. Britney in Customer Support is fantastic!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/100474357931272837146/reviews?hl=en-US",
+    "Author": "Robin Harris",
+    "Content": "very helpful and patient with me, Tricia, spend time with me , looking for a dress to wear for my son's wedding, she send me couple of the pictures of the dresses, that I really like ,ask me questions regarding my style ,her service was really appreciated.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113907677623534424672/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Rocio Quintanilla",
+    "Content": "Love dresses and method of exchange/refund is the best !",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/108047048985072146791/reviews/@37.5006899,-96.3484981,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Brenda Williamson",
+    "Content": "If I could give zero stars I would. Absolutely worst customer service. Do not buy from this company. You won't get your money bac .",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/100785825232807577385/reviews/@38.2979702,-97.6446243,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Tessa Plumme",
+    "Content": "very helpful website...I had questions and Tricia in the chat was very knowledgeable. A big help she was!! Thanks Tricia!!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113491578290275154240/reviews/@31.7545409,-99.7174427,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Anthony Ippolito",
+    "Content": "the girl that helped me and spent a lot of time to make sure that I was able to get what I wanted",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106688156090745000378/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "K Winn",
+    "Content": "Customer service chat function is fast! They are always there to help with any questions",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114602044445170942890/reviews?hl=en-US",
+    "Author": "Mona alassil",
+    "Content": "thank you for helping me, the greatest website store",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111037821927496439929/reviews/@38.2636625,-94.7254014,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ben Longstreth",
+    "Content": "TERRIBLE customer service! Refuse to talk to customers on the phone and short and rude during live chat. Also TERRIBLE return and cancellation policies that are not customer friendly at a",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/118369439839310716406/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Crystal Yoder",
+    "Content": "Very friendly and helpful. Britney helped via chat.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115385013499031549986/reviews/@38.3700234,-94.6739417,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Gabe Rosenthal",
+    "Content": "Tricia was more than helpful and understood what I was looking for :) Thank you!",
+    "Rating": 4
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115385013499031549986/reviews?hl=en-US",
+    "Author": "Gabe Rosenthal",
+    "Content": "Tricia was more than helpful and understood what I was looking for :) Thank you!",
+    "Rating": 4
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105462448830436072679/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "O, Adekunle",
+    "Content": "it was hassle free thanks to Tricia, the customer assistant.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/104175692845372020446/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Joyce Huffman",
+    "Content": "My dress fit perfect. I'm 100% happy with it.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105890445017999913518/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Nilda Ramos",
+    "Content": "Great prices, excellent customer service.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105511130272588672401/reviews/@15.8564133,-99.0626951,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Gilberto Pazmino",
+    "Content": "Excelente Attention, much pacient, and vety fast the delivery. Thank you so much",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105088895966282158913/reviews/@36.8073789,-97.2909145,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Patty Mattox",
+    "Content": "The customer service was wonderful!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114635000984076042504/reviews/@37.4510772,-95.4017889,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Margo Alexander",
+    "Content": "Extremely helpful chat! Found exactly what I was looking for!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/112207774939455407341/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Mousa Ali",
+    "Content": "Every thing with you was excellent",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/117816227689929035395/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "ruth boone",
+    "Content": "Maica was so helpful!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105040597553434465804/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Hannah Dickerson",
+    "Content": "Great customer servi",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/109575888875274817916/reviews/@32.3521375,-103.1914485,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Rene Rivers",
+    "Content": "Amazing Customer Service",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114396428772684365817/reviews/@34.5964521,-98.5505053,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Cheryl Astwood",
+    "Content": "Beautiful dresses, I love it",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111612292058709034576/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "denise bentley",
+    "Content": "Very helpful. Thanks!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/104810665979315819219/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Sabine heap",
+    "Content": "Very happy.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114364474632127347372/reviews/@-2.7269047,-150.6691449,3z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Nadine Crozier",
+    "Content": "Great customer service. Quick to respond and fast to resolve my login issues as well as answering my questions.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/116636701117724287145/reviews/@20.5619508,-95.680867,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "payito Camelo",
+    "Content": "(Translated by Google) good service and beautiful dresses (Original) …",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/101601935309377673902/reviews/@30.7232768,76.6971184,15z?hl=en-US",
+    "Author": "Fola Akerele",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/108779599190933077005/reviews?hl=en-US",
+    "Author": "Sonja Rice",
+    "Content": "Our stay was so terrible we left a day early. Outside and Inside heated pool and hot tub closed due to remodeling. Concrete work nonstop jack hammering and hammers pounding all day. Braces all the way down and up to support floors in middle of walkways. Restaurant out of chicken Alfredo sauce, used milk to water it down.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105208398341521561505/reviews/@21.2699277,-176.1381395,3z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Narciso Ballentos",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106183139345154416383/reviews/@38.4976191,-107.4773437,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Esmeralda",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114753904272704226735/reviews/@33.9827229,-118.2203007,13z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Ever Stv Ortiz",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "",
+    "Author": "",
+    "Content": "",
+    "Rating": ""
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114276059876711934486/reviews?hl=en-US",
+    "Author": "Haylie Nichole",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/112688768534672918071/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "beni tresor sindayigaya",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115833428826501697281/reviews/@41.6478687,-120.6865398,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "martin jamoaa",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/103225778157163601774/reviews/@30.7232768,76.6971184,15z/data=!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Amylin Boekhoudt",
+    "Content": "",
+    "Rating": 5
+  },
+  {
+    "Review_url": "",
+    "Author": "",
+    "Content": "",
+    "Rating": ""
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/100152298385084664141/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Me Yes",
+    "Content": "Sent us the wrong size 2 weeks before from, we paid for fast shipping so the right one would get back on time. Got an email saying the new one wouldn't be here until 1 day before prom due to an error on their part 😐. They then charged a 20% fee on their refund even though I never got what I ordered. I have now lost money and have no dress for prom 😐.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "",
+    "Author": "",
+    "Content": "",
+    "Rating": ""
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/108840876939284403266/reviews?hl=en-US",
+    "Author": "Rosario Borja",
+    "Content": "I recently purchased a beautiful dress on this website, and paid for expedited shipping. After 24 hours without hearing about shipping, I contacted customer service, and was lucky to get MAICA to assist me. This person was exactly what we expect from an American Customer Service: attentive, efficient, and friendly! Unfortunately, my dress was “sold out”,",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/106921659752855901752/reviews/@33.7011847,-114.421713,7z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "youngfaith 0531",
+    "Content": "The Hall was hot so was the dressing room! The DJ was not the original DJ I had been working with! He never played any music from my playlist, the food was seriously for near 200 people! I was not pleased at all and will not refer anyone here again! Not wanting to post but people have the right to know others experiences! They kept postponing the open house and the valz was not started until 4 weeks before! However, the teacher I will say was the best thing out of the whole package! I was even told I could borrow the arro de fierro for my daughters pictures and when it came down to it he said he doesn’t rent it out! When I went to their boutique I was given a price and then went back later and they no longer could honor the package for me! I ended finding everything cheaper some where else but worst service ever! Yes their nice in the beginning but when it comes towards the end their different! Thank god I got my deposit back!!!",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113203624595469578824/reviews?hl=en-US",
+    "Author": "Alma Urbina",
+    "Content": "mail it 3 day shipping! It’s not on their website. I had to cancel my order because I needed the dress with 3 weeks! I was so disappointed.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/115620151196824975958/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Marielle Urquiza",
+    "Content": "I received great help from customer service. From a refund in minutes to order a new dress, and giving me details on the shipping times! Excellent customer service!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/108180478988317545639/reviews?hl=en-US",
+    "Author": "Becca Johnston",
+    "Content": "I ordered 2 dresses and received 1. The box it arrived in had the second dress marked off the shipping label. Inside was a receipt showing I had been charged for 2 dresses and it said (Separate shipments). I got one dress and never received the second one. I waited for the second dress to arrive to begin my 5 days of review time and it did not ever arrive. The item that did arrive ,5 days later , was nothing I even considered ordering(not a dress but pant suit, size 14 not 18 or 20 and Zebra print for my son's plum and sage colored wedding ). Now I am being told the second dress was delivered (again it was not but a pant suit I never even looked at was) and then told that I have exceeded the 5 day window to request a return and now can only receive store credit. I do not want store credit as I will not have a need for another plum colored dress for my son's wedding within 45 days. No thank you!",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/104723455330704229002/reviews?hl=en-US",
+    "Author": "Louise Stevenson",
+    "Content": "These guys were amazing the dress was incredible quality and the fact we had the option to pick up was great",
+    "Rating": 5
+  },
+  {
+    "Review_url": "",
+    "Author": "",
+    "Content": "",
+    "Rating": ""
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/107622532424403725621/reviews?hl=en-US",
+    "Author": "Beth Hayes",
+    "Content": "While the dress I ordered was lovely it was not quite right. The return process was simple. Customer service was understanding and responded very quickly.",
+    "Rating": 4
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/114280280442091124757/reviews?hl=en-US",
+    "Author": "James Knight",
+    "Content": "Thank you so much for taking the time to review our store! Check out Sleep.com for helpful sleep tips. Please do not hesitate to reach out if there is anything that we can do for you in the future.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113191950890345978350/reviews/@43.7892077,-118.2374001,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Dr. Dawn Ambler",
+    "Content": "Amazing Megan! She put up with all my questions and set me at ease to buy the right dress online for my son's wedding.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/109976288074123543545/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Amanda McGraw",
+    "Content": "My mother and I ordered dresses from the Dress Outlet recently. The one I ordered fit great and was exactly what was described. Very nice quality! My mother ordered a pant set and didn't fit. Neither one of realized the 5 day return policy. Trisha worked with me and was able to get a return approved so that my mother could return it. I appreciated the customer service that she gave after the fact. I will definitely order again from the Dress Outlet!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/111932786282521887635/reviews/@40.145668,-118.7812,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Mayan Muhee",
+    "Content": "The customer service is amazing. Chelsea helped me with all my questions about shipment. Highly recommend.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/109396208068797685564/reviews?hl=en-US",
+    "Author": "Caroline Cameron",
+    "Content": "Buying from Dress Outlet has been an excellent experience.  Was a bit sceptical at first being from Australia but I read reviews and went ahead with purchase of 2 dresses. Pleasantly surprised by the quality and fit.  Bought a second time with same outcome.  On my third purchase one of the items was no longer available i managed to pick an alternative dress.  Maica was very professional and provided excellent and very prompt customer service.  I hight recommend theDress Outlet.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/112490999474464117785/reviews?hl=en-US",
+    "Author": "Vera Cone",
+    "Content": "Definitely check out the return policy! As long as you respond in 5 days of receipt, they have excellent customer service.  The people are VERY friendly, knowledgeable and helpful. I ordered 3 dresses and they're well made and beautiful! One was way too large. The exchange process is partially complete and I could not be happier with how they are handling my request. I'm so excited to wear my dresses!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/105226932914655548000/reviews/@38.1173821,-100.7139507,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "JILL FOUNTAIN",
+    "Content": "The customer service was wonderful!  I ordered a pantsuit for a wedding I am attending in October but didn't love it when the outfit arrived.  I was able to return it and order a different outfit with no problem at all.  I absolutely love the second outfit and can't wait to wear it.  Thank you Tricia for helping me with my questions and requests.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/102698107179199200457/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Gun EL",
+    "Content": "I am in the process of looking for a wedding dress, and I can definitely say that it has been my best experience. Despite it was midnight, Britney was such a sweetheart to help me with all my questions. She is very patient and knowledgeable about the products they offer. Though, I haven't ordered the dress yet, so far I had a great experience with them!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/116792534831683128015/reviews?hl=en-US",
+    "Author": "Tracy Smith",
+    "Content": "Just wanted to share that we attended a birthday party there this morning and we had Luke  working the party. He was absolutely AMAZING! He was so attentive and great with the kids! Smiling at the kids the whole time and making sure they had everything they needed! Seems like a great kid!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/107512750095959342309/reviews/@35.4094237,-97.1531533,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Saphire Nolan-Barnett",
+    "Content": "Melissa, was a breeze to work with! Having a buyers agent that’s on her game is plus, making the transaction painless is a bonus! Looking forward to working with her again!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "",
+    "Author": "",
+    "Content": "",
+    "Rating": ""
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113930920497583240823/reviews/@35.4383268,-97.1956131,5z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Charles Barker Companies",
+    "Content": "So they get 1 star because the dresses were beautiful.  I ordered 3 dresses to try on for a wedding in November.  The package was delivered on Friday, Sep 24.  Due to work schedule it took me a few days before I could try on and then reach out for the return process. I emailed them afternoon of Oct 2 and was told I missed the return request date.  I double checked the return policy on my receipt and it states the return must be received in 14 days.  So their response was I needed to call them in 5 days of receipt to request the return, however this is not stated in the written policy.  Their conciliatory offer is to give me store credit for the purchase.  Terrible customer service for an online out-of-town shopper.",
+    "Rating": 1
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/101059408250232987674/reviews/@39.2550337,-95.4788621,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "maison healy",
+    "Content": "This website was great. Excellent customer service. They were fast, and courteous. They answered all my questions. The person that helped me was Britney. She was very helpful. I recommend this website for wedding dress shopping. Their inventory wasn't massive, but had dresses that my fiance liked very much. Prices are very reasonable too. Also this website was the only one I could find that I was able to talk to an actual person the moment I went to their website. Good luck to everyone wedding dress shopping.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/117690176670259962975/reviews/@37.8469994,-95.4678748,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Melanie Brodeur",
+    "Content": "I received the absolutely stunning long off shoulder formal prom dress gown in the eggplant that I ordered for a summer wedding. I didn't realize when I ordered it, that it is actually a winter gown and wouldn't work for my summer wedding. However by the time I realized this, I was outside of the return policy window. I worked with two absolutely amazing reps Tricia and Maica from the Dress Outlet and they were able to help me out to find a dress that would work for the summer wedding! I couldn't be happier with the service I received and will definitely be recommending them to all my friends and family looking for dresses for the wedding season!",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/108506673835978913823/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Gayla Clark",
+    "Content": "i recently spoke to Pam and I had ordered a dress and I had forgotten to add my 15% discount, and right away she refunded me 15% it was a great blessing to me and I will order again because of Pam.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/113959516172193553438/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Alice Andre-Soares",
+    "Content": "Chelsea was helping me and she was so patient with me.  She explained thoroughly what needed to be done for my return/exchange.",
+    "Rating": 5
+  },
+  {
+    "Review_url": "https://www.google.com/maps/contrib/104960002703394564490/reviews/@34.0350145,-118.2566346,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US",
+    "Author": "Susan Jordan",
+    "Content": "Thanks to your company and the excellent service provided by Britney. She helped to provide a beautiful dress for my daughter’s sweet 16 party in a short notice. I would love to recommend your company to anyone who needs a fabulous dress in moment's notice in the future.",
+    "Rating": 5
+  }
+]
+
+const displayPageNav = perPage => {
+
+  let pagination =``
+  const totalItems = dataSet.length
+  perPage = perPage ? perPage : 1
+  const pages = Math.ceil(totalItems/perPage)
+  
+  for(let i = 1; i <= pages; i++) {
+    pagination += `<a data-id="${i}" href="#" onClick="displayItems(${i},${perPage})" >${i}</a>`
+  }
+
+  document.getElementById('pagination').innerHTML = pagination
+  
+}
+
+const displayItems = ( page = 1, perPage = 2 ) => {
+
+ let index, offSet
+  
+  if(page == 1 || page <=0)  {
+    index = 0
+    offSet = perPage
+  } else if(page > dataSet.length) {
+    index = page - 1
+    offSet = dataSet.length
+  } else {
+    index = page * perPage - perPage
+    offSet = index + perPage
+  }
+  const slicedItems = dataSet.slice(index, offSet)
+    var $listItems = $('div#pagination a');
+   $listItems.removeClass('active'); // remove from all other <SPAN>
+   $('div#pagination a[data-id=' + page + ']').addClass('active');
+  const html = slicedItems.map(item => 
+`<div class="panel panel-default ${item.Rating}" data-rating="${item.Rating}">
+<div class="panel-heading">
+<div class="auth-date"><div class="author">By <a class="url fn n" href="${item.Review_url}" target="_blank">${item.Author} </a></div>
+<div class="date"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/1109/3312/files/icons8-google-240.png?v=1657621585" role="presentation" alt="" data-uw-rm-ima="un"></div>
+</div><h4 class="panel-title">
+<img loading="lazy" width="100px" src="https://cdn.shopify.com/s/files/1/1109/3312/files/${item.Rating}-star.png?v=1658920789">
+<span data-title="Q" data-show="Show" data-hide="Hide"><label class="label-verified--YStHM"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585.86 585.7"><use href="#icon-verified--lT02W"></use></svg><span>Verified</span></label>		</span></h4>   	
+  </div>  
+<div class="panel-review">	
+<div class="panel-body">
+<div data-title="a"><div class="rte">${item.Content}</div></div></div></div>
+</div>`)  
+  document.querySelector('#container .reviewdata').innerHTML = html.join('')
+}
+
+let perPage = 35
+displayPageNav(perPage)
+displayItems(1, perPage)
+/*************pop data*******/
+    $('.googleapp #ratingFilter').change(function() {
+  var reviews = $(this).val();
+  if (reviews === 'all') {
+ $('.reviewdata > div').fadeIn(450);
+  } else {
+    $('.reviewdata > div').fadeIn(450);
+    $('.reviewdata > div').not('.' + reviews).hide();
+  }
+
+});
+</script>

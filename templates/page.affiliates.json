@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "e7ad82c5-ce82-4914-82ad-82165a781431": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ddab35d7-a24c-43da-9b08-f115a89787b2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Become a TDO Affiliate!",
+            "heading_size": "h1"
+          }
+        },
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Dress Outlet is the one-stop-shop destination for fashionistas and trendsetters. Whether you're planning an amazing wedding or just want something for your next formal event, you'll find a gorgeous ensemble at our online store. The Dress Outlet has an incredible selection of fabulous formal dresses like prom dresses, mother of the bride dresses, plus size dresses, and cocktail dresses—everything you could ever want to create a perfect look at any event. We also offer an impressive array of accessories and other fashionable items that can complete your closet. Likewise, The Dress Outlet has an enthusiastic and dedicated number of regular customers that are constantly growing rapidly.<\/p>"
+          }
+        },
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "APPLY TODAY",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-0",
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-1",
+        "template--15190980624445__ddab35d7-a24c-43da-9b08-f115a89787b2-16824544888591b4f5-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "d09bfd7b-d00f-4dd6-b842-6326b876f216": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHY JOIN OUR PROGRAM?",
+            "heading_size": "h2"
+          }
+        },
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By joining The Dress Outlet’s affiliate program, you can benefit from our years of experience in the fashion industry. It is an excellent opportunity for fashion influencers and young professionals looking to get their careers started in fashion and build their portfolios. We offer quality dresses that are always in season and we're experts on trends and styles to help your followers find what they're looking for. In addition, as a The Dress Outlet Affiliate, you can enjoy some great benefits that will make it easier for you to earn money from your blog or website. You'll be able to take advantage of special offers, generous perks, and lucrative payouts, as well as have access to top-quality support. Our program is designed to make it easy for you to earn money as an affiliate. Don't miss the chance to become part of our growing fashionable brand. We're always on the lookout for like-minded individuals who want to be part of an exciting and glamorous fashion lifestyle. Apply for The Dress Outlet's Affiliate Program today and start earning money right away!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "APPLY NOW",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-0",
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-1",
+        "template--15190980624445__d09bfd7b-d00f-4dd6-b842-6326b876f216-1682455144b8a17a08-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HOMECOMING1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "e7ad82c5-ce82-4914-82ad-82165a781431",
+    "main",
+    "ddab35d7-a24c-43da-9b08-f115a89787b2",
+    "d09bfd7b-d00f-4dd6-b842-6326b876f216"
+  ]
+}

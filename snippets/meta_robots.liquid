@@ -1,0 +1,22 @@
+{% if current_page != 1
+  or template contains '*?q=*'
+  or template contains '*?usf=*'
+  or template contains '*?vendor=*'
+  or template contains '*?page=*'
+  or template contains 'search'
+  or template contains '*?variant=*'
+  or current_tags
+  or product.selected_variant
+  or product_variant
+  or template =='page.search-data' %}
+  <meta name="robots" content="noindex, follow"/>
+{% elsif request.page_type == 'page' and page.handle contains 'search' %}
+  <meta name="robots" content="noindex, follow"/>
+{% elsif template contains 'collection' and collection.handle == 'vendors' %}
+  <meta name="robots" content="noindex, follow"/>
+  <!-- hidding URL's with "?" -->
+{% elsif request.path contains '?' %}
+  <meta name="robots" content="noindex, nofollow" />
+{% else %}
+  <meta name="robots" content="max-image-preview:large">
+{% endif %}

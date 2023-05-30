@@ -1,0 +1,143 @@
+{{ 'do-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+  
+  {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+  {%- assign t = template | split: '.' | first -%}
+  <div class="section-{{ section.id }}-padding">
+    <div class="page-width">
+        <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+            <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="/">{{ section.settings.home_text }}</a>
+            </li>
+            {%- case t -%}
+                {%- when 'page' -%}
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+                </li>
+                {%- when 'product' -%}
+                {%- if collection.url -%}
+                    <li class="breadcrumbs__item">
+                      {%- if collection.metafields.my_fields.faq_new_content != blank-%}
+                        {{collection.metafields.my_fields.faq_new_content | link_to: collection.url }}
+                        {% else %}
+                        {{ collection.title | link_to: collection.url }}
+                      {%- endif -%}
+                      {% comment %} {{ collection.title | link_to: collection.url }} {% endcomment %}
+                    </li>
+                {%- endif -%}
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+                </li>
+                {%- when 'collection' and collection.handle -%}
+                  {%- if current_tags -%}
+                    <li class="breadcrumbs__item">
+                      {%- if collection.metafields.my_fields.faq_new_content != blank-%}
+                        {{collection.metafields.my_fields.faq_new_content | link_to: collection.url }}
+                        {% else %}
+                        {{ collection.title | link_to: collection.url }}
+                      {%- endif -%}
+                    </li>
+                    <li class="breadcrumbs__item">
+                    {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                    <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+                    </li>
+                {%- else -%}
+                    <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">
+                      {%- if collection.metafields.my_fields.faq_new_content != blank-%}{{collection.metafields.my_fields.faq_new_content }}{% else %}{{ collection.title }}{%- endif -%}
+                    </a>
+                    </li>
+                {%- endif -%}
+                {%- when 'blog' -%}
+                {%- if current_tags -%}
+                    <li class="breadcrumbs__item">
+                    {{ blog.title | link_to: blog.url }}
+                    </li>
+                    <li class="breadcrumbs__item">
+                    {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+                    <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+                    </li>
+                {%- else -%}
+                    <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+                    </li>
+                {%- endif -%}
+                {%- when 'article' -%}
+                <li class="breadcrumbs__item">
+                    {{ blog.title | link_to: blog.url }}
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+                </li>
+                {%- else -%}
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+                </li>
+            {%- endcase -%}
+            </ol>
+        </nav>
+    </div>
+</div>
+  {%- endunless -%}
+
+  {% schema %}
+{
+  "name": "DO Breadcrumbs",
+  "tag": "section",
+  "class": "section section-breadcrumbs",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "home_text",
+      "label": "Text for home url",
+      "default": "Dresses"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "DO Breadcrumbs"
+    }
+  ]
+}
+{% endschema %}

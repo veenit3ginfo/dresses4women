@@ -1,0 +1,152 @@
+{{ 'do-collections-masonry.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient isolate do-px-[20px]">
+  <div class="{% if section.settings.full_width %}max-page-width{% else %} page-width{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %} section-{{ section.id }}-padding do-mx-auto do-my-0">
+    <h2 class="do-collage-wrapper-title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+    <div class="do-block md:do-grid do-gap-[10px] do-collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
+      {%- for block in section.blocks -%}
+        <div
+          class="do-mb-[10px] md:do-mb-0 do-collage__item-{{forloop.index}} do-collage__item--{{ block.type }} do-collage__item--{{ section.settings.desktop_layout }}"
+          {{ block.shopify_attributes }}
+        >
+          {%- case block.type -%}
+            {%- when 'collectionBox' -%}
+                <a
+                  class="do-block do-h-full" href="{{block.settings.collection.url}}"
+                >
+                  {%- if block.settings.image != blank -%}
+                    {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                    <img src="{{ block.settings.image | img_url: '50x'}}" 
+                      data-src="{{ block.settings.image | img_url: '1000x'}}" 
+                      data-srcset="{{block.settings.image | img_url: '550x'}} 550w, {{block.settings.image | img_url: '720x'}} 720w, {{block.settings.image | img_url: '990x'}} 990w, {{block.settings.image | img_url: '1100x'}} 1100w, {{block.settings.image | img_url: '1500x'}} 1500w, {{block.settings.image | img_url: '2200x'}} 2200w, {{block.settings.image | img_url: '3000x'}} 3000w" 
+                      alt="{{block.settings.image.alt}}" 
+                      class="lazy do-w-full"
+                      data-sizes="{{sizes}}"
+                     />
+                    {% comment %} {{
+                      block.settings.image
+                      | image_url: width: 3000
+                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000', class: 'lazy', data-src: block.settings.image 
+                    }} {% endcomment %}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </a>
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "DO Collections Masonry",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full Width",
+        "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Multimedia collage",
+      "label": "t:sections.collage.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collectionBox",
+      "name": "Collection Box",
+      "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.collage.blocks.image.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "DO Collections Masonry",
+      "blocks": [
+        {
+          "type": "collectionBox"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

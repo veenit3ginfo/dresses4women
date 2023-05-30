@@ -1,0 +1,87 @@
+{{ 'do-readmore.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width do__readmore-section section-{{ section.id }}-padding">
+    <h2
+        class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }} do-text-[3.5rem] do-text-center do-my-[10px]"
+        {{ block.shopify_attributes }}
+    >
+        {{ section.settings.heading }}
+    </h2>
+    <div class="do-text-center do-max-w-[800px]  do-mx-auto do-my-0">
+        {{section.settings.do_rm_initial_text}}<span id="dots" class="do-inline">...</span>
+        <div id="more">{{section.settings.do_rm_more_text}}</div>
+    </div>
+    <div class="do-text-center">
+        <button onclick="readMore()" id="myBtn" class="do-bg-[#151515] do-text-white do-border-[1px] do-border-[#151515] do-text-[14px] do-inline-block do-px-[20px] do-py-[6px] do-my-[10px]">Read more</button>
+    </div>
+</div>
+
+<script src="{{ 'do-readmore.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "DO Readmore",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+    "type": "text",
+    "id": "heading",
+    "default": "Talk about your brand",
+    "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+    },
+   {
+    "type": "richtext",
+    "id": "do_rm_initial_text",
+    "label": "Initial Text"
+   },
+   {
+    "type": "richtext",
+    "id": "do_rm_more_text",
+    "label": "More Text"
+   },
+   {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 40
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 52
+  }
+  ],
+  "presets": [
+    {
+      "name": "DO Readmore text"
+    }
+  ]
+}
+{% endschema %}

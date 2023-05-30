@@ -1,0 +1,51 @@
+.style2 .do-featured--collection-card .card__information {
+    padding: 0;
+}
+.style2 .do-featured--collection-card .card__information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.style2 .do-featured--collection-card .card__information a {
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #fff;
+}
+.style2 .do-featured--collection-card .card__information a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.style2 .do-featured--collection-card .card:hover a span{position: relative;z-index: 99 ;}
+.style2 .do-featured--collection-card .card:hover a::after {opacity: 1;}
+.style2 .do-featured--collection-card .card:hover img {
+    transform: scale(1.15) !important;
+}
+.style2 .do-featured--collection-card .card a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #00000069;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .4s;
+}
+.style2 .card--standard .card__inner{
+    min-height: 500px;
+}
+.style3 .do-featured--collection-card .card__inner{border-radius: 100%;overflow: hidden;}
+/* .style3.do-featured--collection-list .grid{column-gap: 30px;} */
+.style3.do-featured--collection-list .grid__item .card-wrapper{
+    padding:0 6px;
+}
+.style3 .slider.slider--tablet{
+    scroll-padding-left:0px;
+}
+.style3.do-featured--collection-list .full-unstyled-link{font-size: 14px;}

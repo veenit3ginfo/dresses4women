@@ -1,0 +1,250 @@
+{
+  "sections": {
+    "bc4caaaa-afc7-45d7-8481-709ec49cb22b": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "home_text": "Dresses",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "f5583f27-bc7d-4e4b-95a3-da1d93f54489": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body",
+            "do__is_vendor": true
+          }
+        },
+        "84078b38-e561-4e06-8103-f642d18858e2": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle",
+            "do__is_vendor": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "f5583f27-bc7d-4e4b-95a3-da1d93f54489",
+        "84078b38-e561-4e06-8103-f642d18858e2",
+        "variant_picker",
+        "price",
+        "buy_buttons",
+        "caption",
+        "description"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "4bb9a24d-29d0-4176-a351-04bae76ca5dc": {
+      "type": "do-delivery-return",
+      "settings": {
+        "shipping_heading": "Shipping",
+        "shipping_heading_icon": "shopify:\/\/shop_images\/truck.png",
+        "ups_icon": "shopify:\/\/shop_images\/UPS-Emblem-logo.png",
+        "ups_text": "<p>Standard US - Free<br\/>2-3 Days Air - $39.98<\/p>",
+        "dhl_icon": "shopify:\/\/shop_images\/dhl.png",
+        "dhl_text": "<p>Canada - $39.99<br\/>Worldwide - $59.99<\/p>",
+        "return_heading": "Returns",
+        "return_heading_icon": "shopify:\/\/shop_images\/return_bc49bf55-59c8-4763-92d9-ba4dd283fdec.png",
+        "return_text": "<p>For full priced items we offer a refund (minus restocking fee).<\/p>"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 2,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "2fbf0274-f947-45f6-a329-3bec3a910d65": {
+      "type": "do-featured-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "dylan-davids-1",
+        "products_to_show": 7,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "columns_tablet": "3",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "54428cc2-21b9-4597-8e9f-cd329f953f87": {
+      "type": "do-featured-collection-grid",
+      "blocks": {
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bridesmaid",
+            "do__featured_collection_title": "Bridesmaid Dresses"
+          }
+        },
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "short-cocktail-dresses",
+            "do__featured_collection_title": "Cocktail Dresses"
+          }
+        },
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "evening-gowns",
+            "do__featured_collection_title": "Evening Gowns"
+          }
+        },
+        "8aeded26-88ee-4130-919a-ecd05f9fc4dc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "formal-dresses",
+            "do__featured_collection_title": "Formal Dresses"
+          }
+        },
+        "9128fe52-2ec6-4c97-97a7-cd4c1cbf3972": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plus-size-dresses",
+            "do__featured_collection_title": "Plus Size Dresses"
+          }
+        },
+        "121dd963-988c-4396-8973-f1a1c62b8fc9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "quinceanera-dresses",
+            "do__featured_collection_title": "Quinceanera Dresses"
+          }
+        }
+      },
+      "block_order": [
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-0",
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-1",
+        "template--15180098273341__54428cc2-21b9-4597-8e9f-cd329f953f87-16821173858c2411ed-2",
+        "8aeded26-88ee-4130-919a-ecd05f9fc4dc",
+        "9128fe52-2ec6-4c97-97a7-cd4c1cbf3972",
+        "121dd963-988c-4396-8973-f1a1c62b8fc9"
+      ],
+      "custom_css": [
+        "img {object-position: top;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "collection_grid_style": "style3",
+        "do_hide_title_arrow": false,
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "columns_tablet": "3",
+        "padding_top": 32,
+        "padding_bottom": 16
+      }
+    },
+    "16817653057ca7e6f2": {
+      "type": "apps",
+      "blocks": {
+        "801a9999-fc21-451d-aece-5d071d4c2db7": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "801a9999-fc21-451d-aece-5d071d4c2db7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "bc4caaaa-afc7-45d7-8481-709ec49cb22b",
+    "main",
+    "4bb9a24d-29d0-4176-a351-04bae76ca5dc",
+    "related-products",
+    "2fbf0274-f947-45f6-a329-3bec3a910d65",
+    "54428cc2-21b9-4597-8e9f-cd329f953f87",
+    "16817653057ca7e6f2"
+  ]
+}

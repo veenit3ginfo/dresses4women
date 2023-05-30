@@ -1,0 +1,614 @@
+<div class="main-about-us {% if section.settings.style_title == 'style_2' %}style_2{% elsif section.settings.style_title == 'style_3' %}style_3{% endif %}{% if section.settings.title_sub != blank %} sub_title_padding{% endif %}{% if section.settings.style_about == 'style_2' %} style_about_2{% elsif section.settings.style_about == 'style_3' %} style_about_3{% elsif section.settings.style_about == 'style_4' %} style_about_4{% elsif section.settings.style_about == 'style_5' %} style_about_5{% elsif section.settings.style_about == 'style_6' %} style_about_6{% elsif section.settings.style_about == 'style_7' %} style_about_7{% endif %}" id="main-review-{{ section.id }}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-12">
+        {% if section.settings.title != blank %}
+            <h1 class="title">
+              {{section.settings.title }}
+            </h1>
+        {% endif %}
+
+        {% if section.settings.title_sub != blank %}
+            <h3 class="sub-title">
+              {{section.settings.title_sub }}
+            </h3>
+        {% endif %}
+        <div class="site_reviews">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>        
+        		  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+        </div>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJXfrpzlO5woARBt7xNa0cf0k" target="_blank" class="leave-review">Leave us a Reviews</a>
+        {% if section.settings.des != blank and section.settings.style_about != 'style_3' %}
+            <div class="des readless half_descrip1">
+              {{ section.settings.des }}
+            </div>
+        {% endif %}
+		{% if section.settings.fulldes != blank and section.settings.style_about != 'style_3' %}
+            <div class="des readless full_descrip1" style="display:none;">
+              {{ section.settings.fulldes }}
+            </div>
+        {% endif %}
+        
+        
+        {% if section.settings.button_text != blank %}
+            <a class="btn btn-about-us" href="{{ section.settings.button_text_link }}">{{ section.settings.button_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% if section.blocks.size > 0 %}
+    <div class="list-item review-logo disable-srollbar">
+        {% for block in section.blocks %}
+            {% if block.settings.image != blank or block.settings.content != blank %}
+            <div class="item column-{{section.blocks.size}}" id="item-{{block.id}}">
+                
+
+                {% if section.settings.style_about == 'style_5' %}
+                    <div class="content-left">
+                        {% if block.settings.icon_type == 'image' %}
+                            {% if block.settings.image != blank %}
+                         <div class="image">
+                                <img loading="lazy" data-srcset="{{ block.settings.image | img_url: '200x' }}" class="lazyload" alt="{{ block.settings.image.alt | default: shop.name }}" />
+                            </div>
+                    
+                            {% else %}
+                                <a class="animate-scale" href="{{ block.settings.link }}">
+                                    {% if section.settings.style_about == 'style_4' %}
+                                        <div class="not_img">77 x 77px</div> 
+                                    {% else %}
+                                        <div class="not_img">48 x 48px</div> 
+                                    {% endif %}    
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            {% if block.settings.text_icon != blank %}
+                            <div class="image">
+                                {{ block.settings.text_icon }}
+                            </div>
+                            {% else %}
+                                <a class="animate-scale" href="{{ block.settings.link }}">
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="content-right">
+                        {% if block.settings.content != blank %}
+                            <div class="content">
+                                {{ block.settings.content }}
+                            </div>
+                        {% endif %}
+
+                        {% if block.settings.content != blank %}
+                            <p class="desctiption">{{ block.settings.description }}</p>
+                        {% endif %}
+
+                        {% if block.settings.text_button != blank %}
+                            <a class="btn button_text" href="{{block.settings.link_icon}}">{{ block.settings.text_button }}</a>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <a {% unless block.settings.link_icon == blank %}href="{{block.settings.link_icon}}"{% endunless %}>
+                    {% if block.settings.icon_type == 'image' %}
+                        {% if block.settings.image != blank %}
+                        {% if block.settings.link_img != blank %}
+                        <a class="" href="{{block.settings.link_img}}">
+                        <div class="image dddd">
+                            <img data-srcset="{{ block.settings.image | img_url: '200x' }}" class="lazyload" alt="{{ block.settings.image.alt | default: shop.name }}" />
+                        </div>
+                      </a>
+                      {% endif %}   
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                                {% if section.settings.style_about == 'style_4' %}
+                                    <div class="not_img">77 x 77px</div> 
+                                {% elsif section.settings.style_about == 'style_6' %}
+                                    <div class="not_img">70 x 235px</div> 
+                                {% else %}
+                                    <div class="not_img">48 x 48px</div> 
+                                {% endif %}    
+                            </a>
+                        {% endif %}
+                    {% else %}
+                        {% if block.settings.text_icon != blank %}
+                        <div class="image">
+                            {{ block.settings.text_icon }}
+                        </div>
+                        {% else %}
+                            <a class="animate-scale" href="{{ block.settings.link }}">
+                            </a>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if block.settings.content != blank %}
+                    <div class="content">
+                        {{ block.settings.content }}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.content != blank %}
+                    <p class="desctiption">{{ block.settings.description }}</p>
+                    {% endif %}
+
+                    {% if block.settings.text_button != blank %}
+                    <a class="btn button_text" href="{{block.settings.link_icon}}">{{ block.settings.text_button }}</a>
+                    {% endif %}
+
+                    </a> 
+                {% endif %}
+
+                <style>
+                    #item-{{block.id}} .button_text, #item-{{block.id}} .desctiption, #item-{{block.id}} .content p, #item-{{block.id}} .content a, #item-{{block.id}} .image svg, #item-{{block.id}} .image i {
+                        color: {{ block.settings.color_content }};
+                    }
+                    .main-about-us.style_about_2 .list-item #item-{{block.id}} .content p:before {
+                        background-color: {{ block.settings.color_content }};
+                    }
+                    .main-about-us.style_about_2 .list-item #item-{{block.id}} a:hover .content p:before {
+                        background-color: {{ block.settings.color_content_hover }};
+                    }
+                    #item-{{block.id}} a:hover .content p, #item-{{block.id}} a:hover .image svg, #item-{{block.id}} a:hover .image i {
+                        color: {{ block.settings.color_content_hover }};
+                    }
+                </style>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if section.settings.des != blank and section.settings.style_about == 'style_3' %}
+        <div class="des des-bottom">
+          {{ section.settings.des }}
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+    {% assign margin_bottom =  section.settings.margin_bottom %} 
+
+    {% if section.settings.style_about == 'style_5' %}
+        {% if section.settings.bg_color != 'rgba(0,0,0,0)' or section.settings.image_bg_style_4 != blank %}
+        #main-review-{{ section.id }} .container .list-item {
+            background-color: {{ section.settings.bg_color }};
+        }
+        {% endif %}
+    {% else %}
+        {% if section.settings.bg_color != 'rgba(0,0,0,0)' or section.settings.image_bg_style_4 != blank %}
+        #main-review-{{ section.id }} {
+            {% if section.settings.image_bg_style_4 != blank %}
+                background: url({{ section.settings.image_bg_style_4 | img_url: '1920x' }});
+                background-repeat: repeat-x;
+                background-size: cover;
+            {% else %}
+                background-color: {{ section.settings.bg_color }};
+            {% endif %}
+        }
+        {% endif %}
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_4' %}
+        #main-review-{{ section.id }}.style_about_4 .title {
+            margin-bottom: 0;
+        }
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_3' %}
+        .main-about-us.style_2 .title {
+            font-weight: bold;
+        }
+        .main-about-us.style_about_3 {
+            padding: 56px 0 50px;
+        }
+    {% endif %}
+
+    {% if section.settings.style_title == 'style_3' %}
+        #main-review-{{ section.id }} .container .row {
+            background-color: {{ section.settings.bg_color }};
+        }
+        #main-review-{{ section.id }} .des a {
+            color: {{ section.settings.color_des }};
+        }
+
+    {% endif %}
+
+    {% if section.settings.style_about == 'style_2' or section.settings.style_about == 'style_3' %}
+        .main-about-us.style_about_2 .list-item .item {
+            border-color: {{ section.settings.border_bg_color }};
+        }
+    {% endif %}
+  
+    #main-review-{{ section.id }} .title {
+        color: {{ section.settings.color_title }};
+        font-size: {{ section.settings.font_size_title }};
+        {% if section.settings.title_sub == blank %}
+            {% if section.settings.style_about == 'style_3' %}
+                margin-bottom: 35px;
+            {% else %}
+                margin-bottom: {{ section.settings.font_size_title }};
+            {% endif %}
+        {% else %}
+            margin-bottom: 0;
+        {% endif %}
+    }
+
+    #main-review-{{ section.id }} .sub-title {
+        color: {{ section.settings.color_title_sub }};
+        font-size: {{ section.settings.font_size_title_sub }};
+    }
+    
+    #main-review-{{ section.id }} .des {
+        color: {{ section.settings.color_des }};
+        font-size: {{ section.settings.font_size_des }};
+    }
+
+    #main-review-{{ section.id }} .btn-about-us {
+        color: {{ section.settings.color_button }};
+        border-color: {{ section.settings.color_border_button }};
+        background-color: {{ section.settings.bg_color_button }};
+    }
+    
+    @media (min-width: 1200px) {
+        #main-review-{{ section.id }} {
+        margin-bottom: {{ margin_bottom }}px;
+        }
+    }   
+
+    {% unless section.settings.display_border_top %}
+    #main-review-{{ section.id }} {
+        border-top: none;
+    }
+    {% endunless %}
+
+    .main-about-us.style_about_3 .list-item .item {
+        background-color: {{ section.settings.bg_color_item_style_3 }}
+    }
+  #main-review-template--14759625228349__main h1.title {
+    text-align: center;
+}
+#main-review-template--14759625228349__main h3.sub-title {
+    text-align: center;
+}
+</style>
+
+<!------------------reviews tab---------------------->
+<div class="container">
+<div class="horizontal-tabs tabs-center">
+
+  <ul class="tabs">
+          {% for block in section.blocks %}
+
+    {% case block.type %}
+        {% when 'title' %} 
+         {% if  block.settings.heading_area !='' %}
+    <li class="tab-title"><a class="tab-links" href="#tab-{{ forloop.index }}">
+       
+      <img loading="lazy" src="{{ block.settings.image | img_url: 'compact' }}">
+
+      
+      </a></li>
+  {% endif %}
+          
+        {% endcase %}
+        {% endfor %}
+     
+  </ul>
+
+     
+  <div class="tab-content" id="tab-1">
+    <section id="review_page" class="review_sec">
+    {% render 'google-rating-data' %}
+    </section>
+  </div>
+  <div class="tab-content" id="tab-2">
+     <section id="review_page" class="review_sec">
+    {% render 'amazon-rating-data' %}
+    </section>
+  </div>
+  <div class="tab-content" id="tab-3">
+     <section id="review_page" class="review_sec">
+    {% render 'trust-rating-data' %}
+    </section>
+  </div>
+ 
+
+
+
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Reviews",
+   "class": "Dressoutlet-review-sections",
+        "settings": [
+            {
+                "type": "select",
+                "id": "style_about",
+                "label": "About review Style:",
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    },
+                    {
+                        "value": "style_4",
+                        "label": "Style 4"
+                    },
+                    {
+                        "value": "style_5",
+                        "label": "Style 5"
+                    },
+                    {
+                        "value": "style_6",
+                        "label": "Style 6"
+                    },
+                    {
+                        "value": "style_7",
+                        "label": "Style 7"
+                    },
+ 					{
+                        "value": "style_8",
+                        "label": "Style 8"
+                    }
+                ],
+                    "default": "style_1"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_border_top",
+                "label": "Display Border Top?",
+                "default": true
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color",
+                "label" : "Background Color",
+                "default" : "transparent"
+            },
+            {
+                "type" : "color",
+                "id" : "border_bg_color",
+                "label" : "Border Color Style 2",
+                "default" : "#f5f5f5"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color_item_style_3",
+                "label" : "Background Color Item Style 3",
+                "default" : "#fff"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_bg_style_4",
+                "label": "Background Image"
+            },
+            {
+                "type": "select",
+                "id": "style_title",
+                "label": "Title Style:",
+                "options": [
+                    {
+                        "value": "style_1",
+                        "label": "Style 1"
+                    },
+                    {
+                        "value": "style_2",
+                        "label": "Style 2"
+                    },
+                    {
+                        "value": "style_3",
+                        "label": "Style 3"
+                    }
+                ],
+                    "default": "style_1"
+            },
+            {
+                "type": "textarea",
+                "id": "title",
+                "label": "Title",
+                "default": "About The Shop"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_title",
+                "label" : "Title Font Size",
+                "default" : "12px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_title",
+                "label" : "Title Color",
+                "default" : "#232323"
+            },
+            {
+                "type": "textarea",
+                "id": "title_sub",
+                "label": "Sub Title"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_title_sub",
+                "label" : "Sub Title Font Size",
+                "default" : "12px"
+            },
+            {
+                "type" : "color",
+                "id" : "color_title_sub",
+                "label" : "Sub Title Color"
+            },
+            {
+                "type": "textarea",
+                "id": "des",
+                "label": "Full Descriptions"
+            },
+			{
+                "type": "textarea",
+                "id": "fulldes",
+                "label": "Descriptions"
+            },
+            {
+                "type" : "color",
+                "id" : "color_des",
+                "label" : "Description Color",
+                "default" : "#787878"
+            },
+            {
+                "type" : "text",
+                "id" : "font_size_des",
+                "label" : "Des Font Size",
+                "default" : "14px"
+            },
+            {
+                "type" : "text",
+                "id" : "button_text",
+                "label" : "Button Text"
+            },
+            {
+                "type" : "url",
+                "id" : "button_text_link",
+                "label" : "Button Link"
+            },
+            {
+                "type" : "color",
+                "id" : "color_button",
+                "label" : "Color Button",
+                "default" : "#202020"
+            },
+            {
+                "type" : "color",
+                "id" : "color_border_button",
+                "label" : "Border Color Button",
+                "default" : "#ffffff"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_color_button",
+                "label" : "Background Color Button",
+                "default" : "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "margin_bottom",
+                "label": "Margin Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default": 30
+            }
+        ],
+  "blocks": [
+	{
+      "type": "title",
+      "name": "Heading",
+      "settings": [
+		{
+			"type": "text",
+			"id": "heading_area",
+			"label": "About Reviews",
+			"default": "Heading Here"
+		},
+        {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Review logo"
+        },
+		{
+        "type": "url",
+        "id": "review_link",
+        "label": "Product link"
+        }
+      ]
+    },
+    {
+      "type": "Reviews",
+      "name": "Reviews",
+      "settings": [
+		 {
+            "type" : "textarea",
+            "id" : "question_faqs",
+            "label" : "Add Review"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs",
+            "label" : "Review"
+          },
+			{
+            "type" : "text",
+            "id" : "date",
+            "label" : "Review Date"
+          },
+			{
+						"type": "image_picker",
+						"id": "image",
+						"label": "Banner Image"
+					},
+		{
+            "type" : "text",
+            "id" : "title",
+            "label" : "Product title"
+          },
+
+        {
+        "type": "url",
+        "id": "product_link",
+        "label": "Product link"
+        },
+
+          {
+          "type": "range",
+          "id": "rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "unit": "px",
+          "label": "rating",
+          "default": 5
+          },
+
+			{
+            "type" : "text",
+            "id" : "author",
+            "label" : "Add author"
+          }
+      ]
+    }
+	
+  ]
+  }
+{% endschema %}
+ <script>
+  $(document).ready(function() {
+    $('ul.tabs').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+ </script>

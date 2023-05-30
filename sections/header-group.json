@@ -1,0 +1,157 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "3f84c6f2-a058-447b-bf86-fd33d9442d37": {
+      "type": "do-topbar",
+      "blocks": {
+        "3f7d2474-71d7-44d8-8370-6ffb1ccba529": {
+          "type": "do__announcement",
+          "settings": {
+            "text": "Free Shipping",
+            "do__tb_icon": "shopify:\/\/shop_images\/top-return_88d77b00-8394-4e7f-a777-8e8fb3c36ee1.webp",
+            "text_alignment": "left",
+            "link": "",
+            "do__bar_width": 33
+          }
+        },
+        "b2565277-6b34-4414-bce2-9a007d48d4d9": {
+          "type": "do__announcement",
+          "settings": {
+            "text": "Easy Returns",
+            "do__tb_icon": "shopify:\/\/shop_images\/top-shipping.png",
+            "text_alignment": "center",
+            "link": "",
+            "do__bar_width": 33
+          }
+        },
+        "5e9802a3-8caa-4bb9-a877-fd185fa1cc02": {
+          "type": "do__announcement",
+          "settings": {
+            "text": "Call: (888) 861-1422",
+            "text_alignment": "right",
+            "link": "tel:8888611422",
+            "do__bar_width": 24
+          }
+        },
+        "22489c49-7793-4cf9-acda-5b98e2d5c6cd": {
+          "type": "do__announcement",
+          "settings": {
+            "text": "<selector-root data-id=\"OA430597\" id=\"OA430597\"><\/selector-root>",
+            "text_alignment": "right",
+            "link": "",
+            "do__bar_width": 11
+          }
+        }
+      },
+      "block_order": [
+        "3f7d2474-71d7-44d8-8370-6ffb1ccba529",
+        "b2565277-6b34-4414-bce2-9a007d48d4d9",
+        "5e9802a3-8caa-4bb9-a877-fd185fa1cc02",
+        "22489c49-7793-4cf9-acda-5b98e2d5c6cd"
+      ],
+      "settings": {
+        "color_scheme": "accent-1"
+      }
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "blocks": {
+        "f9853ae5-ecfe-43b7-8ff7-4e4563cfdcdc": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping | Use WELCOME10 For 10% Your First Order",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
+        "a5080603-73e1-4f0e-830e-904128e71c95": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
+        "b595432b-2f3f-4c84-afe5-ad5138d52430": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f9853ae5-ecfe-43b7-8ff7-4e4563cfdcdc",
+        "a5080603-73e1-4f0e-830e-904128e71c95",
+        "b595432b-2f3f-4c84-afe5-ad5138d52430"
+      ],
+      "settings": {
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "645095b1-a956-41fc-985b-77ce7c796c00": {
+          "type": "CustomersSearch",
+          "settings": {
+            "do__customers_often_search_menu": "",
+            "do_submenu_name": "prom dresses",
+            "do_megamenu_link_image": "https:\/\/www.thedressoutlet.com\/collections\/prom-dresses",
+            "do_megamenu_image": "shopify:\/\/shop_images\/prom-1x1-min.jpg",
+            "do_megamenu_collection_title": "Prom Dresses 2023"
+          }
+        },
+        "f6efa01d-7c24-423e-a334-b8ed99313c9f": {
+          "type": "CustomersSearch",
+          "settings": {
+            "do__customers_often_search_menu": "",
+            "do_submenu_name": "mother of bride",
+            "do_megamenu_link_image": "https:\/\/www.thedressoutlet.com\/collections\/mother-of-the-bride-dresses",
+            "do_megamenu_image": "shopify:\/\/shop_images\/MOB_2.jpg",
+            "do_megamenu_collection_title": "Mother of the Bride Dresses"
+          }
+        },
+        "c6060ff1-4c76-4dbf-87e2-88cfa683235c": {
+          "type": "CustomersSearch",
+          "settings": {
+            "do__customers_often_search_menu": "",
+            "do_submenu_name": "formal",
+            "do_megamenu_link_image": "https:\/\/www.thedressoutlet.com\/collections\/formal-dresses",
+            "do_megamenu_image": "shopify:\/\/shop_images\/formal-1-1-seat-cta-min-cropped.jpg",
+            "do_megamenu_collection_title": "Shop Formal Dresses"
+          }
+        }
+      },
+      "block_order": [
+        "645095b1-a956-41fc-985b-77ce7c796c00",
+        "f6efa01d-7c24-423e-a334-b8ed99313c9f",
+        "c6060ff1-4c76-4dbf-87e2-88cfa683235c"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu-2-0",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "left",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "3f84c6f2-a058-447b-bf86-fd33d9442d37",
+    "announcement-bar",
+    "header"
+  ]
+}

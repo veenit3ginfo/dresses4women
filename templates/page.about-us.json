@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "e7ad82c5-ce82-4914-82ad-82165a781431": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "781a446c-9459-4226-997a-a073107df2c2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h1"
+          }
+        },
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Dress Outlet was established in 2008 with the mission of bringing<br\/> affordable, quality bridal wear to the masses. Since that time, our Los<br\/> Angeles-based company has expanded to offer not only <a href=\"https:\/\/www.thedressoutlet.com\/collections\/wedding-dresses-1\" title=\"Wedding Dresses\">wedding dresses and gowns<\/a>, but <a href=\"https:\/\/www.thedressoutlet.com\/collections\/bridesmaid-dresses\" title=\"Bridesmaid Dresses\">bridesmaid dresses<\/a>, <a href=\"https:\/\/www.thedressoutlet.com\/collections\/prom-dresses\" title=\"Prom Dresses\">prom dresses<\/a>,<br\/> and formal wear in a variety of styles and colors. We are passionate <br\/>about providing not just beautiful dresses, but an excellent experience <br\/>that lasts from the moment you place your order to the moment you slip <br\/>into something stunning on your special day.<\/p><p>Since our inception, <br\/>we have built a reputation for providing superior customer service. We <br\/>are proud to offer fast shipping on all orders and allow returns so you <br\/>can shop with confidence. If you are searching for affordable <a href=\"https:\/\/www.thedressoutlet.com\/collections\/formal-dresses\" title=\"Formal Dresses\">formal dresses<\/a> or high-end designer wear, The Dress Outlet is the right place for you!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-0",
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-1",
+        "template--15185694982205__781a446c-9459-4226-997a-a073107df2c2-16815122873efbc1df-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/MOB_1024x1024_crop_center_cff3aaa7-4ec7-4c66-ae72-2cf841574e2e.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ac6c76fa-1528-444a-8e8b-a7b032b00d6f": {
+      "type": "image-with-text",
+      "blocks": {
+        "cee4fb36-6767-4006-ace5-e95878e76a77": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We hope you love our selection as much as we do, and we look forward <br\/>to helping you discover your perfect dress. We offer dresses for all <br\/>occasions. We make it easy to find the perfect dress in styles that <br\/>range from classic and timeless to chic and contemporary. Our selection <br\/>of colors is equally diverse; you are sure to find something that suits <br\/>your taste!<\/p><p> <\/p><p>A good dress can add glamour to your life. <br\/>It's not just something you wear—it's who you are at that moment. Our <br\/>team at TDO is dedicated to bringing you the most current and exciting <br\/>styles that are sure to elevate any event. Whether your tastes are <br\/>conservative or avant-garde, we provide a broad selection of designs <br\/>from top designers and brands, like <a href=\"https:\/\/www.thedressoutlet.com\/collections\/jovani-dresses\" title=\"Jovani\">Jovani<\/a> and <a href=\"https:\/\/www.thedressoutlet.com\/collections\/cinderella-divine\" title=\"Cinderella Divine\">Cinderella Divine<\/a>,<br\/> to help you create any look you desire. We make it easy to find the <br\/>perfect dress for your occasion at a price that is sure to delight!<\/p><p> <\/p><p>Learn about the brands you like, the service you deserve, the prices you want, and the dresses you need at TDO<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "cee4fb36-6767-4006-ace5-e95878e76a77"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/BRIDAL_1024x1024_crop_center_f4af89ad-fee5-4b87-b203-294c2fa79b63.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "e7ad82c5-ce82-4914-82ad-82165a781431",
+    "main",
+    "781a446c-9459-4226-997a-a073107df2c2",
+    "ac6c76fa-1528-444a-8e8b-a7b032b00d6f"
+  ]
+}

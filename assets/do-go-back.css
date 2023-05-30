@@ -1,0 +1,35 @@
+.do__go-back_btn svg {
+    width: 25px;
+    fill: #fff;
+}
+
+.do__go-back_btn {
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    background: var(--gradient-base-accent-1);
+    padding: 11px 20px;
+    border: 1px solid;
+    transition: .3s;
+}
+
+.do__go-back_btn a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 0 0 10px;
+}
+
+.do__go-back_btn:hover {
+    background: #fff;
+}
+
+.do__go-back_btn:hover svg, .do__go-back_btn:hover a {fill: var(--gradient-base-accent-1);color: var(--gradient-base-accent-1);}
+
+.do__go-back_btn a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

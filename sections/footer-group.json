@@ -1,0 +1,62 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "ddfb6850-35f7-49d0-8a56-85463589a6c4": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "XGDyFj"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "footer"
+          }
+        },
+        "4d279221-c90c-43e5-b36a-6a28d9b56d2d": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Services",
+            "menu": "information"
+          }
+        },
+        "1585e8b3-e4df-4085-9a7f-3eb3c8981757": {
+          "type": "textAndImage",
+          "settings": {
+            "heading": "",
+            "do__text": "<p>By using this site you agree to our Terms & Conditions of Use and Privacy Statement. WARNING: <a href=\"http:\/\/www.p65warnings.ca.gov\/\" target=\"_blank\">Cancer and Reproductive Harm<\/a><\/p>",
+            "do__image": "shopify:\/\/shop_images\/adascLogo.png"
+          }
+        }
+      },
+      "block_order": [
+        "ddfb6850-35f7-49d0-8a56-85463589a6c4",
+        "footer-1",
+        "4d279221-c90c-43e5-b36a-6a28d9b56d2d",
+        "1585e8b3-e4df-4085-9a7f-3eb3c8981757"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "0b24fde4-001c-46d7-a4ad-58a64743d7b7": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15177665806397__0b24fde4-001c-46d7-a4ad-58a64743d7b7-16802145818ff3c76a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ",
+            "heading_size": "h1"
+          }
+        },
+        "template--15177665806397__0b24fde4-001c-46d7-a4ad-58a64743d7b7-16802145818ff3c76a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>$8.95 3-6 Days<br\/>$39.98 2-3 Day Air Shipping<br\/>International Flat Rate Shipping $59.98<br\/>Canada Flat Rate Shipping $39.99.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15177665806397__0b24fde4-001c-46d7-a4ad-58a64743d7b7-16802145818ff3c76a-0",
+        "template--15177665806397__0b24fde4-001c-46d7-a4ad-58a64743d7b7-16802145818ff3c76a-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "90e72441-c546-4100-b2c9-ccde63ce97c2": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "RETURN POLICY",
+            "icon": "none",
+            "row_content": "<p>We accept returns for refund (20% restocking fee) or store credit with no restocking fee and a $10 bonus credit. Sale items are final sale and can not be <br\/>returned. You must request a return within 1-week of <br\/>receiving your package.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT ARE MY PAYMENT OPTIONS",
+            "icon": "none",
+            "row_content": "<p>We accept all common credit cards, Amazon Pay, Google Pay, Shop Pay, Paypal and your standard Credit\/Debit.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ARE THERE MORE PICTURES",
+            "icon": "none",
+            "row_content": "<p><strong>ADDITIONAL IMAGES<\/strong><\/p><p>All product images available are on our website. We will not provide additional photographs if they are not already on the website.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW CAN I TRACK MY ORDER",
+            "icon": "none",
+            "row_content": "<p><strong>ORDER TRACKING<\/strong><\/p><p>Once your order has been processed, you will receive an email containing a tracking number that will let you know your order has been shipped<\/p>",
+            "page": ""
+          }
+        },
+        "1a316c2c-9bf3-432f-8fc2-5e200a89ba15": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "IS YOUR WEBSITE SAFE AND SECURE",
+            "icon": "none",
+            "row_content": "<p>Yes - we run on Shopify just like Fashionova and other major sites.<\/p>",
+            "page": ""
+          }
+        },
+        "cd4c5668-2343-408b-a18a-6dd99f53a335": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DOES THE DRESS OUTLET HAVE A STORE",
+            "icon": "none",
+            "row_content": "<p>Our site thedressoutlet.com is online only. While we may open a store in the future, all of our dresses are available here on the website. Please feel free to call or send us a note with any product questions and we'll get back to you ASAP!<\/p>",
+            "page": ""
+          }
+        },
+        "87a51e45-3aaf-4c98-93e9-919f72518ff1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "IS MY DRESS AVAILABLE",
+            "icon": "none",
+            "row_content": "<p><strong>RESTOCK<\/strong><\/p><p>If a dress is sold out and we do not have a listed ship date, then the item is sold out.<\/p>",
+            "page": ""
+          }
+        },
+        "667ed8eb-27de-4ca5-a75f-99376db683ca": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHEN WILL YOU GET MORE",
+            "icon": "none",
+            "row_content": "<p><strong>DRESS AVAILABILITY<\/strong><\/p><p>Most of our dresses are in stock! To find out if your dress is available, choose the size and color you would like from the product page and you will see the availability message. It is rare, but sometimes the availability of special order dresses can change after you make your purchase. If this happens, we contact you immediately.<\/p>",
+            "page": ""
+          }
+        },
+        "c5960aed-8192-478b-8b53-4f3e3ad35ddf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHERE IS A SIZE CHART",
+            "icon": "none",
+            "row_content": "<p><strong>SIZING<\/strong><\/p><p>Every dress has a different size chart. Size charts are available on each product page on the line marked \"Size\". Be sure to check the size chart to get the best fit. Keep in mind you can always take a gown in if some areas are large, but you cannot let something out that is too small.<\/p>",
+            "page": ""
+          }
+        },
+        "46a8a488-5ce1-4325-8cca-4b44dd0b87bb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "OTHER",
+            "icon": "none",
+            "row_content": "<p><strong>OTHER QUESTIONS<\/strong><\/p><p>Email us at info@thedressoutlet.com for any other questions not addressed here, we'll get back to you right away.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-0",
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-1",
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-2",
+        "template--15173052334141__90e72441-c546-4100-b2c9-ccde63ce97c2-168021825300dab768-3",
+        "1a316c2c-9bf3-432f-8fc2-5e200a89ba15",
+        "cd4c5668-2343-408b-a18a-6dd99f53a335",
+        "87a51e45-3aaf-4c98-93e9-919f72518ff1",
+        "667ed8eb-27de-4ca5-a75f-99376db683ca",
+        "c5960aed-8192-478b-8b53-4f3e3ad35ddf",
+        "46a8a488-5ce1-4325-8cca-4b44dd0b87bb"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0b24fde4-001c-46d7-a4ad-58a64743d7b7",
+    "90e72441-c546-4100-b2c9-ccde63ce97c2"
+  ]
+}

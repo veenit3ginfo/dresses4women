@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "e7ad82c5-ce82-4914-82ad-82165a781431": {
+      "type": "do-breadcrumbs",
+      "settings": {
+        "home_text": "Dresses",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "e7ad82c5-ce82-4914-82ad-82165a781431",
+    "main"
+  ]
+}
